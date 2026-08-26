@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &amp; a Retrospective on Gathering Them</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #1c2330; background: #fbfcfe; }
+  @media (prefers-color-scheme: dark) { body { color: #dfe6f2; background: #0f1420; } }
+  h1, h2, h3, h4 { line-height: 1.25; margin: 1.6em 0 .5em; }
+  h1 { font-size: 1.9em; border-bottom: 2px solid #3d7fd6; padding-bottom: .3em; }
+  h2 { font-size: 1.4em; border-bottom: 1px solid #8883; padding-bottom: .25em; }
+  h3 { font-size: 1.15em; }
+  a { color: #2f7fe0; } @media (prefers-color-scheme: dark){ a{ color:#7fb8ff; } }
+  code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: .88em;
+         background: #8882; padding: .12em .35em; border-radius: 4px; }
+  pre { background: #11182a; color: #cfe0ff; padding: 14px 16px; border-radius: 8px;
+        overflow-x: auto; } pre code { background: none; padding: 0; color: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #8884; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #3d7fd61a; }
+  blockquote { margin: 1em 0; padding: .4em 1em; border-left: 3px solid #3d7fd6; background: #3d7fd614; }
+  hr { border: none; border-top: 1px solid #8884; margin: 2em 0; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin: .2em 0; }
+</style></head><body>
+<h1>Sources &amp; a Retrospective on Gathering Them</h1>
+<p>Two parts. <strong>Part A</strong> is a single consolidated list of every source the project draws on. <strong>Part B</strong> is an honest, critical analysis of how the information was fetched during this build — what went wrong, why, and how the process should have been run to avoid it.</p>
+<p>The exhaustive licence text and per-source detail lives in <a href="SOURCES.md" target="_blank" rel="noopener noreferrer">SOURCES.md</a>; this document is the <em>overview plus the post-mortem</em>.</p>
+<hr>
+<h1>Part A — Every source, in one place</h1>
+<h2>A.1 Geographic &amp; imagery data (the machine-readable inputs)</h2>
+<table><thead><tr><th>#</th><th>Source</th><th>Publisher</th><th>Licence</th><th>Feeds</th></tr></thead><tbody><tr><td>1</td><td>Natural Earth 10m Admin-0 / Admin-1</td><td>Natural Earth (NACIS)</td><td>Public domain</td><td>Country + state borders, country facts</td></tr><tr><td>2</td><td>GeoNames <code>cities15000</code> + country/admin tables</td><td>GeoNames (Unxos GmbH)</td><td><strong>CC BY 4.0</strong></td><td>34,027 city markers, names, populations</td></tr><tr><td>3</td><td>GeoNames <code>IN.zip</code> (India dump)</td><td>GeoNames</td><td><strong>CC BY 4.0</strong></td><td>254 Mumbai zoom-in places</td></tr><tr><td>4</td><td>Blue Marble Next Generation + Black Marble</td><td>NASA Earth Observatory</td><td>Public domain (CC0-ish)</td><td>Globe day + night textures</td></tr><tr><td>5</td><td>GEBCO_08 elevation grid</td><td>GEBCO (IHO / IOC-UNESCO)</td><td>Public domain</td><td>Relief shading + ocean mask</td></tr><tr><td>6</td><td>GSHHG 2.3.7 shoreline</td><td>P. Wessel (UH) &amp; W. Smith (NOAA)</td><td><strong>LGPL</strong></td><td>Mumbai high-resolution coastline</td></tr><tr><td>7</td><td>BMC Ward boundaries (ArcGIS service)</td><td>Municipal Corporation of Greater Mumbai</td><td><strong>GODL-India</strong> (by policy)</td><td>24 ward plates</td></tr><tr><td>8</td><td>OpenStreetMap (via Overpass API)</td><td>OpenStreetMap contributors</td><td><strong>ODbL</strong></td><td>Roads (7,602) + railway (1,007)</td></tr></tbody></table>
+<h2>A.2 Mumbai history &amp; prose sources (the human-readable inputs)</h2>
+<table><thead><tr><th>Source</th><th>Publisher</th><th>Official?</th><th>Feeds</th></tr></thead><tbody><tr><td>Gazetteer of Greater Bombay — History</td><td>Gazetteers Dept, Govt of Maharashtra</td><td>Yes</td><td>Main narrative, ancient → modern</td></tr><tr><td>Gazetteer of Bombay City and Island (Edwardes, 1909)</td><td>Gazetteers Dept, Govt of Maharashtra</td><td>Yes</td><td>Islands, reclamation, early admin</td></tr><tr><td>Elephanta Caves (WHC 244)</td><td>UNESCO</td><td>Yes</td><td>Caves, inscription 1987</td></tr><tr><td>Chhatrapati Shivaji Terminus (WHC 945)</td><td>UNESCO</td><td>Yes</td><td>CST, inscription 2004</td></tr><tr><td>Victorian Gothic &amp; Art Deco Ensembles (WHC 1480)</td><td>UNESCO</td><td>Yes</td><td>Two expansion waves, 2018</td></tr><tr><td>Mumbai City District — History / Demography</td><td>District Administration, Govt of Maharashtra</td><td>Yes</td><td>Rename, Mumbadevi, district population</td></tr><tr><td>Census of India 2011</td><td>Registrar General &amp; Census Commissioner</td><td>Yes</td><td>Population figures</td></tr><tr><td>Encyclopaedia Iranica — Parsi Communities</td><td>Columbia University (peer-reviewed)</td><td>~</td><td>Early Zoroastrian migration</td></tr><tr><td>Tata group — Our Heritage</td><td>Tata Sons</td><td>Yes (company)</td><td>Tata dynasty dates</td></tr><tr><td>Godrej — Our Story</td><td>Godrej</td><td>Yes (company)</td><td>Godrej dynasty dates</td></tr><tr><td>Mumbai Legacy Project heritage note</td><td>MCGM</td><td>Yes</td><td>Petit family</td></tr><tr><td>The Rise and Fall of the Sassoons; encyclopaedia entries</td><td>The India Forum / Encyclopedia.com</td><td>Secondary</td><td>Sassoon family</td></tr><tr><td>Reliance — history + press</td><td>Reliance / press</td><td>Secondary</td><td>Ambani / Reliance</td></tr><tr><td>Standard references on Indian cinema &amp; institutions</td><td>Britannica etc.</td><td>Secondary</td><td>Cinema, dabbawalas, Film City</td></tr></tbody></table>
+<p><strong>In the Mumbai data file: 22 distinct sources — 17 official, 5 secondary.</strong> Every timeline event and figure names its source on screen with an <strong>Official / Secondary</strong> badge.</p>
+<h2>A.3 Software (ships to the browser or runs at build)</h2>
+<table><thead><tr><th>Library</th><th>Licence</th><th>Role</th></tr></thead><tbody><tr><td>three.js 0.185</td><td>MIT</td><td>WebGL rendering (vendored)</td></tr><tr><td>earcut</td><td>ISC</td><td>Polygon triangulation (vendored)</td></tr><tr><td>mapshaper</td><td>MPL-2.0</td><td>Shapefile → GeoJSON (build only)</td></tr><tr><td>sharp</td><td>Apache-2.0</td><td>Image resampling (build only)</td></tr><tr><td>fflate</td><td>MIT</td><td>Unzipping downloads (build only)</td></tr></tbody></table>
+<h2>A.4 The obligations, in brief</h2>
+<ol><li><strong>Must credit GeoNames</strong> (CC BY 4.0) — legal requirement.</li><li><strong>Must credit MCGM</strong> (GODL-India) — and it is the basis for commercial use.</li><li><strong>Must credit OpenStreetMap and honour ODbL share-alike</strong> — attribution, plus</li></ol>
+<p>   offering the road-data extract under ODbL if the app is distributed. This is    the project's one share-alike obligation; it is isolated in a single toggleable    file. (Full analysis: SOURCES.md §11.)</p>
+<ol><li><strong>Should credit NASA, GEBCO, NOAA/GSHHG</strong> — requested, not required (GSHHG's</li></ol>
+<p>   LGPL does require it).</p>
+<ol><li><strong>Need not credit Natural Earth</strong> — public domain.</li><li>All of the above required credits are rendered <strong>in the app</strong>, not just here.</li></ol>
+<hr>
+<h1>Part B — How the information-fetching could have been improved</h1>
+<p>This is a candid retrospective. The project's <em>data-handling</em> was careful — every figure is sourced, disputes are flagged, licences were audited — but the <em>retrieval process itself</em> made several avoidable errors, and it is worth being exact about them.</p>
+<h2>B.1 What actually went wrong</h2>
+<p>Five concrete failures happened during this build:</p>
+<ol><li><strong>Trusting a search summary as if it were the source.</strong> Web-search results</li></ol>
+<p>   return an LLM summary of snippets. Several times that summary was simply    wrong, and it was taken at face value:</p>
+<ul><li>It reported Greater Mumbai's population as <strong>9,356,962</strong> — which is only the</li></ul>
+<p>     <em>suburban district part-record</em>, about three-quarters of the real municipal      figure of <strong>12,442,373</strong>. The correct number is the sum of two district      part-records, and the search summary made exactly the mistake the final      data now warns against.</p>
+<ul><li>It understated the <strong>2006 train-bombing toll</strong> ("over 180"; the figure is</li></ul>
+<p>     ~209). This shipped wrong and was only corrected in a later accuracy pass.</p>
+<ol><li><strong>Asserting a precision the sources didn't support.</strong> The Bombay→Mumbai rename</li></ol>
+<p>   was recorded as "<strong>4 March 1995</strong>." No source supports that exact date;    accounts give May, October, or November 1995. A false-precise date is worse    than an honest "1995," because it looks authoritative.</p>
+<ol><li><strong>Believing an aggregator's licence claim.</strong> DataMeet's repository is widely</li></ol>
+<p>   quoted as CC BY 4.0. Only by opening the <em>Mumbai folder's own readme</em> did the    real licence surface — <strong>CC BY-SA 2.5 India</strong> (share-alike), which changed the    whole sourcing decision. A search-level licence claim nearly led to shipping    share-alike data unknowingly.</p>
+<ol><li><strong>Reactive verification.</strong> Some facts were only checked after the user</li></ol>
+<p>   questioned them (the population), or in a later sweep. Verification should    precede display, not follow a challenge.</p>
+<ol><li><strong>Fragile transport.</strong> The main Overpass endpoint returned 504s; the</li></ol>
+<p>   Maharashtra gazetteer serves an <strong>expired TLS certificate</strong>; UNESCO returned    403s to the fetcher. Each needed an ad-hoc workaround, and each is a    reproducibility risk for a future rebuild.</p>
+<h2>B.2 The root cause</h2>
+<p>Almost all of the above trace to <strong>one habit: treating "found" as "verified."</strong> A search result is a <em>lead</em>. It tells you where to look, not what is true. The moment a lead is copied into the data as fact — without opening the primary source and reading the actual number in its actual context — every downstream check inherits the error.</p>
+<p>The secondary cause is <strong>quoting a number before defining its unit.</strong> "Mumbai's population" is not one number; it is at least four (city district, municipal corporation, urban agglomeration, metropolitan region). Recording a figure before pinning the boundary is how the 9.4M/12.4M/18.4M confusion happens.</p>
+<h2>B.3 How it should have been done</h2>
+<p>A disciplined retrieval process, in the order it should run:</p>
+<ol><li><strong>Search to find, primary source to confirm.</strong> Never let a search summary be</li></ol>
+<p>   the citation. Open the publisher's own page or dataset and read the value in    place. For a census figure that means the Census of India data table, not a    site that repackages it.</p>
+<ol><li><strong>Define the unit before recording the number.</strong> For any ambiguous quantity</li></ol>
+<p>   (population, area, casualty toll, "first" claims), write down the exact    boundary/definition first, then find the figure that matches it. A short    checklist of ambiguous quantities would have caught the population trap on the    first pass.</p>
+<ol><li><strong>Cross-check anything displayed as fact against ≥2 independent sources.</strong></li></ol>
+<p>   Especially dates, tolls and populations. Where they disagree, record <em>both</em>    and flag it — the data schema already supports this (<code>disputed: true</code>), and    the UI already shows disagreement rather than smoothing it over. The fix is to    make cross-checking the default, not the exception.</p>
+<ol><li><strong>Verify licences from the dataset's own licence file, at fetch time</strong> — not</li></ol>
+<p>   from an aggregator, a README one level up, or a search snippet. The DataMeet    case proves the nested licence can override the headline one.</p>
+<ol><li><strong>Capture provenance at the moment of capture.</strong> Store, per datum: the source</li></ol>
+<p>   URL, the retrieval date, and the exact quoted value. The project stores a    <code>sourceId</code>; adding <code>retrievedAt</code> and the raw quoted string would make every    number independently auditable later.</p>
+<ol><li><strong>Make the build validate the data.</strong> Several integrity checks were run by</li></ol>
+<p>   hand (every event has a valid source; every <code>place</code> exists; era ranges contain    their events; the two population part-records sum to the displayed total).    These should be an automated <code>check-data</code> step that fails the build — manual    validation is exactly what slips when you are moving fast.</p>
+<ol><li><strong>Make volatile fetches deterministic.</strong> Overpass output should be snapshotted</li></ol>
+<p>   into <code>data/raw</code> (it is) with a recorded query and date, and mirrors tried in    order (they are). Dataset versions should be pinned and written to the manifest    (they are for the global data). The gap is that a <em>rebuild months later</em> may    get different OSM data with no record of what changed — a hash of each raw    input in the manifest would close that.</p>
+<ol><li><strong>Treat an unverifiable transport as a data-quality caveat, not a blocker.</strong></li></ol>
+<p>   The expired-certificate gazetteer is genuine government content, but the    connection can't be cryptographically verified. That was documented rather than    hidden — the right call — but the stronger move is to <em>also</em> pull the same fact    from a second host and confirm they agree, so integrity does not rest on one    compromised channel.</p>
+<ol><li><strong>Distinguish "found," "read," and "cross-checked" as explicit states.</strong> The</li></ol>
+<p>   Official / Secondary badge is a coarse proxy for this. A finer model would tag    each fact with how far it got through verification, and only present the    fully-checked ones as unqualified fact.</p>
+<h2>B.4 What the project already does right (so it is not lost)</h2>
+<p>To be fair to the process, several of these disciplines <em>were</em> applied and should be kept:</p>
+<ul><li><strong>Nothing redistributes source data blindly</strong> — everything is fetched from the</li></ul>
+<p>  publisher at build time, and versions are recorded in the manifest.</p>
+<ul><li><strong>Licences were read from the primary terms page</strong> for the eight data sources,</li></ul>
+<p>  and two real compliance breaches (missing in-app attribution; stripped vendored   licence notices) were found and fixed.</p>
+<ul><li><strong>Disputes are surfaced, not hidden</strong> — the Samyukta Maharashtra toll</li></ul>
+<p>  (105/106), the 1944 docks explosion, the 2006 toll and the rename date all   carry their uncertainty into the UI.</p>
+<ul><li><strong>The population figure is now reconciled</strong> across the two views that show it,</li></ul>
+<p>  with a note explaining why the globe (GeoNames, ~12.69M) and the history panel   (Census, 12.44M) differ.</p>
+<h2>B.5 The single most important change</h2>
+<p>If only one thing were adopted from this analysis, it would be this:</p>
+<blockquote><p><strong>A search result is never a citation. Open the primary source, read the value in its own context, confirm the unit, and cross-check it — before it becomes a fact on screen.</strong></p></blockquote>
+<p>Every error in B.1 would have been prevented by that one rule, and none of the things in B.4 would have been lost.</p>
+</body></html>

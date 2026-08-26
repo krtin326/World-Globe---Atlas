@@ -1,0 +1,28 @@
+{
+  "name": "world-globe",
+  "version": "1.0.0",
+  "description": "Interactive 3D terrain globe with country, state and city data",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "node tools/fetch-sources.mjs",
+    "build:textures": "node tools/build-textures.mjs",
+    "build:data": "node tools/build-data.mjs",
+    "build": "npm run fetch && npm run build:textures && npm run build:data && npm run build:city",
+    "serve": "node tools/serve.mjs",
+    "serve:network": "python serve.py",
+    "build:city": "node tools/build-city.mjs",
+    "build:atlas-cities": "node tools/build-atlas-cities.mjs",
+    "docs:html": "node tools/md2html.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "earcut": "^3.2.3",
+    "fflate": "^0.8.3",
+    "mapshaper": "^0.7.47",
+    "sharp": "^0.35.3",
+    "three": "^0.185.1"
+  }
+}

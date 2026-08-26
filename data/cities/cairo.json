@@ -1,0 +1,646 @@
+{
+  "id": "cairo",
+  "name": "Cairo",
+  "formerName": null,
+  "nameLocal": "القاهرة",
+  "country": "Egypt",
+  "geonameId": 360630,
+  "centre": [
+    31.2497,
+    30.0626
+  ],
+  "bbox": [
+    31.1,
+    29.92,
+    31.42,
+    30.2
+  ],
+  "renamed": null,
+  "summary": "Cairo — al-Qāhira, ‘the Victorious’ — is the largest city in the Arab world and in Africa, strung along the Nile where the river fans into its delta. It is a city in layers: the pharaonic pyramids of Giza on its western horizon, a Roman fortress and Coptic churches at its old core, a thousand-year-old Islamic capital of minarets and madrasas at its heart, and a restless megacity of some 22 million on top. Egyptians call it Umm al-Dunya — the Mother of the World.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈10 million",
+      "note": "City proper; ≈22 million in Greater Cairo — the largest metropolis in the Arab world and Africa.",
+      "sourceId": "britannica-cairo"
+    },
+    {
+      "label": "al-Qāhira founded",
+      "value": "969 AD",
+      "note": "By the Fatimids. Predecessors: Fustat (641) and Memphis nearby (c. 3100 BC).",
+      "sourceId": "britannica-cairo"
+    },
+    {
+      "label": "Setting",
+      "value": "Head of the Nile delta",
+      "note": "Where the river fans out just north of the city.",
+      "sourceId": "britannica-cairo"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Historic Cairo (1979)",
+      "note": "One of the world’s oldest Islamic cities, with its famous mosques and madrasas.",
+      "sourceId": "unesco-89"
+    },
+    {
+      "label": "On the horizon",
+      "value": "The Giza pyramids",
+      "note": "Older than the medieval city beside them by roughly 2,500 years.",
+      "sourceId": "unesco-giza"
+    }
+  ],
+  "eras": [
+    {
+      "id": "pharaonic",
+      "label": "Pharaonic",
+      "from": -3100,
+      "to": -30,
+      "color": "#f5a623"
+    },
+    {
+      "id": "roman",
+      "label": "Roman & Coptic",
+      "from": -30,
+      "to": 641,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "fatimid",
+      "label": "Early Islamic",
+      "from": 641,
+      "to": 1171,
+      "color": "#e8467c"
+    },
+    {
+      "id": "mamluk",
+      "label": "Ayyubid & Mamluk",
+      "from": 1171,
+      "to": 1517,
+      "color": "#a56bff"
+    },
+    {
+      "id": "ottoman",
+      "label": "Ottoman & Khedival",
+      "from": 1517,
+      "to": 1882,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1882,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -3100,
+      "era": "pharaonic",
+      "title": "Memphis, first capital",
+      "body": "Memphis is founded nearby as capital of a newly unified Egypt.",
+      "sourceId": "unesco-giza",
+      "tags": [
+        "major"
+      ],
+      "yearDisplay": "c. 3100 BC",
+      "place": "giza",
+      "pivotal": true
+    },
+    {
+      "year": -2560,
+      "era": "pharaonic",
+      "title": "The Great Pyramid",
+      "body": "The Great Pyramid of Khufu rises at Giza.",
+      "sourceId": "unesco-giza",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "c. 2560 BC",
+      "place": "giza"
+    },
+    {
+      "year": -525,
+      "era": "pharaonic",
+      "title": "Persia conquers Egypt",
+      "body": "Persia conquers Egypt; the age of native pharaohs wanes.",
+      "sourceId": "whe-egypt",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "525 BC"
+    },
+    {
+      "year": -30,
+      "era": "roman",
+      "title": "Cleopatra and Roman Egypt",
+      "body": "Cleopatra dies; Egypt becomes a Roman province and Rome’s granary.",
+      "sourceId": "whe-egypt",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "30 BC"
+    },
+    {
+      "year": 641,
+      "era": "fatimid",
+      "title": "The Arab conquest and Fustat",
+      "body": "Arab armies under ʿAmr ibn al-ʿAs take Egypt and found Fustat.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "major"
+      ],
+      "yearDisplay": "641 AD",
+      "place": "fustat",
+      "pivotal": true
+    },
+    {
+      "year": 969,
+      "era": "fatimid",
+      "title": "The Fatimids found Cairo",
+      "body": "The Fatimids conquer Egypt and found al-Qāhira — Cairo.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 970,
+      "era": "fatimid",
+      "title": "Al-Azhar is founded",
+      "body": "Al-Azhar mosque and university is founded, a beacon of learning.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "970–972",
+      "place": "al-azhar"
+    },
+    {
+      "year": 1073,
+      "era": "fatimid",
+      "title": "Badr al-Jamali's walls",
+      "body": "The vizier Badr al-Jamali rebuilds Cairo’s walls and monumental gates.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1168,
+      "era": "fatimid",
+      "title": "Fustat is burned",
+      "body": "Fustat is burned to deny it to the Crusaders threatening Cairo.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "conflict"
+      ],
+      "place": "fustat"
+    },
+    {
+      "year": 1171,
+      "era": "mamluk",
+      "title": "Saladin ends Fatimid rule",
+      "body": "Saladin ends Fatimid rule and founds the Ayyubid dynasty.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1176,
+      "era": "mamluk",
+      "title": "Saladin's Citadel begins",
+      "body": "Saladin begins the great Citadel on the Mokattam spur.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "growth"
+      ],
+      "place": "citadel"
+    },
+    {
+      "year": 1250,
+      "era": "mamluk",
+      "title": "The Mamluks seize power",
+      "body": "The Mamluks — a caste of freed slave-soldiers — seize power in Cairo.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1260,
+      "era": "mamluk",
+      "title": "Victory at Ain Jalut",
+      "body": "The Mamluks halt the seemingly invincible Mongols at Ain Jalut.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1348,
+      "era": "mamluk",
+      "title": "The Black Death",
+      "body": "The Black Death reaches Cairo, killing perhaps a third of its people.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1517,
+      "era": "ottoman",
+      "title": "The Ottoman conquest",
+      "body": "The Ottomans defeat the Mamluks; Egypt becomes an Ottoman province.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1798,
+      "era": "ottoman",
+      "title": "Napoleon takes Cairo",
+      "body": "Napoleon takes Cairo after the Battle of the Pyramids.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1801,
+      "era": "ottoman",
+      "title": "The French are expelled",
+      "body": "British and Ottoman forces expel the French from Egypt.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1805,
+      "era": "ottoman",
+      "title": "Muhammad Ali seizes power",
+      "body": "Muhammad Ali Pasha seizes power and founds modern Egypt.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1811,
+      "era": "ottoman",
+      "title": "Massacre at the Citadel",
+      "body": "Muhammad Ali massacres the Mamluk beys at the Citadel, ending their power.",
+      "sourceId": "unesco-89",
+      "tags": [
+        "conflict"
+      ],
+      "place": "citadel"
+    },
+    {
+      "year": 1863,
+      "era": "ottoman",
+      "title": "‘Paris on the Nile’",
+      "body": "Khedive Ismail begins remaking Cairo with grand boulevards — “Paris on the Nile.”",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1869,
+      "era": "ottoman",
+      "title": "The Suez Canal opens",
+      "body": "The Suez Canal opens amid lavish Cairo celebrations.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1882,
+      "era": "modern",
+      "title": "Britain occupies Egypt",
+      "body": "Britain crushes the Urabi revolt and occupies Egypt.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1902,
+      "era": "modern",
+      "title": "The Egyptian Museum opens",
+      "body": "The Egyptian Museum opens on Tahrir Square.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "culture"
+      ],
+      "place": "tahrir"
+    },
+    {
+      "year": 1919,
+      "era": "modern",
+      "title": "The 1919 revolution",
+      "body": "A nationwide uprising demands independence from Britain.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1922,
+      "era": "modern",
+      "title": "A kingdom’s independence",
+      "body": "Egypt gains nominal independence as a kingdom.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "major"
+      ]
+    },
+    {
+      "year": 1948,
+      "era": "modern",
+      "title": "The first Arab–Israeli war",
+      "body": "Egypt joins the first Arab–Israeli war.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1952,
+      "era": "modern",
+      "title": "The Free Officers’ revolution",
+      "body": "The Free Officers depose the king; the monarchy falls.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1956,
+      "era": "modern",
+      "title": "Nasser nationalises the Canal",
+      "body": "Nasser nationalises the Suez Canal, triggering an international crisis.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1967,
+      "era": "modern",
+      "title": "The Six-Day War",
+      "body": "The Six-Day War ends in a shattering Egyptian defeat.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1970,
+      "era": "modern",
+      "title": "The Aswan High Dam",
+      "body": "The Aswan High Dam is completed, ending the Nile’s ancient flood.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1975,
+      "era": "modern",
+      "title": "The funeral of Umm Kulthum",
+      "body": "The funeral of the singer Umm Kulthum draws millions into Cairo’s streets.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1977,
+      "era": "modern",
+      "title": "The bread riots",
+      "body": "“Bread riots” erupt across Cairo against cuts to food subsidies.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1981,
+      "era": "modern",
+      "title": "Sadat is assassinated",
+      "body": "President Sadat is assassinated at a Cairo military parade.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1992,
+      "era": "modern",
+      "title": "The 1992 earthquake",
+      "body": "An earthquake kills over 500 people and topples old buildings.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 2011,
+      "era": "modern",
+      "title": "Tahrir Square and Mubarak's fall",
+      "body": "The Tahrir Square uprising forces Hosni Mubarak from power.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "politics"
+      ],
+      "place": "tahrir"
+    },
+    {
+      "year": 2013,
+      "era": "modern",
+      "title": "The upheaval of 2013",
+      "body": "Mass protests and a military takeover convulse the capital.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "conflict"
+      ],
+      "place": "tahrir"
+    },
+    {
+      "year": 2015,
+      "era": "modern",
+      "title": "A new capital in the desert",
+      "body": "Ground is broken on a vast New Administrative Capital east of Cairo.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 2021,
+      "era": "modern",
+      "title": "The Pharaohs’ Golden Parade",
+      "body": "Twenty-two royal mummies are paraded in a golden convoy to a new museum.",
+      "sourceId": "britannica-cairo",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "giza",
+      "name": "Giza pyramids",
+      "lat": 29.9792,
+      "lon": 31.1342,
+      "note": "The pyramids of Khufu, Khafre and Menkaure, on the desert edge west of the city."
+    },
+    {
+      "id": "fustat",
+      "name": "Fustat (Old Cairo)",
+      "lat": 30.0069,
+      "lon": 31.2331,
+      "note": "The first Arab capital of Egypt (641) and the Coptic core."
+    },
+    {
+      "id": "al-azhar",
+      "name": "Al-Azhar",
+      "lat": 30.0459,
+      "lon": 31.2622,
+      "note": "Mosque and university founded 970–972, a millennium-old seat of learning."
+    },
+    {
+      "id": "citadel",
+      "name": "The Citadel",
+      "lat": 30.0296,
+      "lon": 31.2611,
+      "note": "Saladin’s fortress on the Mokattam spur, begun 1176."
+    },
+    {
+      "id": "tahrir",
+      "name": "Tahrir Square",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "note": "The civic heart of modern Cairo and the Egyptian Museum."
+    },
+    {
+      "id": "khan-el-khalili",
+      "name": "Khan el-Khalili",
+      "lat": 30.0477,
+      "lon": 31.2622,
+      "note": "The great medieval bazaar of Islamic Cairo."
+    }
+  ],
+  "sources": {
+    "unesco-89": {
+      "title": "Historic Cairo — UNESCO World Heritage List",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/89/",
+      "official": true
+    },
+    "unesco-giza": {
+      "title": "Memphis and its Necropolis – the Pyramid Fields — UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/86/",
+      "official": true
+    },
+    "britannica-cairo": {
+      "title": "Cairo — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Cairo",
+      "official": false
+    },
+    "whe-egypt": {
+      "title": "Ancient Egypt — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/egypt/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "The dynasties that built and ruled Cairo, from the Fatimid founders to the makers of modern Egypt.",
+    "list": [
+      {
+        "id": "fatimids",
+        "era": "fatimid",
+        "span": "969–1171",
+        "community": "Founders of Cairo",
+        "industries": [
+          "Rule",
+          "Religion",
+          "Learning"
+        ],
+        "legacy": "Al-Qāhira itself and Al-Azhar",
+        "sourceId": "unesco-89",
+        "place": "al-azhar",
+        "name": "The Fatimids",
+        "summary": "A Shia Ismaili dynasty that founded al-Qāhira as an imperial capital and established Al-Azhar. At their height they ruled from North Africa to Syria and the Hejaz and claimed the caliphate itself."
+      },
+      {
+        "id": "ayyubids",
+        "era": "mamluk",
+        "span": "1171–1250",
+        "community": "Dynasty of Saladin",
+        "industries": [
+          "Rule",
+          "War",
+          "Building"
+        ],
+        "legacy": "The Citadel and Sunni restoration",
+        "sourceId": "britannica-cairo",
+        "place": "citadel",
+        "name": "The Ayyubids",
+        "summary": "Founded by Salah al-Din, who ended Fatimid rule, restored Sunni Islam in Egypt, built the Citadel and led the Muslim recovery of Jerusalem."
+      },
+      {
+        "id": "mamluks",
+        "era": "mamluk",
+        "span": "1250–1517",
+        "community": "Warrior-sultans",
+        "industries": [
+          "War",
+          "Rule",
+          "Architecture"
+        ],
+        "legacy": "Cairo’s finest mosque-madrasa architecture",
+        "sourceId": "unesco-89",
+        "name": "The Mamluks",
+        "summary": "A self-perpetuating caste of freed military slaves who governed Egypt from Cairo, broke the Mongols and the Crusaders, and endowed the city with its finest mosque-madrasa architecture."
+      },
+      {
+        "id": "muhammad-ali",
+        "era": "ottoman",
+        "span": "1805–1953",
+        "community": "Rulers of modern Egypt",
+        "industries": [
+          "Rule",
+          "Reform",
+          "Military"
+        ],
+        "figures": [
+          "Muhammad Ali Pasha",
+          "Khedive Ismail"
+        ],
+        "legacy": "The Egyptian state, and ‘Paris on the Nile’",
+        "sourceId": "britannica-cairo",
+        "place": "citadel",
+        "name": "The Muhammad Ali dynasty",
+        "summary": "Founded by Muhammad Ali Pasha, the architect of modern Egypt, who massacred the Mamluk beys to seize power. His line of khedives and kings ruled until the 1952 revolution."
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World Globe — terrain, borders and cities</title>
+<meta name="description" content="An interactive 3D terrain globe with every country, state and province, and 34,000 cities.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-city.css">
+
+<!--
+  Import map so `import ... from 'three'` resolves without a bundler. Every
+  dependency is vendored under /vendor, so the whole app runs from a plain
+  static file server with no network access at all.
+-->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<canvas id="globe"></canvas>
+<div id="labels" class="label-layer" aria-hidden="true"></div>
+
+<!-- ---------------------------------------------------------------- -->
+<div id="loading" class="loading">
+  <div class="loading-inner">
+    <div class="loading-title">World Globe</div>
+    <div class="loading-bar"><div id="loading-fill"></div></div>
+    <div id="loading-status" class="loading-status">Starting…</div>
+  </div>
+</div>
+
+<!-- --------------------------- left panel --------------------------- -->
+<aside id="sidebar" class="sidebar">
+  <header class="sidebar-head">
+    <h1>World&nbsp;Globe</h1>
+    <button id="sidebar-toggle" class="icon-btn" title="Hide panel" aria-label="Hide panel">&#10094;</button>
+  </header>
+
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="Search cities, countries, states…"
+           autocomplete="off" spellcheck="false" aria-label="Search">
+  </div>
+
+  <nav id="breadcrumb" class="breadcrumb" aria-label="Location"></nav>
+
+  <div class="list-meta">
+    <span id="list-title">Countries</span>
+    <span id="list-count" class="muted"></span>
+  </div>
+
+  <div id="list" class="vlist" tabindex="0"></div>
+
+  <div class="sidebar-foot">
+    <span id="stats" class="muted"></span>
+  </div>
+</aside>
+
+<button id="sidebar-show" class="icon-btn floating-show" title="Show panel" aria-label="Show panel" hidden>&#10095;</button>
+
+<!-- --------------------------- right panel -------------------------- -->
+<aside id="details" class="details" hidden>
+  <button id="details-close" class="icon-btn details-close" aria-label="Close">&times;</button>
+  <div id="details-body"></div>
+</aside>
+
+<!-- --------------------------- controls ----------------------------- -->
+<section id="controls" class="controls" aria-label="Layers">
+  <button id="controls-toggle" class="controls-head" aria-expanded="true">
+    <span>Layers</span><span class="chev">&#9662;</span>
+  </button>
+  <div id="controls-body" class="controls-body">
+    <label><input type="checkbox" id="t-countries" checked> Country borders</label>
+    <label><input type="checkbox" id="t-states" checked> State / province borders</label>
+    <label><input type="checkbox" id="t-cities" checked> Cities</label>
+    <label><input type="checkbox" id="t-sun"> Sun follows camera</label>
+
+    <div class="slider-row">
+      <label for="s-relief">Terrain relief</label>
+      <input type="range" id="s-relief" min="0" max="6" step="0.1" value="2.2">
+    </div>
+    <div class="slider-row">
+      <label for="s-marker">Marker size</label>
+      <input type="range" id="s-marker" min="0.4" max="2.5" step="0.1" value="1">
+    </div>
+  </div>
+</section>
+
+<!-- --------------------------- readout ------------------------------ -->
+<div id="readout" class="readout">
+  <span id="readout-coords" class="mono">—</span>
+  <span id="readout-place" class="muted"></span>
+</div>
+
+<div id="hint" class="hint">
+  Drag to rotate &middot; scroll to zoom &middot; click to inspect
+</div>
+
+<!--
+  Data attribution. This is not decoration: the city data is licensed CC BY 4.0,
+  which makes crediting GeoNames a licence condition rather than a courtesy.
+  Keep it visible. See docs/SOURCES.md §7.
+-->
+<div id="credits" class="credits">
+  <button id="credits-toggle" class="credits-toggle" aria-expanded="false" aria-controls="credits-body">
+    Data sources
+  </button>
+  <div id="credits-body" class="credits-body" hidden>
+    <p>
+      Boundaries <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a>
+      (public domain).
+      Cities &copy; <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a>,
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC&nbsp;BY&nbsp;4.0</a>.
+      Imagery <a href="https://www.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Earth Observatory</a>.
+      Elevation <a href="https://www.gebco.net/" target="_blank" rel="noopener noreferrer">GEBCO</a> (IHO/IOC&#8209;UNESCO).
+    </p>
+    <p class="credits-note">
+      Borders are simplified for display and follow one editorial view of several
+      contested frontiers. Not authoritative.
+    </p>
+  </div>
+</div>
+
+<!-- ======================= city sub-view ============================ -->
+<!--
+  Opens over the globe when a city with a history file is selected. The globe's
+  render loop stops while this is up; see src/city/cityview.js.
+-->
+<section id="cityview" class="cityview" hidden aria-label="City history">
+  <div class="cv-scanlines" aria-hidden="true"></div>
+
+  <header class="cv-head">
+    <div class="cv-head-main">
+      <h2 id="city-title" class="cv-title"></h2>
+      <div id="city-subtitle" class="cv-subtitle"></div>
+    </div>
+    <div class="cv-head-tools">
+      <button id="city-roads" class="cv-btn" aria-pressed="true">Roads: on</button>
+      <button id="city-places" class="cv-btn" aria-pressed="true">Places: on</button>
+      <button id="city-wards" class="cv-btn" aria-pressed="true">Wards: on</button>
+      <button id="city-rotate" class="cv-btn" aria-pressed="true">Rotation: auto</button>
+      <button id="city-close" class="cv-btn cv-close" aria-label="Close">ESC ✕</button>
+    </div>
+  </header>
+
+  <div class="cv-body">
+    <!-- 3D map -->
+    <div class="cv-map">
+      <canvas id="city-canvas"></canvas>
+      <div id="city-map-label" class="cv-map-label" aria-hidden="true"></div>
+      <div id="city-poi-labels" class="cv-poi-labels" aria-hidden="true"></div>
+      <div id="city-ward-labels" class="cv-ward-labels" aria-hidden="true"></div>
+
+      <!--
+        Floating panel dock. Detail follows the current selection; the others
+        are one-of-a-kind windows. All of them are draggable and can be pinned
+        into frozen copies — see src/city/panels.js.
+      -->
+      <div class="cv-dock" role="toolbar" aria-label="Panels">
+        <span class="cv-dock-label">Panels</span>
+        <button class="cv-dock-btn" data-panel="detail">Detail</button>
+        <button class="cv-dock-btn" data-panel="legend">Legend</button>
+        <button class="cv-dock-btn" data-panel="coords">Coordinates</button>
+        <button class="cv-dock-btn" data-panel="notes">Notes</button>
+      </div>
+
+      <!-- Draggable panels live here; the layer itself is pointer-transparent. -->
+      <div id="city-panels" class="cv-panels"></div>
+
+      <div class="cv-map-foot">
+        <span id="city-status" class="cv-status"></span>
+        <span class="cv-hint">drag to orbit · scroll to zoom</span>
+      </div>
+      <!--
+        Attribution for the sources this view adds. Every one of these is a
+        licence condition, not a courtesy: GODL-India (MCGM) and CC BY (GeoNames)
+        require it, GSHHG is LGPL, and the road/rail layer is OpenStreetMap under
+        ODbL, whose attribution requirement is mandatory. Keep all visible.
+      -->
+      <div class="cv-credit">
+        Coastline
+        <a href="https://www.soest.hawaii.edu/pwessel/gshhg/" target="_blank" rel="noopener noreferrer">GSHHG</a>
+        (NOAA) · Wards
+        <a href="https://portal.mcgm.gov.in/" target="_blank" rel="noopener noreferrer">MCGM</a>,
+        GODL&#8209;India · Places
+        <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a>,
+        CC&nbsp;BY · Roads &amp; rail &copy;
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>
+        contributors, ODbL
+      </div>
+    </div>
+
+    <!-- history + timeline -->
+    <div class="cv-side">
+      <p id="city-summary" class="cv-summary"></p>
+      <div id="city-figures" class="cv-figures"></div>
+
+      <div class="cv-section-label">Eras</div>
+      <div id="city-eras" class="cv-eras"></div>
+
+      <div class="cv-section-label" id="city-divisions-label">Divisions</div>
+      <div id="city-divisions" class="cv-divisions"></div>
+
+      <!--
+        Timeline and Families share the column via a tab switch rather than
+        stacking: the timeline is 62 rows and the families list seven cards, and
+        making them compete for the same vertical space left both too short.
+      -->
+      <div class="cv-tabs" role="tablist">
+        <button id="tab-timeline" class="cv-tab is-active" role="tab" aria-selected="true">Timeline</button>
+        <button id="tab-families" class="cv-tab" role="tab" aria-selected="false">Families</button>
+      </div>
+
+      <div id="city-timeline" class="cv-timeline" role="tabpanel"></div>
+      <div id="city-families" class="cv-families" role="tabpanel" hidden></div>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

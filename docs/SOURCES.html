@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #1c2330; background: #fbfcfe; }
+  @media (prefers-color-scheme: dark) { body { color: #dfe6f2; background: #0f1420; } }
+  h1, h2, h3, h4 { line-height: 1.25; margin: 1.6em 0 .5em; }
+  h1 { font-size: 1.9em; border-bottom: 2px solid #3d7fd6; padding-bottom: .3em; }
+  h2 { font-size: 1.4em; border-bottom: 1px solid #8883; padding-bottom: .25em; }
+  h3 { font-size: 1.15em; }
+  a { color: #2f7fe0; } @media (prefers-color-scheme: dark){ a{ color:#7fb8ff; } }
+  code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: .88em;
+         background: #8882; padding: .12em .35em; border-radius: 4px; }
+  pre { background: #11182a; color: #cfe0ff; padding: 14px 16px; border-radius: 8px;
+        overflow-x: auto; } pre code { background: none; padding: 0; color: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #8884; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #3d7fd61a; }
+  blockquote { margin: 1em 0; padding: .4em 1em; border-left: 3px solid #3d7fd6; background: #3d7fd614; }
+  hr { border: none; border-top: 1px solid #8884; margin: 2em 0; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin: .2em 0; }
+</style></head><body>
+<h1>Sources</h1>
+<p>Every byte of geographic and image data in this project, where it came from, who publishes it, what it is licensed under, and what you are obliged to do if you publish something built on it.</p>
+<p><strong>Nothing in this repository redistributes source data.</strong> <code>npm run fetch</code> downloads each input from its publisher at build time, so what you build is provably what they currently publish.</p>
+<blockquote><h3>Verification status — 22 July 2026</h3>
+<p>Every URL below was requested and returned HTTP 200. Every licence claim was read back from the publisher's own terms page, not from memory or a summary. Two compliance gaps were found in the process and have been fixed; both are recorded in <a href="#7-compliance-what-was-wrong-and-what-was-fixed" target="_blank" rel="noopener noreferrer">§7</a>.</p>
+<p>Two URLs had moved since first writing and are corrected here. One source — the Maharashtra Gazetteers Department — is served with an <strong>expired TLS certificate</strong>; see the note in <a href="#8-mumbai-city-history-sources" target="_blank" rel="noopener noreferrer">§8</a>.</p></blockquote>
+<hr>
+<h2>An honest note on "government sources"</h2>
+<p>The brief for this project asked for credible sources, government websites in particular. That deserves a straight answer rather than a reassuring one.</p>
+<p>Two of the four inputs — <strong>NASA</strong> and <strong>GEBCO</strong> — are exactly that: a national space agency and a programme of two intergovernmental bodies.</p>
+<p>The other two are not. <strong>Natural Earth</strong> and <strong>GeoNames</strong> are open compilations maintained outside government. But they are not amateur scrapes either: both are built <em>from</em> official national mapping agencies, gazetteers and statistical offices, and both are the standard reference datasets in professional cartography and GIS. Natural Earth is supported by the North American Cartographic Information Society and is what most published thematic world maps are drawn from; GeoNames aggregates the US National Geospatial-Intelligence Agency's GNS, the USGS Geographic Names Information System, Ordnance Survey and others.</p>
+<p>The genuinely authoritative alternatives exist and are listed in <a href="#5-more-authoritative-alternatives" target="_blank" rel="noopener noreferrer">§5</a>. They were not used because each is either enormous, split across ~200 separate national downloads, or licensed in ways that would prevent a project like this from being freely shared. The compilations are the right engineering choice here — but they <em>are</em> compilations, and you should know that before citing a figure from this app in anything that matters.</p>
+<hr>
+<h2>1. Administrative boundaries — Natural Earth</h2>
+<p><strong>Used for:</strong> every country outline, every state/province/region outline, and the attribute data behind the country and division information cards.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td>Natural Earth (supported by the North American Cartographic Information Society)</td></tr><tr><td>Home</td><td>https://www.naturalearthdata.com/</td></tr><tr><td>Terms</td><td>https://www.naturalearthdata.com/about/terms-of-use/</td></tr><tr><td>Version used</td><td><strong>5.1.1</strong></td></tr><tr><td>Licence</td><td><strong>Public domain</strong></td></tr><tr><td>Attribution</td><td><strong>Not required.</strong> The terms state plainly: <em>"All versions of Natural Earth raster + vector map data found on this website are in the public domain"</em> and <em>"Crediting the authors is unnecessary."</em></td></tr></tbody></table>
+<h3>Datasets</h3>
+<table><thead><tr><th>File</th><th>Contents</th><th>Rows</th></tr></thead><tbody><tr><td><a href="https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip" target="_blank" rel="noopener noreferrer"><code>ne_10m_admin_0_countries.zip</code></a></td><td>Countries and dependencies, 1:10m</td><td>258</td></tr><tr><td><a href="https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip" target="_blank" rel="noopener noreferrer"><code>ne_10m_admin_1_states_provinces.zip</code></a></td><td>First-level administrative divisions, 1:10m</td><td>4,596</td></tr></tbody></table>
+<h3>What Natural Earth is built from</h3>
+<p>Natural Earth's own documentation credits, among others, the <strong>US Geological Survey</strong>, the <strong>US National Geospatial-Intelligence Agency</strong>, <strong>Statistics Canada</strong>, and a range of national mapping agencies and census bureaux. The population and economic attributes (<code>POP_EST</code>, <code>GDP_MD</code>) are compiled from national statistical offices, the <strong>CIA World Factbook</strong>, and <strong>World Bank</strong> figures — with the year each was gathered stored alongside it, which is why the information card shows <code>Natural Earth (2019)</code> rather than an undated number.</p>
+<h3>Disputed boundaries, and what this project does about them</h3>
+<p>There is no politically neutral map of the world, and Natural Earth does not pretend otherwise. The shapefiles carry roughly 170 columns per record, a large share of which are <em>point of view</em> variants — <code>ADM0_A3_IN</code>, <code>ADM0_A3_PK</code>, <code>ADM0_A3_CN</code>, <code>FCLASS_RU</code> and so on — each encoding how a particular government depicts contested territory.</p>
+<p><strong>This project keeps the default view and discards the variants.</strong> That is a choice, made for simplicity, and it is not a claim that the default is correct. Concretely, it means this globe takes a specific position on Kashmir, Crimea, the West Bank, Western Sahara, Taiwan and several dozen other disputes, and someone somewhere will consider each of those positions wrong.</p>
+<p>One consequence is visible in the data itself: Natural Earth records <strong>Taiwan with <code>ISO_A2 = -99</code></strong> rather than <code>TW</code>. That is why the city of Magong is the one settlement in the dataset that cannot be resolved to a country code — not a bug in the pipeline, but a political decision in the source surfacing downstream.</p>
+<p>If you need a different editorial line, the point-of-view columns are still in <code>data/raw/</code> and <code>ADMIN0_FIELDS</code> in <code>tools/build-data.mjs</code> is where you would select them.</p>
+<hr>
+<h2>2. Cities and place names — GeoNames</h2>
+<p><strong>Used for:</strong> the entire city list, city coordinates, populations, elevations, time zones, feature classes, and the country/region reference tables.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td>GeoNames (Unxos GmbH, Switzerland)</td></tr><tr><td>Home</td><td>https://www.geonames.org/</td></tr><tr><td>About / licence</td><td>https://www.geonames.org/about.html</td></tr><tr><td>Downloads</td><td>https://download.geonames.org/export/dump/</td></tr><tr><td>Licence</td><td><strong>Creative Commons Attribution 4.0</strong> — https://creativecommons.org/licenses/by/4.0/</td></tr><tr><td>Attribution</td><td><strong>Required.</strong> This is the one obligation in this project that is not optional.</td></tr></tbody></table>
+<blockquote><h3>Attribution is mandatory</h3>
+<p>CC BY 4.0 requires you to credit the source. If you publish anything built on this, include a visible credit such as:</p>
+<blockquote><p>City data © <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p></blockquote></blockquote>
+<h3>Datasets</h3>
+<table><thead><tr><th>File</th><th>Contents</th></tr></thead><tbody><tr><td><a href="https://download.geonames.org/export/dump/cities15000.zip" target="_blank" rel="noopener noreferrer"><code>cities15000.zip</code></a></td><td>All places with population ≥ 15,000 — <strong>34,027 rows</strong></td></tr><tr><td><a href="https://download.geonames.org/export/dump/countryInfo.txt" target="_blank" rel="noopener noreferrer"><code>countryInfo.txt</code></a></td><td>ISO codes, capitals, areas, populations, currencies — 252 rows</td></tr><tr><td><a href="https://download.geonames.org/export/dump/admin1CodesASCII.txt" target="_blank" rel="noopener noreferrer"><code>admin1CodesASCII.txt</code></a></td><td>Names for first-level division codes</td></tr><tr><td><a href="https://download.geonames.org/export/dump/admin2Codes.txt" target="_blank" rel="noopener noreferrer"><code>admin2Codes.txt</code></a></td><td>Names for second-level division codes</td></tr></tbody></table>
+<p>Deeper tiers (<code>cities5000</code>, <code>cities1000</code>, <code>cities500</code>) are supported by the pipeline — see DOCUMENTATION.md §1.</p>
+<h3>What GeoNames is built from</h3>
+<p>GeoNames aggregates official gazetteers rather than generating its own names. Its principal sources are government bodies:</p>
+<table><thead><tr><th>Source</th><th>Publisher</th><th>Coverage</th></tr></thead><tbody><tr><td><a href="https://geonames.nga.mil/" target="_blank" rel="noopener noreferrer">GNS</a></td><td><strong>US National Geospatial-Intelligence Agency</strong> / US Board on Geographic Names</td><td>Names outside the United States</td></tr><tr><td><a href="https://www.usgs.gov/us-board-on-geographic-names" target="_blank" rel="noopener noreferrer">GNIS</a></td><td><strong>US Geological Survey</strong> / US Board on Geographic Names</td><td>United States</td></tr><tr><td><a href="https://www.ordnancesurvey.co.uk/products/os-open-names" target="_blank" rel="noopener noreferrer">Ordnance Survey Open Data</a></td><td><strong>Ordnance Survey</strong> (UK)</td><td>United Kingdom</td></tr><tr><td>GeoBase</td><td><strong>Natural Resources Canada</strong></td><td>Canada</td></tr><tr><td>GTOPO30</td><td><strong>USGS</strong></td><td>Elevation (<code>dem</code> field)</td></tr></tbody></table>
+<p>Population figures come from national census and statistical agencies, and are therefore <strong>of differing vintages between countries</strong> — a point worth remembering before comparing two countries' city populations directly.</p>
+<h3>Known caveats</h3>
+<ul><li><strong>"All cities" means places of 15,000+.</strong> 34,027 settlements is not every</li></ul>
+<p>  named place on Earth.</p>
+<ul><li><strong>City populations are administrative, not metropolitan.</strong> GeoNames records</li></ul>
+<p>  New York City at 8.8 million (the city), not ~20 million (the metro area).   Comparing cities across countries compares differently-drawn boundaries.</p>
+<ul><li><strong>Some entries are city districts.</strong> Tokyo's wards appear as separate rows, so</li></ul>
+<p>  the nearest place to central Tokyo may resolve to a ward rather than to   "Tokyo".</p>
+<ul><li><strong>Coordinates are point centroids</strong>, not city extents.</li></ul>
+<hr>
+<h2>3. Surface imagery — NASA</h2>
+<p><strong>Used for:</strong> the globe's colour map and the night-lights map.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td><strong>NASA</strong> — Earth Observatory / Goddard Space Flight Center</td></tr><tr><td>Use policy</td><td>https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance</td></tr><tr><td>Licence</td><td>Public domain; most NASA-led mission data is <strong>CC0</strong></td></tr><tr><td>Attribution</td><td><strong>Requested, not required.</strong> NASA asks to be acknowledged as the source.</td></tr></tbody></table>
+<blockquote><p>NASA's policy: <em>"NASA ESDIS content used in a factual manner that does not suggest or imply endorsement may be used without explicit permission. NASA should be acknowledged as the source of the material."</em></p>
+<p>You must not imply NASA endorsement, or claim copyright over NASA material.</p></blockquote>
+<table><thead><tr><th>Image</th><th>Product</th><th>Resolution</th></tr></thead><tbody><tr><td><a href="https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73751/world.topo.bathy.200407.3x5400x2700.jpg" target="_blank" rel="noopener noreferrer"><code>world.topo.bathy.200407.3x5400x2700.jpg</code></a></td><td>Blue Marble Next Generation, July 2004, with topography and bathymetry</td><td>5400 × 2700 → resampled to 4096 × 2048</td></tr><tr><td><a href="https://eoimages.gsfc.nasa.gov/images/imagerecords/79000/79765/dnb_land_ocean_ice.2012.3600x1800.jpg" target="_blank" rel="noopener noreferrer"><code>dnb_land_ocean_ice.2012.3600x1800.jpg</code></a></td><td>Black Marble / <em>Earth at Night</em> 2012, Suomi NPP VIIRS day-night band</td><td>3600 × 1800 → resampled to 2048 × 1024</td></tr></tbody></table>
+<p>Blue Marble Next Generation is derived from <strong>MODIS</strong> aboard NASA's <em>Terra</em> satellite. Note it depicts <strong>July 2004</strong> — a real month, so the snow line and vegetation are July's, not today's.</p>
+<hr>
+<h2>4. Elevation and bathymetry — GEBCO</h2>
+<p><strong>Used for:</strong> the relief shading normal map and the land/ocean mask that restricts the specular highlight to water.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td><strong>GEBCO</strong> — General Bathymetric Chart of the Oceans</td></tr><tr><td>Governance</td><td>Jointly by the <strong>International Hydrographic Organization (IHO)</strong> and the <strong>Intergovernmental Oceanographic Commission (IOC) of UNESCO</strong></td></tr><tr><td>Home</td><td>https://www.gebco.net/</td></tr><tr><td>Licence</td><td><strong>Public domain</strong> — <em>"The GEBCO Grid is placed in the public domain and may be used free of charge."</em></td></tr><tr><td>Attribution</td><td>Requested for publications.</td></tr></tbody></table>
+<table><thead><tr><th>Image</th><th>Product</th></tr></thead><tbody><tr><td><a href="https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png" target="_blank" rel="noopener noreferrer"><code>gebco_08_rev_elev_21600x10800.png</code></a></td><td>GEBCO_08 land elevation grid, distributed via NASA Earth Observatory — 21600 × 10800, resampled here to 2048 × 1024</td></tr></tbody></table>
+<p>If you use GEBCO data in a publication, the current recommended citation is:</p>
+<blockquote><p>GEBCO Bathymetric Compilation Group (2026). <em>The GEBCO_2026 Grid — a continuous terrain model for oceans and land at 15 arc-second intervals.</em> doi:<a href="https://doi.org/10.5285/4f68d5c7-45eb-f999-e063-7086abc036fa" target="_blank" rel="noopener noreferrer">10.5285/4f68d5c7-45eb-f999-e063-7086abc036fa</a></p></blockquote>
+<p><strong>This project uses the older GEBCO_08 revision</strong>, because NASA distributes it as a ready-made equirectangular image. The current GEBCO_2026 grid is substantially better and is available directly from GEBCO if you need accuracy rather than a shading map.</p>
+<hr>
+<h2>5. More authoritative alternatives</h2>
+<p>If this were feeding something where the boundary line itself carries legal or analytical weight, these are the datasets to reach for instead. Each is more authoritative than what is used here, and each is more work.</p>
+<table><thead><tr><th>Dataset</th><th>Publisher</th><th>Why you would use it</th><th>Why not here</th></tr></thead><tbody><tr><td><a href="https://gadm.org/" target="_blank" rel="noopener noreferrer">GADM</a></td><td>University of California, Davis</td><td>Administrative areas to level 5, far more detailed</td><td>Non-commercial licence only</td></tr><tr><td><a href="https://ec.europa.eu/eurostat/web/gisco" target="_blank" rel="noopener noreferrer">Eurostat GISCO / NUTS</a></td><td><strong>European Commission</strong></td><td>The legal reference for EU statistical regions</td><td>Europe only</td></tr><tr><td><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank" rel="noopener noreferrer">US Census TIGER/Line</a></td><td><strong>US Census Bureau</strong></td><td>Legally authoritative US boundaries</td><td>United States only</td></tr><tr><td><a href="https://surveyofindia.gov.in/" target="_blank" rel="noopener noreferrer">Survey of India</a></td><td><strong>Government of India</strong></td><td>India's official boundaries</td><td>India only; restricted licensing</td></tr><tr><td><a href="https://www.un.org/geospatial/" target="_blank" rel="noopener noreferrer">UN Geospatial (UNGIS)</a></td><td><strong>United Nations</strong></td><td>The UN's own world map</td><td>Coarse; restrictive terms</td></tr><tr><td><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a></td><td>OSM Foundation</td><td>Vastly more detail, continuously updated</td><td>ODbL share-alike; needs heavy processing</td></tr><tr><td><a href="https://www.gebco.net/data-products/gridded-bathymetry-data" target="_blank" rel="noopener noreferrer">GEBCO_2026 grid</a></td><td><strong>IHO / IOC-UNESCO</strong></td><td>Current, far higher resolution</td><td>Multi-GB NetCDF, not a web texture</td></tr><tr><td><a href="https://www.worldpop.org/" target="_blank" rel="noopener noreferrer">WorldPop</a></td><td>University of Southampton</td><td>Modelled gridded population</td><td>Modelled estimates, not counts</td></tr></tbody></table>
+<hr>
+<h2>6. Software</h2>
+<table><thead><tr><th>Library</th><th>Licence</th><th>Use</th></tr></thead><tbody><tr><td><a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">three.js</a> 0.185.1</td><td>MIT</td><td>WebGL rendering (vendored in <code>vendor/</code>)</td></tr><tr><td><a href="https://github.com/mapbox/earcut" target="_blank" rel="noopener noreferrer">earcut</a></td><td>ISC</td><td>Polygon triangulation (vendored)</td></tr><tr><td><a href="https://github.com/mbloch/mapshaper" target="_blank" rel="noopener noreferrer">mapshaper</a></td><td>MPL 2.0</td><td>Shapefile → GeoJSON, simplification (build-time only)</td></tr><tr><td><a href="https://sharp.pixelplumbing.com/" target="_blank" rel="noopener noreferrer">sharp</a></td><td>Apache 2.0</td><td>Image resampling (build-time only)</td></tr><tr><td><a href="https://github.com/101arrowz/fflate" target="_blank" rel="noopener noreferrer">fflate</a></td><td>MIT</td><td>Unzipping downloads (build-time only)</td></tr></tbody></table>
+<p>Only three.js and earcut ship to the browser. The rest never leave the build.</p>
+<hr>
+<h2>7. Compliance: what was wrong, and what was fixed</h2>
+<p>A verification pass on 22 July 2026 checked every URL and read every licence back from the publisher. Two genuine problems turned up. Both are fixed; both are recorded here, because "we checked and found nothing" would have been a less useful statement than what actually happened.</p>
+<h3>7.1 The application displayed no attribution — FIXED</h3>
+<p>Every mention of GeoNames, Natural Earth, NASA and GEBCO lived in source-code comments or as the label of a data field. None of it was a <em>credit</em>, and none of it was visible to anybody actually using the app.</p>
+<p>CC BY 4.0 requires attribution "in any reasonable manner" for public use. Code comments are not that. As it stood, publishing the app would have been a licence breach.</p>
+<p><strong>Fix:</strong> a permanent "Data sources" control in the lower-right corner of the globe view, expanding to the full credit line with links to each publisher and to the CC BY 4.0 deed. It is deliberately not dismissable, and the markup carries a comment explaining why, so that a future tidy-up does not quietly delete it.</p>
+<h3>7.2 Vendored libraries carried no licence notice — FIXED</h3>
+<p><code>vendor/</code> contains nine files copied out of npm packages. Two of them (<code>three.module.js</code>, <code>three.core.js</code>) shipped with an SPDX header. The other seven — earcut, and the six three.js addon files — had none:</p>
+<pre><code>vendor/earcut.js
+vendor/jsm/controls/OrbitControls.js
+vendor/jsm/lines/Line2.js
+vendor/jsm/lines/LineGeometry.js
+vendor/jsm/lines/LineMaterial.js
+vendor/jsm/lines/LineSegments2.js
+vendor/jsm/lines/LineSegmentsGeometry.js</code></pre>
+<p>Both the MIT and the ISC licence require the copyright notice and permission text to be retained "in all copies or substantial portions of the Software". Vendoring a file into a repository is a copy. Stripped of their notices, those files were being redistributed in breach of the very licences that permit redistribution.</p>
+<p>This is an easy mistake to make: copying a source file out of <code>node_modules</code> leaves the licence behind in a sibling <code>LICENSE</code> file that nothing points at.</p>
+<p><strong>Fix:</strong> an SPDX header on each file naming the copyright holder and licence, plus the complete licence texts at <code>vendor/LICENSE.three.txt</code> and <code>vendor/LICENSE.earcut.txt</code>. Verified: all nine vendored files now carry a notice.</p>
+<h3>7.3 Things that were already fine</h3>
+<ul><li>No source data is redistributed — everything is fetched from the publisher at</li></ul>
+<p>  build time, so no question of re-licensing arises.</p>
+<ul><li>Natural Earth is public domain and explicitly waives attribution.</li><li>NASA and GEBCO ask for credit but do not require it; both are credited anyway.</li><li>Build-only dependencies (mapshaper MPL-2.0, sharp Apache-2.0, fflate MIT)</li></ul>
+<p>  never reach the browser, so their terms attach to the build environment rather   than to anything you publish.</p>
+<h3>7.4 What would still need attention</h3>
+<ul><li><strong>If you add OpenStreetMap data</strong>, ODbL brings share-alike obligations on</li></ul>
+<p>  derived databases that none of the current sources impose. Do not mix it in   casually.</p>
+<ul><li><strong>If you swap the imagery for anything from Google, Mapbox, Esri or Bing</strong>,</li></ul>
+<p>  none of the above applies — those are licensed products whose terms generally   forbid exactly this kind of reuse.</p>
+<ul><li><strong>The NASA insignia and logo are separately restricted</strong> and are not used</li></ul>
+<p>  here. Permission to use NASA imagery is not permission to use NASA branding.</p>
+<hr>
+<h2>8. Mumbai city history sources</h2>
+<p>Sources for the city history feature. These support prose and dates rather than geometry, so the standard is citability rather than licensing — but the same preference for official publishers applies.</p>
+<table><thead><tr><th>Source</th><th>Publisher</th><th>Used for</th></tr></thead><tbody><tr><td><a href="https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/history.html" target="_blank" rel="noopener noreferrer">Gazetteer of Greater Bombay</a></td><td><strong>Gazetteers Department, Government of Maharashtra</strong></td><td>The main historical narrative: ancient, mediaeval, Portuguese, British and modern periods</td></tr><tr><td><a href="https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/Bombay%20City/volume_1/index.html" target="_blank" rel="noopener noreferrer">Gazetteer of Bombay City and Island</a> (S. M. Edwardes, 1909)</td><td><strong>Gazetteers Department, Government of Maharashtra</strong></td><td>Primary-source detail on the islands, reclamation and early administration</td></tr><tr><td><a href="https://whc.unesco.org/en/list/244/" target="_blank" rel="noopener noreferrer">Elephanta Caves</a></td><td><strong>UNESCO World Heritage Centre</strong></td><td>Inscribed 1987; caves dated mid-5th to 6th century AD, occupation from the 2nd century BC</td></tr><tr><td><a href="https://whc.unesco.org/en/list/945/" target="_blank" rel="noopener noreferrer">Chhatrapati Shivaji Terminus</a></td><td><strong>UNESCO World Heritage Centre</strong></td><td>Inscribed 2004; built from 1878 over ten years, architect F. W. Stevens</td></tr><tr><td><a href="https://whc.unesco.org/en/list/1480/" target="_blank" rel="noopener noreferrer">Victorian Gothic and Art Deco Ensembles</a></td><td><strong>UNESCO World Heritage Centre</strong></td><td>Inscribed 2018; the two expansion waves and the Oval Maidan ensemble</td></tr><tr><td><a href="https://mumbaicity.gov.in/en/history/" target="_blank" rel="noopener noreferrer">Mumbai City District — History</a></td><td><strong>District Administration, Government of Maharashtra</strong></td><td>Renaming to Mumbai (1995); Mumbadevi and Koli origin of the name</td></tr><tr><td><a href="https://mumbaicity.gov.in/en/about-district/demography/" target="_blank" rel="noopener noreferrer">District demography</a></td><td><strong>District Administration, Government of Maharashtra</strong></td><td>Mumbai City district population, 2011 Census</td></tr><tr><td><a href="https://censusindia.gov.in/" target="_blank" rel="noopener noreferrer">Census of India</a></td><td><strong>Office of the Registrar General &amp; Census Commissioner, India</strong></td><td>Population figures</td></tr><tr><td><a href="https://www.iranicaonline.org/articles/parsi-communities-i-early-history/" target="_blank" rel="noopener noreferrer">Encyclopaedia Iranica — Parsi Communities</a></td><td>Columbia University (peer-reviewed)</td><td>Early Zoroastrian migration to Gujarat</td></tr></tbody></table>
+<h3>Points of interest (the zoom-in detail)</h3>
+<p>The city map reveals neighbourhoods, railway stations, campuses, forts, stadiums and hills as you zoom in. These come from the <strong>GeoNames India gazetteer</strong> (<code>IN.zip</code>), the same publisher and licence (<strong>CC BY 4.0</strong>) already credited for the globe's city layer — its per-country dump carries far more than the global 15,000-plus tier does. Only a curated set of feature codes is kept (the raw Mumbai bbox is ~45% hotels and restaurants, which would be noise), filtered to the city bounding box and scored for importance so the client can fade each in at the right zoom. No share-alike obligation attaches. Credited in the city view alongside the coastline and ward sources.</p>
+<h3>Business families (the Families tab)</h3>
+<p>The dynasty entries mix official company histories with scholarly secondary accounts, and each card names which it is on screen (<strong>Official source</strong> / <strong>Secondary source</strong>).</p>
+<table><thead><tr><th>Source</th><th>Publisher</th><th>Used for</th></tr></thead><tbody><tr><td><a href="https://www.tata.com/about-us/tata-group-our-heritage/Our-Timeline" target="_blank" rel="noopener noreferrer">Tata group — Our Heritage</a></td><td><strong>Tata Sons</strong> (official)</td><td>Tata dates: 1868 founding, Empress Mills 1874, Taj 1903, Tata Steel 1907, Tata Power 1910, IISc 1909, Tata Airlines 1932</td></tr><tr><td><a href="https://www.godrejcp.com/know-us/our-story" target="_blank" rel="noopener noreferrer">Godrej — Our Story</a></td><td><strong>Godrej</strong> (official)</td><td>Godrej: 1897 lock works, springless lock (1907), vegetable-oil soap, later engineering/aerospace</td></tr><tr><td><a href="https://www.mcgm.gov.in/irj/go/km/docs/documents/D%20Ward/Heritage-Sites/Heritage-12.pdf" target="_blank" rel="noopener noreferrer">Mumbai Legacy Project heritage note</a></td><td><strong>MCGM</strong> (official)</td><td>Petit family: Oriental Spinning &amp; Weaving Mill (1855), first Petit baronet (1890)</td></tr><tr><td>Gazetteer of Greater Bombay (as above)</td><td><strong>Govt of Maharashtra</strong> (official)</td><td>Wadia shipbuilding (1736) and Bombay Dyeing; Jejeebhoy's China trade and philanthropy</td></tr><tr><td><a href="https://www.theindiaforum.in/history/rise-and-fall-sassoons" target="_blank" rel="noopener noreferrer">The Rise and Fall of the Sassoons</a> + encyclopaedia entries</td><td>The India Forum / Encyclopedia.com (secondary)</td><td>Sassoon arrival 1832, mills, Sassoon Docks 1872–75</td></tr><tr><td><a href="https://www.ril.com/OurCompany/History.aspx" target="_blank" rel="noopener noreferrer">Reliance — history</a> + press</td><td>Reliance / press (secondary)</td><td>Ambani/Reliance: 1966 founding, Vimal polyester, 1977 share issue, petrochemicals</td></tr></tbody></table>
+<blockquote><p><strong>Company histories are not neutral.</strong> Where a family's own firm is the source, the card marks it <em>Official source</em> — meaning the publisher is authoritative on the dates, not that the account is disinterested. Founding years and product firsts are well documented; the framing ("the family that industrialised India") is the app's, drawn from the record but not a neutral fact.</p></blockquote>
+<h3>Caveats worth knowing</h3>
+<p><strong>The gazetteer's TLS certificate is expired.</strong> <code>gazetteers.maharashtra.gov.in</code> presents a certificate that both browsers and <code>curl</code> reject (<code>SEC_E_CERT_EXPIRED</code>). The content is genuine government gazetteer material and matches the printed editions, but the connection cannot be cryptographically verified, and a browser will show a full-page warning before letting you through. That is a server misconfiguration on the state government's side rather than evidence of tampering — but it is stated here instead of glossed over, because "official source" and "verified connection" are not the same claim.</p>
+<p><strong>The Greater Bombay gazetteer was published in 1986</strong> and its narrative effectively stops there. Everything later — the 1992–93 riots, the 1993 bombings, the 1995 renaming, 2005, 2006, 2008 — rests on other sources, and each timeline entry carries its own citation.</p>
+<p><strong>Population figures are easy to get wrong,</strong> because "Mumbai" names at least four different areas. The 2011 Census records Greater Mumbai (M Corp) as two <em>part</em> records split across two districts:</p>
+<table><thead><tr><th>Unit</th><th>2011 population</th></tr></thead><tbody><tr><td>Mumbai City district</td><td>3,085,411</td></tr><tr><td>Mumbai Suburban district</td><td>9,356,962</td></tr><tr><td><strong>Greater Mumbai (M Corp)</strong> — the sum of the two</td><td><strong>12,442,373</strong></td></tr><tr><td>Greater Mumbai Urban Agglomeration</td><td>~18.4 million</td></tr></tbody></table>
+<p>Several secondary sites quote the suburban part-figure of 9,356,962 as the population of Greater Mumbai. It is not; it is about three-quarters of it. The figure used here is the sum, cross-checked against the official district demography page, which independently gives the Mumbai City district figure of 3,085,411.</p>
+<p><strong>Where sources disagree, the timeline says so.</strong> The Samyukta Maharashtra movement's death toll is given as 105 in some accounts and 106 in others, and the Hutatma Chowk memorial itself carries 106 names. Both figures are shown rather than a false precision.</p>
+<hr>
+<h2>9. Coastline for the city view — NOAA GSHHG</h2>
+<p><strong>Used for:</strong> the high-resolution shoreline in the 3D city view. Natural Earth's 1:10m coastline reduces Mumbai to a handful of vertices — fine on a globe, useless at city scale.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Dataset</td><td>GSHHG — Global Self-consistent, Hierarchical, High-resolution Geography</td></tr><tr><td>Authors</td><td>Paul Wessel (University of Hawai'i) and Walter H. F. Smith (<strong>NOAA</strong>)</td></tr><tr><td>Distribution</td><td>https://www.soest.hawaii.edu/pwessel/gshhg/ , co-hosted by <strong>NOAA NCEI</strong></td></tr><tr><td>Version</td><td>2.3.7</td></tr><tr><td>Licence</td><td><strong>LGPL</strong> — free to use and redistribute, with attribution</td></tr></tbody></table>
+<p>Built from the World Vector Shoreline (<strong>US Defense Mapping Agency</strong>, now NGA), the CIA World Data Bank II, and the Atlas of the Biosphere. Full resolution is roughly 100–200 m, which renders Mumbai's peninsula, its creeks and Elephanta Island properly.</p>
+<hr>
+<h2>10. Administrative divisions — MCGM</h2>
+<p><strong>Used for:</strong> the 24 ward plates in Mumbai's 3D city view.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td><strong>Municipal Corporation of Greater Mumbai</strong> (MCGM / BMC)</td></tr><tr><td>Service</td><td><code>services8.arcgis.com/r6MmJtuWAzMawmJ8/.../BMC_Ward/FeatureServer/0</code></td></tr><tr><td>Contents</td><td>24 ward polygons, codes A through T</td></tr><tr><td>Native CRS</td><td>UTM zone 43N (EPSG:32643); requested as WGS 84</td></tr><tr><td>Licence</td><td><strong>Not stated on the endpoint.</strong> See below.</td></tr></tbody></table>
+<p>This is the corporation's own GIS service — the body that draws the ward boundaries publishing them itself, rather than a third-party copy. The service returns GeoJSON in WGS 84 on request, so there is no reprojection step.</p>
+<h3>Why this source and not the obvious alternative</h3>
+<p>The widely-cited alternative is the <a href="https://github.com/datameet/Municipal_Spatial_Data" target="_blank" rel="noopener noreferrer">DataMeet municipal repository</a>, which carries the same wards compiled from MCGM maps. It was <strong>not</strong> used, and the reason is worth recording because the summaries you find online get it wrong.</p>
+<p>DataMeet's top-level documentation is often quoted as CC BY 4.0. Mumbai's own <code>Readme.md</code> inside that repository says something different:</p>
+<blockquote><p>The dataset is created by the Pune chapter of the DataMeet Trust, Bangalore, India, and is shared under Creative Commons Attribution-<strong>ShareAlike</strong> 2.5 India.</p></blockquote>
+<p>ShareAlike is viral. Any ward layer derived from it would itself have to be published under CC BY-SA 2.5 India. That is perfectly usable for a personal project, and genuinely problematic for a commercial one: it would oblige you to release your processed boundary data under a licence that lets a competitor take it. Since this project is intended to be sellable, that obligation is the wrong trade.</p>
+<h3>The licence position of the source actually used</h3>
+<p>The MCGM endpoint states no licence at all, which is not the same as granting one. The applicable default is the <strong>Government Open Data License – India (GODL)</strong>, which under the National Data Sharing and Accessibility Policy covers "shareable non-sensitive data ... generated using public funds by various agencies of the Government of India". Its terms, verified against the published licence:</p>
+<ul><li><strong>Commercial use: permitted</strong> — "a worldwide, royalty-free, non-exclusive</li></ul>
+<p>  license to use, adapt, publish ... for all lawful commercial and   non-commercial purposes".</p>
+<ul><li><strong>Attribution: mandatory</strong> — the provider, source and licence must be</li></ul>
+<p>  published.</p>
+<ul><li><strong>ShareAlike: none.</strong> Derivative works need not be released under the same</li></ul>
+<p>  terms.</p>
+<p>Ward boundaries drawn by a municipal corporation with public money, published on that corporation's own public service, sit squarely inside that description.</p>
+<blockquote><p><strong>Be clear-eyed about this.</strong> GODL applying here is an inference from national policy, not a statement printed on the endpoint. It is the strongest position available short of asking, and it is the position most consistent with the data's nature and publisher — but if you are taking this to market, write to MCGM and get the grant in writing. That costs one email and removes the only real ambiguity left in this project.</p></blockquote>
+<h3>Data quality</h3>
+<p>mapshaper reports roughly 106 self-intersections in the published geometry — adjacent wards whose shared borders do not quite coincide. The count barely changes between simplification levels, confirming they are present in the source rather than introduced downstream. The build repairs them with <code>-clean</code> and applies no simplification. Treat the rendered ward edges as indicative, not survey-accurate.</p>
+<hr>
+<h2>11. Roads and railway — OpenStreetMap</h2>
+<p><strong>Used for:</strong> the arterial road network and the suburban railway lines in the 3D city view — the layer that turns a coast outline into a recognisable city.</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Publisher</td><td><strong>OpenStreetMap</strong> contributors</td></tr><tr><td>Source</td><td>Overpass API (mirrors: kumi.systems, private.coffee, overpass-api.de)</td></tr><tr><td>Contents</td><td>7,602 road ways (motorway / trunk / primary / secondary) + 1,007 railway ways</td></tr><tr><td>Licence</td><td><strong>Open Database Licence (ODbL) 1.0</strong> — https://opendatacommons.org/licenses/odbl/</td></tr><tr><td>Attribution</td><td><strong>Mandatory:</strong> "© OpenStreetMap contributors". Credited in the city view.</td></tr></tbody></table>
+<h3>This is the one share-alike source in the project — read this before shipping</h3>
+<p>Every other source here is either public domain, permissively licensed (attribution only), or — in the case of the wards — deliberately chosen to <em>avoid</em> share-alike. OSM is different, and it was used with eyes open because there is <strong>no licence-clean source of street-level road and rail geometry</strong>: no government open-data portal publishes Mumbai's road network at this detail, and Natural Earth's roads are 1:10m (a handful of lines for the whole city). OSM is the only option that makes this layer possible at all.</p>
+<p>What ODbL actually requires, applied to this project:</p>
+<ul><li><strong>Attribution</strong> to "OpenStreetMap contributors" wherever the data is shown.</li></ul>
+<p>  This is in the city view's credit line. Non-negotiable.</p>
+<ul><li>**Share-alike, but only on the <em>database</em>.** ODbL draws a line between a</li></ul>
+<p>  <em>Produced Work</em> (something rendered <em>from</em> the data — a map image, the pixels   on screen) and a <em>Derivative Database</em> (the road data itself). A Produced Work   carries only the attribution requirement. Share-alike bites when you publicly   distribute the <em>database</em> or a derivative of it.</p>
+<ul><li><strong>This app ships <code>mumbai-roads.json</code> to the browser.</strong> That file is a</li></ul>
+<p>  derivative database. So if you distribute the app publicly, that road extract   must be offered under ODbL — a competitor may take <em>that file</em>. Your own   application code, the history, the other layers, and the rendered look are   <strong>not</strong> affected; ODbL does not reach into them.</p>
+<h3>What this means for a sellable product</h3>
+<p>It is workable — a great many commercial products build on OSM — but it is a real obligation, and it is the opposite of the call made for the ward data. Your options, cleanest first:</p>
+<ol><li><strong>Ship it and comply.</strong> Keep the attribution, and make the</li></ol>
+<p>   <code>mumbai-roads.json</code> extract available under ODbL (a link on a page satisfies    it). Your app stays proprietary; only that one data file is shared-alike.</p>
+<ol><li><strong>Render roads server-side into the coastline/relief as image tiles</strong> before</li></ol>
+<p>   shipping, so the client receives a <em>Produced Work</em> (pixels) rather than the    database. Then only attribution applies. More work, removes the share-alike    entirely.</p>
+<ol><li><strong>Drop the layer</strong> if even a shared road-data file is unacceptable. The map</li></ol>
+<p>   still works without it — this is the only OSM-derived layer, isolated in one    file and behind the "Roads" toggle, precisely so it can be removed cleanly.</p>
+<p>This was added at your explicit direction, knowing the trade. It is flagged here so the choice stays visible rather than buried.</p>
+<hr>
+<h2>12. Summary of your obligations</h2>
+<p>If you publish anything built on this project:</p>
+<ol><li><strong>You must credit GeoNames</strong> — CC BY 4.0 is a legal requirement, not a</li></ol>
+<p>   courtesy.</p>
+<ol><li><strong>You should credit NASA and GEBCO</strong> — requested, not required.</li><li><strong>You need not credit Natural Earth</strong> — it is public domain and explicitly</li></ol>
+<p>   says crediting is unnecessary.</p>
+<ol><li><strong>You must credit NOAA/GSHHG</strong> if the city view is included — LGPL requires</li></ol>
+<p>   attribution.</p>
+<ol><li><strong>You must credit MCGM</strong> for the ward boundaries — GODL-India makes</li></ol>
+<p>   attribution mandatory, and it is the condition on which commercial use rests.</p>
+<ol><li><strong>You must credit OpenStreetMap AND honour ODbL share-alike</strong> for the roads</li></ol>
+<p>   and railway — attribution plus, if you distribute the app, offering the    <code>mumbai-roads.json</code> extract under ODbL. See §11; this is the one share-alike    obligation in the project.</p>
+<ol><li><strong>Keep the licence headers on everything in <code>vendor/</code>.</strong> MIT and ISC both</li></ol>
+<p>   require the notice to travel with the code.</p>
+<ol><li><strong>Keep the in-app "Data sources" credit visible.</strong> It is what actually</li></ol>
+<p>   discharges obligations 1 and 4; a line in this file does not.</p>
+<ol><li><strong>Do not present the boundaries as authoritative.</strong> They are simplified to</li></ol>
+<p>   8-12% of source detail and reflect one editorial view of several dozen active    territorial disputes.</p>
+<p>A single credit line covering all of it:</p>
+<blockquote><p>Boundaries: Natural Earth (public domain). Cities: © GeoNames, CC BY 4.0. Imagery: NASA Earth Observatory. Elevation: GEBCO (IHO/IOC-UNESCO). Coastline: GSHHG (Wessel &amp; Smith, NOAA). Wards: MCGM, GODL-India. Places: © GeoNames, CC BY. Roads &amp; rail: © OpenStreetMap contributors, ODbL.</p></blockquote>
+<p>That line is already rendered in the app under "Data sources" in the lower-right corner. If you fork the UI, carry it across.</p>
+<hr>
+<p><em>Source versions and the build date are recorded in <code>data/manifest.json</code> each time the pipeline runs.</em></p>
+</body></html>

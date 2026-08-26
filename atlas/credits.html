@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLAS — Sources, Licences & Copyright</title>
+<style>
+  :root { color-scheme: dark; }
+  body { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #e7eefb; background: #05070d; }
+  h1 { font-size: 1.9em; border-bottom: 2px solid #3d7fd6; padding-bottom: .3em; }
+  h2 { font-size: 1.3em; border-bottom: 1px solid #ffffff22; padding-bottom: .25em; margin-top: 2em; }
+  a { color: #7fd4ff; } code { font-family: ui-monospace, Menlo, monospace; background:#ffffff14; padding:.1em .4em; border-radius:5px; font-size:.88em; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; display:block; overflow-x:auto; }
+  th, td { border: 1px solid #ffffff22; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #3d7fd61a; }
+  .note { background:#3d7fd614; border-left:3px solid #3d7fd6; padding:.6em 1em; border-radius:6px; margin:1em 0; }
+  .warn { background:#ff6b6b14; border-left:3px solid #ff6b6b; padding:.6em 1em; border-radius:6px; margin:1em 0; }
+  a.back { display:inline-block; margin-bottom:1em; }
+</style>
+</head>
+<body>
+<a class="back" href="index.html">&larr; Back to the globe</a>
+<h1>Sources, Licences &amp; Copyright</h1>
+<p>ATLAS is built to be <strong>copyright-clean</strong>. Everything it renders is either public domain, permissively licensed with attribution, or original work written for this project. Nothing copyrighted is reproduced — where richer material exists, ATLAS <em>links</em> to the source instead of copying it.</p>
+
+<h2>1. The globe imagery &amp; data</h2>
+<table>
+  <tr><th>Asset</th><th>Publisher</th><th>Licence</th><th>Obligation</th></tr>
+  <tr><td>Blue Marble day map, Black Marble night lights</td><td>NASA Earth Observatory</td><td>Public domain (CC0-like)</td><td>Credit requested, not required</td></tr>
+  <tr><td>Elevation / ocean mask (GEBCO_08 via NASA)</td><td>GEBCO (IHO / IOC-UNESCO)</td><td>Public domain</td><td>Credit requested</td></tr>
+  <tr><td>Country &amp; state outlines (parent project)</td><td>Natural Earth (NACIS)</td><td>Public domain</td><td>None</td></tr>
+  <tr><td>City coordinates &amp; names</td><td>GeoNames (Unxos GmbH)</td><td>CC BY 4.0</td><td><strong>Attribution required</strong></td></tr>
+</table>
+<div class="note">City data &copy; <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a>, licensed under
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+Imagery: NASA Earth Observatory. Elevation: GEBCO (IHO/IOC-UNESCO). Boundaries: Natural Earth (public domain).</div>
+
+<h2>2. Software</h2>
+<table>
+  <tr><th>Library</th><th>Licence</th><th>Role</th></tr>
+  <tr><td><a href="https://threejs.org/" target="_blank" rel="noopener">three.js</a> 0.185</td><td>MIT</td><td>WebGL globe rendering (vendored)</td></tr>
+</table>
+<p>Only three.js ships to the browser, under the permissive MIT licence; its notice is retained in <code>../vendor/LICENSE.three.txt</code>.</p>
+
+<h2>3. The city dossiers — original text</h2>
+<p>All prose in the five dossiers (Mumbai, Rome, Cairo, Tokyo, Mexico City) was <strong>written for this project</strong>. It summarises well-established public history in original wording — no encyclopaedia entries, books or articles are copied. Every dossier ends with links to credible <strong>primary and reference sources</strong> (UNESCO, national governments, Encyclopædia Britannica, the World History Encyclopedia) so readers can verify the facts and read further at the source.</p>
+<div class="note">Linking to a website is not copyright infringement. Reproducing its text would be — so ATLAS never does. Photographs of the cities are deliberately omitted to avoid image copyright. When you select a city, its <strong>holographic view</strong> is a <em>procedural, stylised abstraction</em> generated in code (three.js) — not a real map or a photograph of any building — so it carries no geodata or image licence at all.</div>
+
+<h2>4. Accuracy notes</h2>
+<ul>
+  <li>Dates for very ancient or legendary events (e.g. Rome’s 753&nbsp;BC founding, the Aztec 1325 founding) are traditional and debated among historians; the text flags this.</li>
+  <li>City populations depend on definition (city proper vs. metropolitan area) and census year; ATLAS states which it uses and gives ranges where sources differ.</li>
+</ul>
+
+<h2>5. The login system &amp; your credentials</h2>
+<div class="warn">
+  <strong>The login is a gate, not real security.</strong> ATLAS is a static website with no server, so the check runs in your own browser.
+  To keep raw passwords out of the page source, only <strong>SHA-256 hashes</strong> of each credential are stored in <code>js/auth.js</code> — but a determined person can still bypass any client-side gate. Never place anything genuinely sensitive behind it.
+</div>
+<p>The human-readable list of the <strong>built-in</strong> accounts is stored, at your request, in a local Excel file:
+<code>WorldGlobe/docs/atlas_logins.xlsx</code>. Keep that file private and do not commit it to any public repository. To change or add built-in accounts, update the hashes in <code>js/auth.js</code> (the file explains how) and mirror the change in the spreadsheet.</p>
+<p><strong>Sign-up (self-registration).</strong> Because there is no server, a new account created with the <em>Sign up</em> tab is saved only in the visitor's own browser (<code>localStorage</code>, under the key <code>atlas.users</code>). It therefore works on that one device/browser and is not shared with anyone else. Only a SHA-256 hash of the password is stored, never the password itself — but it is still a client-side gate, not secure server authentication. Clearing the browser's site data removes any self-registered accounts.</p>
+
+<h2>6. Reuse of the parent WorldGlobe project</h2>
+<p>ATLAS reuses the already-vendored three.js and the already-downloaded NASA/GEBCO textures from the parent <code>WorldGlobe</code> project via relative paths (<code>../vendor/</code>, <code>../textures/</code>). Those assets carry the licences listed above. The full provenance audit for the parent project lives in <code>../docs/SOURCES.md</code>.</p>
+
+<p style="margin-top:2em"><a class="back" href="index.html">&larr; Back to the globe</a></p>
+</body>
+</html>

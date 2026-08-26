@@ -1,0 +1,554 @@
+{
+  "id": "tokyo",
+  "name": "Tokyo",
+  "formerName": "Edo",
+  "nameLocal": "東京",
+  "country": "Japan",
+  "geonameId": 1850147,
+  "centre": [
+    139.6917,
+    35.6895
+  ],
+  "bbox": [
+    139.55,
+    35.5,
+    139.92,
+    35.82
+  ],
+  "renamed": "1868",
+  "summary": "For most of its life this city was called Edo — a castle town that became the seat of the Tokugawa shoguns in 1603 and grew, by around 1720, into perhaps the largest city on Earth. Renamed Tōkyō, the ‘eastern capital’, when the emperor moved there in 1868, it has twice been destroyed within living memory — by the 1923 earthquake and the 1945 firebombing — and twice rebuilt. Today its greater region holds some 37 million people, the largest metropolitan area in the history of the world.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈14 million",
+      "note": "Tokyo Metropolis; ≈37 million in the greater region — the largest metropolitan area in history.",
+      "sourceId": "metro-tokyo"
+    },
+    {
+      "label": "Founded",
+      "value": "Edo Castle, 1457",
+      "note": "Shogunal capital from 1603; renamed Tokyo in 1868.",
+      "sourceId": "britannica-tokyo"
+    },
+    {
+      "label": "Setting",
+      "value": "Kantō Plain, Tokyo Bay",
+      "note": "The largest plain in Japan, at the head of the bay.",
+      "sourceId": "britannica-tokyo"
+    },
+    {
+      "label": "Seat of",
+      "value": "Emperor & government",
+      "note": "The Imperial Palace stands on the old Edo Castle grounds at the city’s centre.",
+      "sourceId": "metro-tokyo"
+    },
+    {
+      "label": "By c. 1720",
+      "value": "≈1 million people",
+      "note": "Probably the largest city in the world at the time.",
+      "sourceId": "whe-japan"
+    }
+  ],
+  "eras": [
+    {
+      "id": "early",
+      "label": "Early Edo",
+      "from": 645,
+      "to": 1603,
+      "color": "#f5a623"
+    },
+    {
+      "id": "edo",
+      "label": "Edo / Tokugawa",
+      "from": 1603,
+      "to": 1868,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "meiji",
+      "label": "Meiji",
+      "from": 1868,
+      "to": 1912,
+      "color": "#e8467c"
+    },
+    {
+      "id": "imperial",
+      "label": "Imperial & War",
+      "from": 1912,
+      "to": 1945,
+      "color": "#a56bff"
+    },
+    {
+      "id": "postwar",
+      "label": "Postwar",
+      "from": 1945,
+      "to": 1990,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "contemporary",
+      "label": "Contemporary",
+      "from": 1990,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": 645,
+      "era": "early",
+      "title": "Sensō-ji is founded",
+      "body": "Sensō-ji temple is traditionally founded in the fishing village of Asakusa.",
+      "sourceId": "whe-japan",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "645 AD",
+      "place": "sensoji"
+    },
+    {
+      "year": 1457,
+      "era": "early",
+      "title": "Ōta Dōkan builds Edo Castle",
+      "body": "The warrior-poet Ōta Dōkan raises the first Edo Castle.",
+      "sourceId": "whe-japan",
+      "tags": [
+        "major"
+      ],
+      "place": "imperial-palace",
+      "pivotal": true
+    },
+    {
+      "year": 1590,
+      "era": "early",
+      "title": "Ieyasu takes the Kantō",
+      "body": "Tokugawa Ieyasu is granted the Kantō region and makes Edo his base.",
+      "sourceId": "whe-japan",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1600,
+      "era": "early",
+      "title": "Victory at Sekigahara",
+      "body": "Ieyasu wins the Battle of Sekigahara, becoming master of Japan.",
+      "sourceId": "whe-japan",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1603,
+      "era": "edo",
+      "title": "Edo, the shogun’s capital",
+      "body": "Ieyasu becomes shogun; Edo becomes the seat of national power.",
+      "sourceId": "whe-japan",
+      "tags": [
+        "major"
+      ],
+      "place": "imperial-palace",
+      "pivotal": true
+    },
+    {
+      "year": 1657,
+      "era": "edo",
+      "title": "The Great Fire of Meireki",
+      "body": "The Great Fire of Meireki destroys much of Edo and kills tens of thousands.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1703,
+      "era": "edo",
+      "title": "The Genroku earthquake",
+      "body": "The Genroku earthquake and its aftermath devastate the region.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1707,
+      "era": "edo",
+      "title": "Mount Fuji erupts",
+      "body": "Mount Fuji erupts, dusting Edo with volcanic ash.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1720,
+      "era": "edo",
+      "title": "A city of a million",
+      "body": "Edo passes a million people — probably the largest city in the world.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "growth"
+      ],
+      "yearDisplay": "c. 1720"
+    },
+    {
+      "year": 1853,
+      "era": "edo",
+      "title": "Perry's black ships",
+      "body": "Commodore Perry’s “black ships” arrive off Uraga, forcing Japan open.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1855,
+      "era": "edo",
+      "title": "The Ansei earthquake",
+      "body": "The Ansei Edo earthquake kills thousands in the shogunal capital.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1860,
+      "era": "edo",
+      "title": "Ii Naosuke assassinated",
+      "body": "The shogun’s chief minister Ii Naosuke is assassinated outside Edo Castle.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "conflict"
+      ],
+      "place": "imperial-palace"
+    },
+    {
+      "year": 1868,
+      "era": "meiji",
+      "title": "The Meiji Restoration",
+      "body": "The Meiji Restoration ends the shogunate; Edo is renamed Tokyo, the “eastern capital.”",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1872,
+      "era": "meiji",
+      "title": "The first railway",
+      "body": "Japan’s first railway links Tokyo to Yokohama.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "growth"
+      ],
+      "place": "tokyo-station"
+    },
+    {
+      "year": 1889,
+      "era": "meiji",
+      "title": "The Meiji Constitution",
+      "body": "The Meiji Constitution is promulgated, creating an imperial parliament.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1905,
+      "era": "meiji",
+      "title": "The Hibiya riots",
+      "body": "Riots erupt in Tokyo over the terms of peace ending the Russo-Japanese War.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1914,
+      "era": "imperial",
+      "title": "Tokyo Station opens",
+      "body": "Tokyo Station opens, a red-brick symbol of the modern city.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "growth"
+      ],
+      "place": "tokyo-station"
+    },
+    {
+      "year": 1923,
+      "era": "imperial",
+      "title": "The Great Kantō Earthquake",
+      "body": "The Great Kantō Earthquake and firestorms kill over 100,000 and level the city.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1936,
+      "era": "imperial",
+      "title": "The February 26 Incident",
+      "body": "Young officers stage a bloody coup attempt (the February 26 Incident) in central Tokyo.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1945,
+      "era": "postwar",
+      "title": "The firebombing of Tokyo",
+      "body": "The firebombing of 10 March kills around 100,000 in a single night.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1945,
+      "era": "postwar",
+      "title": "Surrender and occupation",
+      "body": "Japan surrenders; Tokyo comes under Allied occupation.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1947,
+      "era": "postwar",
+      "title": "A new constitution",
+      "body": "A new constitution makes the emperor a symbol and renounces war.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1958,
+      "era": "postwar",
+      "title": "Tokyo Tower",
+      "body": "Tokyo Tower opens, a red-and-white beacon of postwar recovery.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "culture"
+      ],
+      "place": "tokyo-tower"
+    },
+    {
+      "year": 1964,
+      "era": "postwar",
+      "title": "Olympics and the bullet train",
+      "body": "Tokyo hosts the Olympics; the first bullet train (Shinkansen) begins running.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1968,
+      "era": "postwar",
+      "title": "The student protests",
+      "body": "Student protests and barricades rock Tokyo’s universities.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "1968–69"
+    },
+    {
+      "year": 1990,
+      "era": "contemporary",
+      "title": "The bubble economy peaks",
+      "body": "The asset “bubble economy” peaks before a long, grinding slump.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1995,
+      "era": "contemporary",
+      "title": "The subway sarin attack",
+      "body": "The Aum Shinrikyo cult releases sarin gas on the Tokyo subway, killing 13.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 2011,
+      "era": "contemporary",
+      "title": "The Tōhoku earthquake",
+      "body": "The Tōhoku earthquake shakes Tokyo and triggers the Fukushima crisis to the north.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 2012,
+      "era": "contemporary",
+      "title": "Tokyo Skytree",
+      "body": "Tokyo Skytree opens at 634 m, the world’s tallest tower.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "growth"
+      ],
+      "place": "sensoji"
+    },
+    {
+      "year": 2020,
+      "era": "contemporary",
+      "title": "The pandemic empties Tokyo",
+      "body": "The COVID-19 pandemic empties Tokyo’s streets and postpones the Olympics.",
+      "sourceId": "britannica-tokyo",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 2021,
+      "era": "contemporary",
+      "title": "The delayed Olympics",
+      "body": "Tokyo hosts the delayed 2020 Olympics behind closed doors.",
+      "sourceId": "metro-tokyo",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "imperial-palace",
+      "name": "Imperial Palace",
+      "lat": 35.6852,
+      "lon": 139.7528,
+      "note": "The old Edo Castle; the emperor’s residence since 1868, at the city’s centre."
+    },
+    {
+      "id": "sensoji",
+      "name": "Sensō-ji",
+      "lat": 35.7148,
+      "lon": 139.7967,
+      "note": "Tokyo’s oldest temple, traditionally founded 645, in Asakusa."
+    },
+    {
+      "id": "tokyo-station",
+      "name": "Tokyo Station",
+      "lat": 35.6812,
+      "lon": 139.7671,
+      "note": "The red-brick central terminus, opened 1914."
+    },
+    {
+      "id": "tokyo-tower",
+      "name": "Tokyo Tower",
+      "lat": 35.6586,
+      "lon": 139.7454,
+      "note": "The 1958 broadcasting tower, a symbol of postwar recovery."
+    },
+    {
+      "id": "shibuya",
+      "name": "Shibuya",
+      "lat": 35.6595,
+      "lon": 139.7005,
+      "note": "The archetypal neon crossing of the contemporary city."
+    }
+  ],
+  "sources": {
+    "metro-tokyo": {
+      "title": "Tokyo Metropolitan Government — official site",
+      "publisher": "Tokyo Metropolitan Government",
+      "url": "https://www.metro.tokyo.lg.jp/english/",
+      "official": true
+    },
+    "britannica-tokyo": {
+      "title": "Tokyo — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Tokyo",
+      "official": false
+    },
+    "whe-japan": {
+      "title": "Ancient & Medieval Japan — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Japan/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "The houses that ruled Edo-Tokyo and the merchant dynasties that industrialised it.",
+    "list": [
+      {
+        "id": "tokugawa",
+        "era": "edo",
+        "span": "1603–1868",
+        "community": "Shogunal dynasty",
+        "industries": [
+          "Rule",
+          "Military"
+        ],
+        "figures": [
+          "Tokugawa Ieyasu"
+        ],
+        "legacy": "250 years of peace with Edo as the nation’s heart",
+        "sourceId": "whe-japan",
+        "place": "imperial-palace",
+        "name": "The Tokugawa",
+        "summary": "Founded by Tokugawa Ieyasu, the shoguns ruled Japan from Edo for over 250 years of peace and isolation, making the city the nation’s political and cultural heart while the emperor stayed in Kyoto."
+      },
+      {
+        "id": "imperial-house",
+        "era": "meiji",
+        "span": "To the present",
+        "community": "The Japanese monarchy",
+        "industries": [
+          "Sovereignty"
+        ],
+        "legacy": "The Imperial Palace at the exact centre of Tokyo",
+        "sourceId": "britannica-tokyo",
+        "place": "imperial-palace",
+        "name": "The Imperial House",
+        "summary": "By tradition the world’s oldest continuous hereditary monarchy. In 1868 the emperor moved from Kyoto to Edo Castle, which became the Imperial Palace at the exact centre of Tokyo."
+      },
+      {
+        "id": "iwasaki",
+        "era": "meiji",
+        "span": "From the 1870s",
+        "community": "Industrial founding family",
+        "industries": [
+          "Shipping",
+          "Heavy industry",
+          "Finance"
+        ],
+        "figures": [
+          "Iwasaki Yatarō"
+        ],
+        "legacy": "Mitsubishi",
+        "sourceId": "britannica-tokyo",
+        "name": "The Iwasaki (Mitsubishi)",
+        "summary": "Iwasaki Yatarō founded Mitsubishi in the 1870s as a shipping firm; it grew into a zaibatsu spanning shipbuilding, banking, heavy industry, aircraft and, later, cars and electronics."
+      },
+      {
+        "id": "mitsui",
+        "era": "edo",
+        "span": "From the 17th century",
+        "community": "Merchant-to-industrial dynasty",
+        "industries": [
+          "Retail",
+          "Banking",
+          "Trade"
+        ],
+        "legacy": "One of the oldest and largest business conglomerates on Earth",
+        "sourceId": "britannica-tokyo",
+        "name": "The Mitsui",
+        "summary": "From a 17th-century Edo dry-goods and money-changing house — inventors of the fixed-price cash sale — the Mitsui built one of the largest and oldest business conglomerates in the world."
+      }
+    ]
+  }
+}

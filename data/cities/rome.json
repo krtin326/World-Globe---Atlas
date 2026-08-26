@@ -1,0 +1,680 @@
+{
+  "id": "rome",
+  "name": "Rome",
+  "formerName": null,
+  "nameLocal": "Roma",
+  "country": "Italy",
+  "geonameId": 3169070,
+  "centre": [
+    12.5113,
+    41.8919
+  ],
+  "bbox": [
+    12.2,
+    41.72,
+    12.66,
+    42.02
+  ],
+  "renamed": null,
+  "summary": "Founded by tradition in 753 BC on seven hills beside the Tiber, Rome grew from a cluster of hilltop villages into the capital of an empire that shaped Western law, language, engineering and government. As that empire faded it became the seat of the Roman Catholic Church, and across the Renaissance and Baroque it was remade again in travertine and marble. Uniquely among cities it surrounds a separate sovereign state, Vatican City, and still calls itself Caput Mundi — capital of the world.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈2.75 million",
+      "note": "City proper; ≈4.3 million in the metropolitan area.",
+      "sourceId": "comune-roma"
+    },
+    {
+      "label": "Founded",
+      "value": "753 BC",
+      "note": "Traditional date, 21 April, in the myth of Romulus.",
+      "sourceId": "whe-rome"
+    },
+    {
+      "label": "Setting",
+      "value": "Seven hills on the Tiber",
+      "note": "Lazio, central Italy.",
+      "sourceId": "britannica-rome"
+    },
+    {
+      "label": "Encloses",
+      "value": "Vatican City",
+      "note": "The city surrounds a separate sovereign state, the seat of the Papacy.",
+      "sourceId": "unesco-91"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Historic Centre (1980)",
+      "note": "Inscribed with the Holy See’s extraterritorial properties.",
+      "sourceId": "unesco-91"
+    }
+  ],
+  "eras": [
+    {
+      "id": "regal",
+      "label": "Kingdom",
+      "from": -753,
+      "to": -509,
+      "color": "#f5a623"
+    },
+    {
+      "id": "republic",
+      "label": "Republic",
+      "from": -509,
+      "to": -27,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "empire",
+      "label": "Empire",
+      "from": -27,
+      "to": 476,
+      "color": "#e8467c"
+    },
+    {
+      "id": "medieval",
+      "label": "Medieval & Papal",
+      "from": 476,
+      "to": 1420,
+      "color": "#a56bff"
+    },
+    {
+      "id": "renaissance",
+      "label": "Renaissance & Baroque",
+      "from": 1420,
+      "to": 1798,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1798,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -753,
+      "era": "regal",
+      "title": "The founding of Rome",
+      "body": "Traditional founding of Rome by Romulus on the Palatine Hill.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "major"
+      ],
+      "yearDisplay": "753 BC",
+      "place": "palatine",
+      "pivotal": true
+    },
+    {
+      "year": -715,
+      "era": "regal",
+      "title": "Numa and the first religion",
+      "body": "Numa Pompilius, the second king, is said to found Rome’s priesthoods and calendar.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "715 BC"
+    },
+    {
+      "year": -509,
+      "era": "republic",
+      "title": "The Republic is founded",
+      "body": "The Romans expel the last king, Tarquin the Proud, and found the Republic.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "509 BC",
+      "place": "forum"
+    },
+    {
+      "year": -494,
+      "era": "republic",
+      "title": "The plebeians secede",
+      "body": "The plebeians secede from the city, winning tribunes to defend their rights.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "494 BC"
+    },
+    {
+      "year": -450,
+      "era": "republic",
+      "title": "The Twelve Tables",
+      "body": "The Twelve Tables set down Roman law in writing for the first time.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "450 BC"
+    },
+    {
+      "year": -390,
+      "era": "republic",
+      "title": "The Gauls sack Rome",
+      "body": "A Gaulish army sacks the young city; only the Capitol holds out.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "390 BC",
+      "place": "forum"
+    },
+    {
+      "year": -312,
+      "era": "republic",
+      "title": "The Appian Way begins",
+      "body": "Appius Claudius begins the Appian Way and Rome’s first aqueduct.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "growth"
+      ],
+      "yearDisplay": "312 BC"
+    },
+    {
+      "year": -264,
+      "era": "republic",
+      "title": "The Punic Wars",
+      "body": "The Punic Wars against Carthage end with Rome master of the Mediterranean.",
+      "sourceId": "whe-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "264–146 BC"
+    },
+    {
+      "year": -133,
+      "era": "republic",
+      "title": "The murder of Tiberius Gracchus",
+      "body": "The tribune Tiberius Gracchus is murdered over land reform — political violence enters the Republic.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "133 BC"
+    },
+    {
+      "year": -73,
+      "era": "republic",
+      "title": "The revolt of Spartacus",
+      "body": "Spartacus leads a vast slave revolt before it is crushed.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "73–71 BC"
+    },
+    {
+      "year": -63,
+      "era": "republic",
+      "title": "Cicero and the Catiline plot",
+      "body": "Cicero exposes and crushes the Catiline conspiracy to seize the state.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "63 BC"
+    },
+    {
+      "year": -49,
+      "era": "republic",
+      "title": "Caesar crosses the Rubicon",
+      "body": "Caesar crosses the Rubicon, igniting civil war.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "49 BC"
+    },
+    {
+      "year": -44,
+      "era": "republic",
+      "title": "The Ides of March",
+      "body": "Caesar is assassinated in the Senate on the Ides of March.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "44 BC",
+      "place": "forum",
+      "pivotal": true
+    },
+    {
+      "year": -27,
+      "era": "empire",
+      "title": "Augustus, first emperor",
+      "body": "Octavian becomes Augustus, first emperor; the Republic gives way to Empire.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "major"
+      ],
+      "yearDisplay": "27 BC",
+      "pivotal": true
+    },
+    {
+      "year": 64,
+      "era": "empire",
+      "title": "The Great Fire of Rome",
+      "body": "The Great Fire of Rome burns for days; Nero blames the Christians.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "disaster"
+      ],
+      "yearDisplay": "64 AD"
+    },
+    {
+      "year": 80,
+      "era": "empire",
+      "title": "The Colosseum opens",
+      "body": "The Colosseum is inaugurated with a hundred days of games.",
+      "sourceId": "unesco-91",
+      "tags": [
+        "culture"
+      ],
+      "place": "colosseum"
+    },
+    {
+      "year": 125,
+      "era": "empire",
+      "title": "Hadrian's Pantheon",
+      "body": "Hadrian rebuilds the Pantheon with its record-breaking concrete dome.",
+      "sourceId": "unesco-91",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "c. 125",
+      "place": "pantheon"
+    },
+    {
+      "year": 271,
+      "era": "empire",
+      "title": "The Aurelian Walls",
+      "body": "The Aurelian Walls rise around the city as barbarian pressure mounts.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 312,
+      "era": "empire",
+      "title": "Constantine at the Milvian Bridge",
+      "body": "Constantine wins at the Milvian Bridge and turns the Empire toward Christianity.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 410,
+      "era": "empire",
+      "title": "Alaric's Visigoths sack Rome",
+      "body": "Alaric’s Visigoths sack Rome — a shock that stuns the ancient world.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 455,
+      "era": "empire",
+      "title": "The Vandals sack Rome",
+      "body": "The Vandals sack the city a second time.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 476,
+      "era": "medieval",
+      "title": "The fall of the Western Empire",
+      "body": "The last Western Roman emperor is deposed; antiquity gives way to the Middle Ages.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 800,
+      "era": "medieval",
+      "title": "Charlemagne crowned emperor",
+      "body": "Charlemagne is crowned emperor in St Peter’s on Christmas Day.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ],
+      "place": "st-peters"
+    },
+    {
+      "year": 1084,
+      "era": "medieval",
+      "title": "The Norman sack",
+      "body": "Norman troops sack Rome while ostensibly rescuing the Pope.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1309,
+      "era": "medieval",
+      "title": "The Papacy leaves for Avignon",
+      "body": "The Papacy decamps to Avignon, leaving Rome impoverished and unruly.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1347,
+      "era": "medieval",
+      "title": "Cola di Rienzo's republic",
+      "body": "Cola di Rienzo seizes power dreaming of reviving the Roman Republic.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1506,
+      "era": "renaissance",
+      "title": "The new St Peter’s begins",
+      "body": "Julius II lays the first stone of the new St Peter’s Basilica.",
+      "sourceId": "unesco-91",
+      "tags": [
+        "culture"
+      ],
+      "place": "st-peters"
+    },
+    {
+      "year": 1508,
+      "era": "renaissance",
+      "title": "Michelangelo's Sistine ceiling",
+      "body": "Michelangelo paints the ceiling of the Sistine Chapel.",
+      "sourceId": "unesco-91",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "1508–12"
+    },
+    {
+      "year": 1527,
+      "era": "renaissance",
+      "title": "The Sack of Rome, 1527",
+      "body": "Mutinous troops of Charles V sack Rome, shattering the High Renaissance.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1656,
+      "era": "renaissance",
+      "title": "The plague of 1656",
+      "body": "Plague sweeps through Rome, killing a large share of its people.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1798,
+      "era": "modern",
+      "title": "A short-lived Roman Republic",
+      "body": "French revolutionaries proclaim a short-lived Roman Republic and depose the Pope.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1849,
+      "era": "modern",
+      "title": "Garibaldi defends Rome",
+      "body": "Garibaldi and Mazzini defend a new Roman Republic before French troops restore the Pope.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1870,
+      "era": "modern",
+      "title": "The breach at Porta Pia",
+      "body": "Italian troops breach the walls at Porta Pia; Rome joins a united Italy.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1871,
+      "era": "modern",
+      "title": "Capital of a united Italy",
+      "body": "Rome becomes the capital of the Kingdom of Italy.",
+      "sourceId": "comune-roma",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1922,
+      "era": "modern",
+      "title": "The March on Rome",
+      "body": "Mussolini’s March on Rome brings the Fascists to power.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1929,
+      "era": "modern",
+      "title": "The Lateran Treaty and the Vatican",
+      "body": "The Lateran Treaty creates the sovereign Vatican City.",
+      "sourceId": "comune-roma",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1943,
+      "era": "modern",
+      "title": "Occupation and liberation",
+      "body": "Rome is bombed, occupied by the Germans, and finally liberated in June 1944.",
+      "sourceId": "britannica-rome",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "1943–44"
+    },
+    {
+      "year": 1957,
+      "era": "modern",
+      "title": "The Treaty of Rome",
+      "body": "The Treaty of Rome founds what will become the European Union.",
+      "sourceId": "comune-roma",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1960,
+      "era": "modern",
+      "title": "The 1960 Olympics",
+      "body": "Rome hosts the Summer Olympic Games.",
+      "sourceId": "comune-roma",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 2000,
+      "era": "modern",
+      "title": "The Great Jubilee",
+      "body": "The Great Jubilee draws tens of millions of pilgrims to the city.",
+      "sourceId": "comune-roma",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "palatine",
+      "name": "Palatine Hill",
+      "lat": 41.8892,
+      "lon": 12.4875,
+      "note": "Where tradition places Romulus’s founding of the city."
+    },
+    {
+      "id": "forum",
+      "name": "Roman Forum",
+      "lat": 41.8925,
+      "lon": 12.4853,
+      "note": "The political and religious heart of the ancient city."
+    },
+    {
+      "id": "colosseum",
+      "name": "The Colosseum",
+      "lat": 41.8902,
+      "lon": 12.4922,
+      "note": "The Flavian Amphitheatre, inaugurated 80 AD."
+    },
+    {
+      "id": "pantheon",
+      "name": "The Pantheon",
+      "lat": 41.8986,
+      "lon": 12.4769,
+      "note": "Hadrian’s temple to all the gods; still the largest unreinforced concrete dome."
+    },
+    {
+      "id": "st-peters",
+      "name": "St Peter’s Basilica",
+      "lat": 41.9022,
+      "lon": 12.4539,
+      "note": "Rebuilt 1506–1626 over the reputed tomb of St Peter, in Vatican City."
+    },
+    {
+      "id": "trevi",
+      "name": "Trevi Fountain",
+      "lat": 41.9009,
+      "lon": 12.4833,
+      "note": "Salvi’s Baroque fountain (1762), fed by the ancient Aqua Virgo."
+    }
+  ],
+  "sources": {
+    "unesco-91": {
+      "title": "Historic Centre of Rome — UNESCO World Heritage List",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/91/",
+      "official": true
+    },
+    "comune-roma": {
+      "title": "Roma Capitale — official city portal",
+      "publisher": "Comune di Roma",
+      "url": "https://www.comune.roma.it/",
+      "official": true
+    },
+    "britannica-rome": {
+      "title": "Rome — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Rome",
+      "official": false
+    },
+    "whe-rome": {
+      "title": "Ancient Rome — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Rome/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Roman houses that shaped the city across its ages — Republican gentes, medieval barons and Baroque papal families.",
+    "list": [
+      {
+        "id": "julii",
+        "era": "republic",
+        "span": "Republic → Empire",
+        "community": "Patrician gens",
+        "industries": [
+          "Politics",
+          "Military"
+        ],
+        "figures": [
+          "Julius Caesar",
+          "Augustus (by adoption)"
+        ],
+        "legacy": "The Julio-Claudian dynasty of emperors",
+        "sourceId": "whe-rome",
+        "place": "forum",
+        "name": "The Julii (gens Julia)",
+        "summary": "One of Rome’s oldest houses, claiming descent from Aeneas and the goddess Venus. It produced Julius Caesar and, by adoption, Augustus — founding the Julio-Claudian dynasty of emperors."
+      },
+      {
+        "id": "cornelii",
+        "era": "republic",
+        "span": "The Roman Republic",
+        "community": "Leading Republican gens",
+        "industries": [
+          "Politics",
+          "Military"
+        ],
+        "figures": [
+          "Scipio Africanus",
+          "The Gracchi (maternal line)"
+        ],
+        "sourceId": "whe-rome",
+        "place": "forum",
+        "name": "The Cornelii",
+        "summary": "Among the most prolific noble houses, including the Scipiones — Scipio Africanus, who beat Hannibal at Zama — and the Gracchi on their mother’s side, who shook Rome with land reform."
+      },
+      {
+        "id": "colonna-orsini",
+        "era": "medieval",
+        "span": "Medieval Rome",
+        "community": "Baronial dynasties",
+        "industries": [
+          "War",
+          "Church",
+          "Politics"
+        ],
+        "legacy": "Popes, cardinals and fortified family strongholds",
+        "sourceId": "britannica-rome",
+        "name": "The Colonna & Orsini",
+        "summary": "Rival warrior families who fortified Rome’s ruins into castles and feuded for centuries over the city and the Papacy, each supplying popes and cardinals."
+      },
+      {
+        "id": "barberini-borghese",
+        "era": "renaissance",
+        "span": "16th–17th century",
+        "community": "Papal families of the Baroque",
+        "industries": [
+          "Church",
+          "Arts",
+          "Patronage"
+        ],
+        "figures": [
+          "Urban VIII (Barberini)",
+          "Paul V (Borghese)"
+        ],
+        "legacy": "Bernini’s Rome — palaces, villas and fountains",
+        "sourceId": "britannica-rome",
+        "place": "st-peters",
+        "name": "The Barberini & Borghese",
+        "summary": "Great houses that gave the Church popes (Urban VIII, Paul V) and spent that power reshaping Rome — commissioning Bernini, raising palaces and the villas that still ring the city. “What the barbarians did not do, the Barberini did,” ran the jibe."
+      }
+    ]
+  }
+}

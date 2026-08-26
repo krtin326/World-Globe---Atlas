@@ -1,0 +1,18 @@
+# --- Dependencies (reinstalled with `npm install`) ---
+node_modules/
+
+# --- Build INPUTS: raw source downloads, ~600 MB, several files over GitHub's
+#     100 MB limit. These are fetched by `npm run fetch` and are NOT needed to
+#     run the site — only to rebuild the processed data in data/*. Keep them
+#     local. (The processed, runtime data under data/ IS committed.)
+data/raw/
+
+# --- SECRETS: plaintext login list for the ATLAS site. Never publish. ---
+docs/atlas_logins.xlsx
+
+# --- OS / editor / logs ---
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

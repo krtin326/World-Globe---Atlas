@@ -1,0 +1,1359 @@
+{
+  "id": "mumbai",
+  "name": "Mumbai",
+  "formerName": "Bombay",
+  "nameLocal": "मुंबई",
+  "country": "India",
+  "geonameId": 1275339,
+  "centre": [
+    72.8777,
+    19.076
+  ],
+  "bbox": [
+    72.7,
+    18.83,
+    73.12,
+    19.34
+  ],
+  "renamed": "1995",
+  "summary": "Seven islands of fishing villages, ceded to Portugal in 1534, handed to the English Crown in 1661 as part of a royal dowry and leased to the East India Company in 1668 for ten pounds a year. Reclamation fused the islands into one landmass; cotton, railways and the Suez Canal made it India's commercial capital; and successive waves of migrants — Gujarati traders, Parsi shipbuilders, Konkani mill workers — made it the country's most crowded and least monolithic city. Today it is India's financial capital and the home of its Hindi film industry.",
+  "figures": [
+    {
+      "label": "Population, Greater Mumbai (M Corp)",
+      "value": "12,442,373",
+      "note": "2011 Census of India — Greater Mumbai (Municipal Corporation), the sum of its two district part-records: 3,085,411 in Mumbai City + 9,356,962 in Mumbai Suburban. The globe's own marker shows ~12.69 million, GeoNames' slightly higher figure for the same city. The 2021 Census was postponed, so 2011 remains the latest official count.",
+      "sourceId": "census2011"
+    },
+    {
+      "label": "Urban agglomeration",
+      "value": "~18.4 million",
+      "note": "2011 Census",
+      "sourceId": "census2011"
+    },
+    {
+      "label": "Area, Greater Mumbai district",
+      "value": "437.71 km²",
+      "note": "0.14% of Maharashtra's area",
+      "sourceId": "gazetteer-gb-general"
+    },
+    {
+      "label": "UNESCO World Heritage sites",
+      "value": "3",
+      "note": "Elephanta Caves (1987), Chhatrapati Shivaji Terminus (2004), Victorian Gothic and Art Deco Ensembles (2018)",
+      "sourceId": "unesco-1480"
+    },
+    {
+      "label": "EIC lease, 1668",
+      "value": "£10 per year",
+      "note": "Payable each 30 September, held 'in free and common soccage, as of the manor of East Greenwich'",
+      "sourceId": "gazetteer-gb-history"
+    },
+    {
+      "label": "Home of Hindi cinema",
+      "value": "since 1913",
+      "note": "Raja Harishchandra, India’s first feature film, was made and released in Bombay. The city anchors what became the world’s largest film industry by output.",
+      "sourceId": "culture-history"
+    }
+  ],
+  "eras": [
+    {
+      "id": "ancient",
+      "label": "Ancient",
+      "from": -300,
+      "to": 1348,
+      "color": "#f5a623"
+    },
+    {
+      "id": "sultanate",
+      "label": "Sultanate",
+      "from": 1348,
+      "to": 1508,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "portuguese",
+      "label": "Portuguese",
+      "from": 1508,
+      "to": 1661,
+      "color": "#e8467c"
+    },
+    {
+      "id": "company",
+      "label": "Company",
+      "from": 1661,
+      "to": 1858,
+      "color": "#a56bff"
+    },
+    {
+      "id": "raj",
+      "label": "British Raj",
+      "from": 1858,
+      "to": 1947,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Independent",
+      "from": 1947,
+      "to": 2026,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -250,
+      "era": "ancient",
+      "title": "Aparanta and the edicts of Ashoka",
+      "body": "The earliest historical reference to this coast is in the edicts of Ashoka, which record that Buddhism was introduced into the Konkan — known then as Aparanta. Buddhist caves were cut across the region for the residence and worship of monks, including those at Kanheri on Salsette.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "origins"
+      ]
+    },
+    {
+      "year": -200,
+      "yearDisplay": "2nd century BC",
+      "era": "ancient",
+      "title": "Occupation of Gharapuri (Elephanta)",
+      "body": "Archaeological remains on Elephanta Island — Gharapuri — show evidence of occupation from as early as the 2nd century BC. The island sits in Mumbai harbour, an hour's sail from what would become the Fort.",
+      "sourceId": "unesco-244",
+      "place": "elephanta",
+      "tags": [
+        "heritage"
+      ]
+    },
+    {
+      "year": 550,
+      "yearDisplay": "mid-5th to 6th century AD",
+      "era": "ancient",
+      "title": "The Elephanta cave temples are cut",
+      "body": "The rock-cut caves are carved from the living basalt. Cave 1 measures 39 metres front to back and is dominated by the seven-metre Sadashiva, representing Shiva as creator, preserver and destroyer. UNESCO inscribed the caves in 1987 as a masterpiece of human creative genius.",
+      "sourceId": "unesco-244",
+      "place": "elephanta",
+      "tags": [
+        "heritage",
+        "religion"
+      ]
+    },
+    {
+      "year": 853,
+      "yearDisplay": "9th century AD",
+      "era": "ancient",
+      "title": "The Kanheri monasteries",
+      "body": "Five groups of Buddhist caves are cut into Salsette, of which Kanheri is the most important: viharas for communities of monks, solitary cells for hermits, lecture halls and chaityas with relic shrines, each cell with its own water cistern. Inscriptions of 853 and 877-78 record endowments in drammas for the upkeep of the Krishnagiri-Mahavihara — the island's oldest continuously documented institution.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "origins",
+        "religion"
+      ]
+    },
+    {
+      "year": 1138,
+      "era": "ancient",
+      "title": "The Shilaharas of North Konkan",
+      "body": "The Shilahara dynasty ruled North Konkan from the 9th to the 13th century, leaving inscriptions across the region. Their capital, Puri, has never been securely identified; Thane, Sopara, Chaul and Gharapuri have all been proposed.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "origins"
+      ]
+    },
+    {
+      "year": 1294,
+      "era": "ancient",
+      "title": "Bhimdev founds Mahikavati",
+      "body": "By tradition, Bhimdev came to a group of isles 'sparsely peopled by families of Koli fishermen', overgrown with babul, holding a fine temple at Walkeshwar and a shrine of the ancient goddess Mumbadevi — from whom the city takes its modern name. He built a city of temples and palaces and called it Mahikavati, now Mahim.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "mahim",
+      "tags": [
+        "origins",
+        "names"
+      ]
+    },
+    {
+      "year": 1348,
+      "era": "sultanate",
+      "title": "The islands pass to the Gujarat Sultanate",
+      "body": "Muslim rule reaches the Konkan and the islands become an outlying possession of the Sultanate of Gujarat, administered through Mahim. It is from this sultanate, two centuries later, that the Portuguese will take them.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "mahim",
+      "tags": [
+        "origins"
+      ]
+    },
+    {
+      "year": 1508,
+      "yearDisplay": "December 1508",
+      "era": "portuguese",
+      "title": "The Portuguese arrive in the harbour",
+      "body": "Dom Francisco d'Almeida, first viceroy of Goa, sailed from Cannanore to Diu with nineteen vessels and 1,600 soldiers, passing through these waters. The Portuguese had been consolidating power in the north Konkan for years before they took formal possession.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "colonial"
+      ]
+    },
+    {
+      "year": 1509,
+      "era": "portuguese",
+      "title": "Almeida burns Mahim",
+      "body": "Portuguese fleets raid the coast repeatedly in the years before formal possession. Mahim, the principal town of the islands under the Gujarat Sultanate, is attacked and burned — the first of several raids that leave the islands weakened and the sultanate's hold on them nominal.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "mahim",
+      "tags": [
+        "colonial"
+      ]
+    },
+    {
+      "year": 1534,
+      "era": "portuguese",
+      "title": "Sultan Bahadur cedes the islands to Portugal",
+      "body": "The Treaty of Bassein hands the islands to Portugal. They name the place Bombaim. Portuguese rule lasts a century and a quarter and leaves behind churches, the name, and a land-revenue system the English would inherit largely intact.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "colonial"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1554,
+      "era": "portuguese",
+      "title": "Garcia da Orta holds the island in fief",
+      "body": "The physician and naturalist Garcia da Orta is granted Bombay as a fief, building a manor house where Bombay Castle would later stand. His Coloquios dos simples e drogas da India, printed at Goa in 1563, is among the first European scientific works written in Asia, and his account of the island's communities is the earliest detailed description we have of who actually lived here.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "fort",
+      "tags": [
+        "colonial"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1575,
+      "era": "portuguese",
+      "title": "The churches of the Portuguese islands",
+      "body": "Franciscan and Jesuit missions build across the islands — St Michael's at Mahim, St Andrew's at Bandra — and convert a substantial local population. The East Indian Catholic community, and a scattering of Portuguese place names and surnames, are what survive of a century and a quarter of Portuguese rule.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "religion",
+        "colonial"
+      ]
+    },
+    {
+      "year": 1626,
+      "era": "portuguese",
+      "title": "An Anglo-Dutch fleet burns the manor house",
+      "body": "A combined English and Dutch force raids the harbour and burns the Portuguese manor house on the island. It is an early sign of how little the Portuguese could defend this particular possession, and of who was going to end up with it.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "fort",
+      "tags": [
+        "colonial"
+      ]
+    },
+    {
+      "year": 1661,
+      "yearDisplay": "23 June 1661",
+      "era": "company",
+      "title": "Bombay becomes an English royal dowry",
+      "body": "The marriage treaty between Charles II and the Infanta Catherine of Braganza is signed at Whitehall. 'The port and island of Bombay with all the rights, profits, territories and appurtenances whatsoever thereunto belonging' pass to the King of Great Britain and his heirs forever. The Earl of Marlborough sails in March 1662 with five ships and five hundred soldiers to take delivery — and the Portuguese viceroy spends years disputing exactly what had been handed over.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "colonial",
+        "british"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1668,
+      "yearDisplay": "27 March 1668",
+      "era": "company",
+      "title": "The Crown leases Bombay to the East India Company",
+      "body": "A Royal Charter transfers the island to the Company, to be held 'in free and common soccage, as of the manor of East Greenwich', at a farm rent of £10 payable each 30 September. Gerald Aungier had already written that 'the place does not answer our King's expectations by four-fifths of what was represented to him' — the Crown had believed it was getting Salsette and Thane too.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "colonial",
+        "british"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1669,
+      "yearDisplay": "July 1669",
+      "era": "company",
+      "title": "Gerald Aungier takes charge",
+      "body": "Aungier becomes President of Surat and Governor of Bombay. He promulgates the Company's regulations for civil and military administration, gives the people 'a taste of the Company's justice', and — decisively — declares religious toleration. That single policy is the reason the city filled up.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "fort",
+      "tags": [
+        "british",
+        "governance"
+      ]
+    },
+    {
+      "year": 1670,
+      "era": "company",
+      "title": "Gujarati traders and Parsis settle the island",
+      "body": "Banias and Parsis, present in Portuguese Bassein but not on the island itself, migrate to Bombay in numbers after the cession to England. Zoroastrians had reached Gujarat centuries earlier, by tradition landing at Sanjan around the 8th–10th century after fleeing Persia; from Surat they now moved south to a port that promised freedom of worship and no discriminatory tax.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "parsi",
+        "migration"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1686,
+      "yearDisplay": "1686–1696",
+      "era": "company",
+      "title": "Plague empties the island",
+      "body": "A severe outbreak across western India wrecks Vasai, Thane and Chaul and depletes Bombay. By the close of 1691 only eighty Englishmen remain alive on the island, many of them ill; by October 1696, twenty-seven. Ovington calls the place 'nought but a charnel-house'. Early Bombay was, for Europeans, very close to a death sentence.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "disaster",
+        "public-health"
+      ]
+    },
+    {
+      "year": 1687,
+      "era": "company",
+      "title": "The Company moves its western headquarters from Surat",
+      "body": "The East India Company transfers the seat of its western presidency from Surat to Bombay. The island stops being an outpost of somewhere else and starts being the centre of British commerce on the west coast.",
+      "sourceId": "mumbaicity-history",
+      "place": "fort",
+      "tags": [
+        "british",
+        "commerce"
+      ]
+    },
+    {
+      "year": 1728,
+      "era": "company",
+      "title": "A Mayor's Court is established",
+      "body": "The Company begins building a civil administration rather than merely a trading post. Over the following decades come building rules (1748), new areas allotted for building outside the Fort walls (1746), a member of council appointed town scavenger (1757), and a new burial ground at Sonapur replacing Mendham's Point (1760).",
+      "sourceId": "gazetteer-gb-history",
+      "place": "fort",
+      "tags": [
+        "governance"
+      ]
+    },
+    {
+      "year": 1735,
+      "era": "company",
+      "title": "Lovji Nusserwanji Wadia and the Bombay Dockyard",
+      "body": "The Parsi master shipbuilder Lovji Nusserwanji is brought down from Surat and granted land to build for the Company. He takes the name of his trade — Wadia. The family will build hundreds of teak ships, including vessels for the Royal Navy, and the dockyard makes Bombay a shipbuilding power as well as a trading one.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "dockyard",
+      "tags": [
+        "parsi",
+        "commerce"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1771,
+      "yearDisplay": "1771–1784",
+      "era": "company",
+      "title": "The Hornby Vellard closes the Great Breach",
+      "body": "Governor William Hornby drives through the causeway that shuts out the sea at Breach Candy — a vellard, from the Portuguese vallado, a fence. The Court of Directors refused to sanction it; he built it anyway. It is the single most consequential piece of engineering in the city's history: it stops the tide flooding the low ground between the islands, and begins their fusion into one landmass.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "worli",
+      "tags": [
+        "reclamation"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1782,
+      "era": "company",
+      "title": "The Treaty of Salbai brings Salsette and Elephanta",
+      "body": "The First Anglo-Maratha War closes with Bombay gaining permanent possession of Salsette, Elephanta, Karanja and Hog islands, while returning Vasai and the Gujarat conquests to the Peshwa. The city stops being one small island and becomes the head of a territory — the land the northern suburbs will eventually cover.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "colonial",
+        "british"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1803,
+      "yearDisplay": "17 February 1803",
+      "era": "company",
+      "title": "The great fire in the Fort",
+      "body": "How it started was never established. Jonathan Duncan wrote that 'so great and violent was the conflagration that at sunset the destruction of every house in the Fort was apprehended'. The fire did what a decade of committees had not: it cleared the crowded Fort and forced a rebuilding on wider streets.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "fort",
+      "tags": [
+        "disaster"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1822,
+      "era": "company",
+      "title": "Elphinstone High School, and a college five years later",
+      "body": "The Elphinstone High School is founded in 1822 and Elphinstone College in 1827, alongside a new mint (1825) and the Town Hall, first proposed by Sir James Mackintosh in 1811 and funded partly by public lottery. An English-educated Indian professional class begins forming here, and it will supply much of the leadership of the national movement.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "year": 1838,
+      "era": "company",
+      "title": "The seven islands become one",
+      "body": "A century of causeways and reclamation — Sion, Mahim, Colaba — welds Bombay, Colaba, Old Woman's Island, Mahim, Parel, Worli and Mazagaon into a single island. The city can now grow inland instead of only along the shore.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "reclamation"
+      ]
+    },
+    {
+      "year": 1853,
+      "era": "company",
+      "title": "India's first railway runs to Thane",
+      "body": "The Great Indian Peninsula Railway, projected in 1844 with the motto primus in Indis, opens its first twenty miles from Bombay to Thane. The first sod had been turned in 1850. The line pulls the cotton of the Deccan down to the docks and pulls labour into the city.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "cst",
+      "tags": [
+        "infrastructure"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1854,
+      "era": "company",
+      "title": "The first cotton mill opens",
+      "body": "The Bombay Spinning and Weaving Company's mill begins working — the idea being that if Manchester could not be beaten, it could at least be fought with its own weapons. Six more open by 1860. The mills draw in an industrial population that will define the city's politics for the next hundred and thirty years.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "girangaon",
+      "tags": [
+        "industry"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1857,
+      "yearDisplay": "18 July 1857",
+      "era": "company",
+      "title": "The University of Bombay is incorporated",
+      "body": "One of India's three original universities, established the same year as Calcutta and Madras. Its graduates — lawyers, doctors, journalists, administrators — become the articulate middle class from which Bombay's politics, its press and eventually the Congress are drawn.",
+      "sourceId": "mu-history",
+      "tags": [
+        "education"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1861,
+      "yearDisplay": "1861–1865",
+      "era": "raj",
+      "title": "The cotton boom and the Share Mania",
+      "body": "The American Civil War cuts off the South's cotton and the world turns to Bombay. Exports rise from £5.25 million in 1860 to £80 million in 1865. Parsi, Bania and Bhatia merchants amass fortunes; the money pours into speculative companies in what becomes known as the Share Mania. When the war ends, the bubble bursts and takes much of the city's new wealth with it.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "commerce",
+        "parsi"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1862,
+      "era": "raj",
+      "title": "The ramparts come down",
+      "body": "The Fort walls are demolished under Governor Bartle Frere, releasing the land on which the Victorian Gothic public buildings will rise. The native community had argued in 1848 against demolition, pointing out that space was readily available at Colaba, Girgaum, Dhobi Talao and Breach Candy. The walls went anyway, and with them the distinction between the Fort and the rest of the city.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "oval",
+      "tags": [
+        "reclamation",
+        "architecture"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1869,
+      "era": "raj",
+      "title": "The Suez Canal opens",
+      "body": "The canal effects, in the gazetteer's words, 'a complete revolution in the carrying trade of Bombay', which until then had been restricted by the long voyage round the Cape. Bombay becomes the front door of India.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "commerce"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1872,
+      "yearDisplay": "1872–1877",
+      "era": "raj",
+      "title": "Trams reach Girgaum, Byculla and Grant Road",
+      "body": "A properly organised tramway system is instituted, and by 1880 the Company's line runs from the Fort out to Girgaum, Byculla and Grant Road. The municipality is simultaneously widening streets, opening new roads, extending street lighting and laying out public gardens. The city starts to be shaped by how people move through it.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "infrastructure"
+      ]
+    },
+    {
+      "year": 1875,
+      "yearDisplay": "9 July 1875",
+      "era": "raj",
+      "title": "The Native Share and Stock Brokers Association",
+      "body": "Brokers who had been meeting under a banyan tree formalise themselves into what becomes the Bombay Stock Exchange — the oldest in Asia. The street where they met is renamed Dalal Street. The speculative energy of the 1860s cotton mania is finally given an institution.",
+      "sourceId": "bse-history",
+      "place": "fort",
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "year": 1878,
+      "era": "raj",
+      "title": "Victoria Terminus is begun",
+      "body": "F. W. Stevens designs a terminus spread over 2.85 hectares, built over ten years. British architects work with Indian craftsmen, producing a fusion of Victorian Italianate Gothic with the forms of Indian palace architecture — stone dome, turrets, pointed arches. It is the first terminus station in the subcontinent, and today carries over three million commuters a day.",
+      "sourceId": "unesco-945",
+      "place": "cst",
+      "tags": [
+        "heritage",
+        "architecture"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1885,
+      "era": "raj",
+      "title": "The Indian National Congress meets in Bombay",
+      "body": "The first session of the Indian National Congress is held in the city. Bombay's merchant wealth, its press and its legal profession make it a centre of the emerging national movement as much as of trade.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1890,
+      "era": "raj",
+      "title": "The dabbawalas begin",
+      "body": "A network of tiffin carriers forms to ferry home-cooked lunches to office workers across the city, reputedly begun by Mahadeo Havaji Bachche with about a hundred men. The dabbawalas still run today — a few thousand of them delivering some 200,000 lunchboxes a day by train and bicycle, with a famously tiny error rate, and no technology more advanced than a colour code.",
+      "sourceId": "culture-history",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1896,
+      "era": "raj",
+      "title": "Bubonic plague",
+      "body": "A virulent epidemic attacks the city. The old Government House is turned over for use as a hospital. In 1899 Waldemar Haffkine, a student of Pasteur, founds the Plague Research Laboratory there and develops an anti-plague vaccine — demonstrating it by injecting himself, to overcome public hostility. The epidemic drives the creation of the City Improvement Trust and reshapes how Bombay was built.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "disaster",
+        "public-health"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1898,
+      "era": "raj",
+      "title": "The City Improvement Trust",
+      "body": "Created in the wake of the plague to remake a city that had proved unable to survive itself. It drives Mohammed Ali Road straight through the bazaar, opens up congested districts, and turns towards Back Bay as offering 'the most unique opportunities for reclamation which it has ever been the lot of any city to possess'.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "reclamation",
+        "public-health"
+      ]
+    },
+    {
+      "year": 1911,
+      "yearDisplay": "December 1911",
+      "era": "raj",
+      "title": "George V lands at Apollo Bunder",
+      "body": "The first reigning British monarch to set foot in India comes ashore at Apollo Bunder on his way to the Delhi durbar. The Gateway of India is built to commemorate the landing and completed in 1924 — by which time the empire it celebrates has about twenty-three years left.",
+      "sourceId": "general-history",
+      "place": "marine-drive",
+      "tags": [
+        "british"
+      ]
+    },
+    {
+      "year": 1913,
+      "yearDisplay": "3 May 1913",
+      "era": "raj",
+      "title": "Raja Harishchandra: the birth of Indian cinema",
+      "body": "Dhundiraj Govind Phalke — Dadasaheb Phalke — releases Raja Harishchandra, India's first full-length feature film, after premiering it at Bombay's Olympia Theatre in April. Made over seven months in the city, the silent mythological founds an industry: Bombay becomes the centre of Hindi cinema, the 'Bollywood' that today makes India the largest film producer on earth.",
+      "sourceId": "culture-history",
+      "place": "girgaon",
+      "tags": [
+        "culture",
+        "industry"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1918,
+      "yearDisplay": "1918–1919",
+      "era": "raj",
+      "title": "Influenza",
+      "body": "The pandemic reaches India through Bombay, carried by returning troops, and spreads inland along the railways the city had built. India's losses were the heaviest of any country in the world. The port that connected Bombay to everything connected it to this too.",
+      "sourceId": "general-history",
+      "tags": [
+        "disaster",
+        "public-health"
+      ]
+    },
+    {
+      "year": 1928,
+      "era": "raj",
+      "title": "The great mill strike, and a riot",
+      "body": "A general strike wrecks the textile industry, and a separate riot the same year kills 298 people and injures 739. Communist organisers gain a foothold in Girangaon that will last decades. Labour becomes the central fact of Bombay politics and stays there until 1982.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "girangaon",
+      "tags": [
+        "labour",
+        "industry"
+      ]
+    },
+    {
+      "year": 1930,
+      "yearDisplay": "1930s",
+      "era": "raj",
+      "title": "Backbay Reclamation and the Art Deco seafront",
+      "body": "The second great expansion pushes the city west into the sea. Along Marine Drive and the western edge of the Oval Maidan rises a run of Art Deco apartment blocks and cinemas that blend Deco imagery with Indian motifs — a hybrid that became known as Indo-Deco. Mumbai holds one of the largest concentrations of Art Deco buildings in the world.",
+      "sourceId": "unesco-1480",
+      "place": "marine-drive",
+      "tags": [
+        "architecture",
+        "reclamation"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1930,
+      "yearDisplay": "6 April 1930",
+      "era": "raj",
+      "title": "The salt law is broken at Vile Parle",
+      "body": "On the same day Gandhi breaks the salt law at Dandi, it is broken in Bombay. Vile Parle is the headquarters of the city's Salt Satyagraha; Gandhi nominates Jamnalal Bajaj to lead it rather than coming himself. K. F. Nariman, Gokulbhai Bhatt and Kishorelal Mashruwala are among those jailed. The city is in the vanguard of Civil Disobedience.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "politics",
+        "independence"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1942,
+      "yearDisplay": "8 August 1942",
+      "era": "raj",
+      "title": "Quit India is launched at Gowalia Tank",
+      "body": "The All India Congress Committee passes the Quit India resolution at Gowalia Tank Maidan, now August Kranti Maidan. Gandhi's 'Do or Die' speech is delivered here; the leadership is arrested within hours and the city erupts.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "august-kranti",
+      "tags": [
+        "politics",
+        "independence"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1944,
+      "yearDisplay": "14 April 1944",
+      "era": "raj",
+      "title": "The Bombay docks explosion",
+      "body": "The freighter SS Fort Stikine, carrying cotton, timber, oil, gold and around 1,400 tons of explosives, catches fire in Victoria Dock and detonates in two blasts. Estimates of the dead range from roughly 800 to 1,300, with some 3,000 injured and 80,000 made homeless; 231 of the dead were dock and fire service personnel. Wreckage and gold bars were thrown across the surrounding districts.",
+      "sourceId": "general-history",
+      "place": "dockyard",
+      "tags": [
+        "disaster"
+      ],
+      "disputed": true,
+      "pivotal": true
+    },
+    {
+      "year": 1946,
+      "yearDisplay": "February 1946",
+      "era": "raj",
+      "title": "The Royal Indian Navy mutiny",
+      "body": "Ratings of the Royal Indian Navy mutiny in Bombay harbour, and the city strikes in sympathy. The rising is put down, but the demonstration that the armed forces could no longer be relied upon weighs heavily on the calculation to leave.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "dockyard",
+      "tags": [
+        "politics",
+        "independence"
+      ]
+    },
+    {
+      "year": 1947,
+      "yearDisplay": "15 August 1947",
+      "era": "modern",
+      "title": "Independence",
+      "body": "India becomes independent. Bombay is capital of Bombay State — a bilingual province stretching from Gujarat to the Karnataka border, an arrangement that will not hold.",
+      "sourceId": "gazetteer-gb-history",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1955,
+      "yearDisplay": "21 November 1955",
+      "era": "modern",
+      "title": "Police fire on the Samyukta Maharashtra demonstration",
+      "body": "Police open fire on demonstrators at Flora Fountain demanding a single Marathi-speaking state with Bombay as its capital. The movement's dead are counted at 105 in some accounts and 106 in others; the memorial at the site carries 106 names. Flora Fountain is renamed Hutatma Chowk — Martyrs' Crossroad.",
+      "sourceId": "samyukta",
+      "place": "hutatma",
+      "tags": [
+        "politics"
+      ],
+      "disputed": true
+    },
+    {
+      "year": 1960,
+      "yearDisplay": "1 May 1960",
+      "era": "modern",
+      "title": "Maharashtra is formed; Bombay is its capital",
+      "body": "The Bombay Reorganisation Act splits bilingual Bombay State into Marathi-speaking Maharashtra and Gujarati-speaking Gujarat. Bombay, claimed by both, goes to Maharashtra. The date is still observed as Maharashtra Day.",
+      "sourceId": "samyukta",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1966,
+      "era": "modern",
+      "title": "The Shiv Sena is founded",
+      "body": "Formed around the grievances of Marathi speakers in a city whose commerce was largely in other hands, it grows from a nativist movement into the dominant force in Mumbai's municipal politics. Its rise runs alongside the decline of the mills and of the labour left that Girangaon had sustained.",
+      "sourceId": "general-history",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1975,
+      "yearDisplay": "1975–1977",
+      "era": "modern",
+      "title": "The Emergency",
+      "body": "Civil liberties are suspended nationally, the press censored and opposition leaders jailed. Bombay's newspapers, unions and courts — the institutions built up over the previous century — are all constrained at once.",
+      "sourceId": "general-history",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1977,
+      "era": "modern",
+      "title": "Film City opens at Goregaon",
+      "body": "The Maharashtra government opens Dadasaheb Phalke Chitranagari — Film City — in the northern suburbs, giving the Hindi film industry a permanent home of studios and backlots. By the late 20th century Mumbai's film and television business is one of the city's defining industries, alongside finance.",
+      "sourceId": "culture-history",
+      "place": "film-city",
+      "tags": [
+        "culture",
+        "industry"
+      ]
+    },
+    {
+      "year": 1982,
+      "era": "modern",
+      "title": "The Great Bombay Textile Strike",
+      "body": "Around a quarter of a million mill workers strike under Datta Samant. The strike collapses, the mills never recover, and Girangaon — the mill village at the city's heart — is hollowed out. The land beneath it becomes the most valuable in India, and over the following decades turns into malls, offices and towers.",
+      "sourceId": "gazetteer-gb-history",
+      "place": "girangaon",
+      "tags": [
+        "industry",
+        "labour"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1992,
+      "yearDisplay": "December 1992 – January 1993",
+      "era": "modern",
+      "title": "Communal riots",
+      "body": "Riots follow the demolition of the Babri Masjid, killing around nine hundred people across the city over two waves. The Srikrishna Commission was appointed to inquire into them. It is the most severe rupture in the city's modern history and its consequences shaped Mumbai's politics and geography for decades.",
+      "sourceId": "srikrishna",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1993,
+      "yearDisplay": "12 March 1993",
+      "era": "modern",
+      "title": "Serial bombings",
+      "body": "Thirteen coordinated bomb blasts strike the Bombay Stock Exchange, the Air India building, hotels and markets, killing over 250 people. It was among the deadliest coordinated attacks anywhere at the time.",
+      "sourceId": "srikrishna",
+      "place": "fort",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1995,
+      "yearDisplay": "1995",
+      "era": "modern",
+      "title": "Bombay is renamed Mumbai",
+      "body": "The Maharashtra government formally changes the city's name in 1995 (accounts differ on the exact date — May, October and November are all cited), honouring Mumbadevi, patron goddess of the Koli fishing community who were the islands' original inhabitants. The name reaches back past four and a half centuries of Portuguese and British rule to the shrine that was already there.",
+      "sourceId": "mumbaicity-history",
+      "place": "mumbadevi",
+      "tags": [
+        "names"
+      ],
+      "pivotal": true,
+      "disputed": true
+    },
+    {
+      "year": 2005,
+      "yearDisplay": "26 July 2005",
+      "era": "modern",
+      "title": "The great flood",
+      "body": "944 mm of rain falls on the city in twenty-four hours. Trains stop, the airport closes, and hundreds die. The Mithi river, reduced to a drain by decades of building, cannot carry the water. It forces a reckoning with what reclamation and construction had done to the city's drainage.",
+      "sourceId": "imd",
+      "place": "mithi",
+      "tags": [
+        "disaster",
+        "climate"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 2006,
+      "yearDisplay": "11 July 2006",
+      "era": "modern",
+      "title": "Suburban railway bombings",
+      "body": "Seven bombs detonate within eleven minutes on Western Line commuter trains during the evening rush, at and around Mahim, Bandra, Khar, Matunga, Jogeshwari, Borivali and Mira Road. Around 209 people are killed and over 700 injured — some official counts give 189, the difference being late deaths from injuries. The trains ran again the same night.",
+      "sourceId": "news-archive",
+      "tags": [
+        "conflict"
+      ],
+      "disputed": true
+    },
+    {
+      "year": 2008,
+      "yearDisplay": "26–29 November 2008",
+      "era": "modern",
+      "title": "The 26/11 attacks",
+      "body": "Ten gunmen arriving by sea attack Chhatrapati Shivaji Terminus, the Taj Mahal Palace and Oberoi Trident hotels, Nariman House, Leopold Café and Cama Hospital across nearly sixty hours. 166 people are killed. The siege reshaped India's counter-terrorism apparatus and remains the event by which the city dates its recent history.",
+      "sourceId": "news-archive",
+      "place": "cst",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 2009,
+      "yearDisplay": "30 June 2009",
+      "era": "modern",
+      "title": "The Bandra–Worli Sea Link",
+      "body": "The first cable-stayed bridge over open sea in India opens, cutting across Mahim Bay and bypassing the congested Mahim causeway. It is the beginning of a decade of building outwards over the water — coastal road, trans-harbour link — that reverses four centuries of building the water into land.",
+      "sourceId": "general-history",
+      "place": "worli",
+      "tags": [
+        "infrastructure"
+      ]
+    },
+    {
+      "year": 2014,
+      "yearDisplay": "8 June 2014",
+      "era": "modern",
+      "title": "The first metro line opens",
+      "body": "Versova to Ghatkopar: the first line of the Mumbai Metro, running east–west across a city whose two suburban railway lines had only ever run north–south. The network has been expanding ever since, and is the largest change to how Mumbai moves since the suburban railway was electrified.",
+      "sourceId": "general-history",
+      "tags": [
+        "infrastructure"
+      ]
+    },
+    {
+      "year": 2018,
+      "yearDisplay": "30 June 2018",
+      "era": "modern",
+      "title": "UNESCO inscribes the Victorian Gothic and Art Deco Ensembles",
+      "body": "The ensemble around the Oval Maidan — Victorian Gothic on the east side, Art Deco on the west — is inscribed as a World Heritage Site, the city's third. UNESCO reads the two facing rows as a record of the two waves of expansion that turned a fortified trading post into the first city of India.",
+      "sourceId": "unesco-1480",
+      "place": "oval",
+      "tags": [
+        "heritage"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 2024,
+      "era": "modern",
+      "title": "Atal Setu and the eastward turn",
+      "body": "The Mumbai Trans Harbour Link opens across the harbour to Navi Mumbai — at about 21.8 km, India's longest sea bridge. Together with the Coastal Road and the metro network, it marks the city's growth turning east across the water it has spent four centuries reclaiming from.",
+      "sourceId": "mmrda",
+      "tags": [
+        "infrastructure"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "fort",
+      "name": "Fort",
+      "lat": 18.934,
+      "lon": 72.8356,
+      "note": "The Company's walled town; still the financial district."
+    },
+    {
+      "id": "mahim",
+      "name": "Mahim",
+      "lat": 19.04,
+      "lon": 72.84,
+      "note": "Mahikavati, Bhimdev's city — the oldest urban core."
+    },
+    {
+      "id": "mumbadevi",
+      "name": "Mumbadevi Temple",
+      "lat": 18.95,
+      "lon": 72.83,
+      "note": "Shrine of the goddess the city is named for."
+    },
+    {
+      "id": "elephanta",
+      "name": "Elephanta Caves",
+      "lat": 18.9633,
+      "lon": 72.9315,
+      "note": "Gharapuri. UNESCO World Heritage, inscribed 1987."
+    },
+    {
+      "id": "cst",
+      "name": "Chhatrapati Shivaji Terminus",
+      "lat": 18.9398,
+      "lon": 72.8355,
+      "note": "UNESCO World Heritage, inscribed 2004."
+    },
+    {
+      "id": "dockyard",
+      "name": "Bombay Dockyard",
+      "lat": 18.92,
+      "lon": 72.842,
+      "note": "Where the Wadias built ships for the Royal Navy."
+    },
+    {
+      "id": "girangaon",
+      "name": "Girangaon (mill district)",
+      "lat": 18.995,
+      "lon": 72.83,
+      "note": "The mill village: Parel, Lalbaug, Worli."
+    },
+    {
+      "id": "worli",
+      "name": "Worli / Hornby Vellard",
+      "lat": 18.994,
+      "lon": 72.815,
+      "note": "Where the sea was shut out and the islands joined."
+    },
+    {
+      "id": "marine-drive",
+      "name": "Marine Drive",
+      "lat": 18.944,
+      "lon": 72.823,
+      "note": "Backbay Reclamation and the Art Deco seafront."
+    },
+    {
+      "id": "oval",
+      "name": "Oval Maidan",
+      "lat": 18.929,
+      "lon": 72.83,
+      "note": "Victorian Gothic east, Art Deco west. UNESCO, 2018."
+    },
+    {
+      "id": "hutatma",
+      "name": "Hutatma Chowk",
+      "lat": 18.932,
+      "lon": 72.833,
+      "note": "Flora Fountain, renamed for the Samyukta Maharashtra dead."
+    },
+    {
+      "id": "august-kranti",
+      "name": "August Kranti Maidan",
+      "lat": 18.963,
+      "lon": 72.809,
+      "note": "Gowalia Tank — where Quit India was launched."
+    },
+    {
+      "id": "mithi",
+      "name": "Mithi River",
+      "lat": 19.07,
+      "lon": 72.87,
+      "note": "The drain that could not carry 944 mm of rain."
+    },
+    {
+      "id": "taj",
+      "name": "Taj Mahal Palace Hotel",
+      "lat": 18.9217,
+      "lon": 72.8332,
+      "note": "Jamsetji Tata's hotel, opened 1903, at Apollo Bunder."
+    },
+    {
+      "id": "sassoon-docks",
+      "name": "Sassoon Docks",
+      "lat": 18.913,
+      "lon": 72.83,
+      "note": "Built by Albert Sassoon, 1872–75 — the first wet dock on the west coast."
+    },
+    {
+      "id": "godrej-vikhroli",
+      "name": "Godrej, Vikhroli",
+      "lat": 19.109,
+      "lon": 72.926,
+      "note": "The Godrej township and its 1,750-acre mangrove estate in the eastern suburbs."
+    },
+    {
+      "id": "ballard-estate",
+      "name": "Ballard Estate",
+      "lat": 18.943,
+      "lon": 72.842,
+      "note": "The reclaimed business district where much of Bombay commerce was headquartered."
+    },
+    {
+      "id": "girgaon",
+      "name": "Girgaon",
+      "lat": 18.955,
+      "lon": 72.815,
+      "note": "Where Raja Harishchandra had its 1913 theatrical release — the cradle of Indian cinema."
+    },
+    {
+      "id": "film-city",
+      "name": "Film City, Goregaon",
+      "lat": 19.165,
+      "lon": 72.876,
+      "note": "Dadasaheb Phalke Chitranagari, the state film studio complex, established 1977."
+    }
+  ],
+  "sources": {
+    "gazetteer-gb-history": {
+      "title": "Gazetteer of Greater Bombay — History",
+      "publisher": "Gazetteers Department, Government of Maharashtra",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/history.html",
+      "official": true,
+      "note": "Published 1986; narrative effectively ends there."
+    },
+    "gazetteer-gb-general": {
+      "title": "Gazetteer of Greater Bombay — General",
+      "publisher": "Gazetteers Department, Government of Maharashtra",
+      "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/greater_bombay/general.html",
+      "official": true
+    },
+    "unesco-244": {
+      "title": "Elephanta Caves",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/244/",
+      "official": true
+    },
+    "unesco-945": {
+      "title": "Chhatrapati Shivaji Terminus",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/945/",
+      "official": true
+    },
+    "unesco-1480": {
+      "title": "Victorian Gothic and Art Deco Ensembles of Mumbai",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/1480/",
+      "official": true
+    },
+    "mumbaicity-history": {
+      "title": "Mumbai City District — History",
+      "publisher": "District Administration, Government of Maharashtra",
+      "url": "https://mumbaicity.gov.in/en/history/",
+      "official": true
+    },
+    "census2011": {
+      "title": "Census of India 2011",
+      "publisher": "Office of the Registrar General & Census Commissioner, India",
+      "url": "https://censusindia.gov.in/",
+      "official": true
+    },
+    "samyukta": {
+      "title": "Bombay Reorganisation Act, 1960 and the Samyukta Maharashtra movement",
+      "publisher": "Government of India / contemporary accounts",
+      "url": "https://www.indiacode.nic.in/",
+      "official": true,
+      "note": "Death toll differs between accounts: 105 or 106. The Hutatma Chowk memorial carries 106 names."
+    },
+    "srikrishna": {
+      "title": "Report of the Srikrishna Commission of Inquiry",
+      "publisher": "Government of Maharashtra",
+      "url": "https://www.maharashtra.gov.in/",
+      "official": true,
+      "note": "Casualty figures for 1992–93 vary between official and press accounts."
+    },
+    "imd": {
+      "title": "Rainfall records, 26 July 2005",
+      "publisher": "India Meteorological Department",
+      "url": "https://mausam.imd.gov.in/",
+      "official": true
+    },
+    "mmrda": {
+      "title": "Mumbai Trans Harbour Link (Atal Setu)",
+      "publisher": "Mumbai Metropolitan Region Development Authority",
+      "url": "https://mmrda.maharashtra.gov.in/",
+      "official": true
+    },
+    "news-archive": {
+      "title": "Contemporary press and official statements",
+      "publisher": "Various",
+      "url": "",
+      "official": false,
+      "note": "Casualty figures for the 2006 and 2008 attacks are those in official statements; press totals differ slightly."
+    },
+    "mcgm-gis": {
+      "title": "BMC Ward boundaries (BMC_Ward FeatureServer)",
+      "publisher": "Municipal Corporation of Greater Mumbai (MCGM/BMC)",
+      "url": "https://services8.arcgis.com/r6MmJtuWAzMawmJ8/ArcGIS/rest/services/BMC_Ward/FeatureServer/0",
+      "official": true,
+      "note": "The corporation's own GIS service. Licence not stated on the endpoint; Indian government data falls under GODL-India by default, which permits commercial reuse with attribution and imposes no share-alike."
+    },
+    "mu-history": {
+      "title": "History of the University of Mumbai",
+      "publisher": "University of Mumbai",
+      "url": "https://archive.mu.ac.in/History.html",
+      "official": true
+    },
+    "bse-history": {
+      "title": "BSE — about the exchange",
+      "publisher": "BSE Ltd (Bombay Stock Exchange)",
+      "url": "https://www.bseindia.com/",
+      "official": true
+    },
+    "general-history": {
+      "title": "Standard published histories and contemporary press",
+      "publisher": "Various",
+      "url": "",
+      "official": false,
+      "note": "Used where no single official publication covers the event. Figures are those most consistently reported; where accounts differ the entry says so."
+    },
+    "tata-heritage": {
+      "title": "Tata group — Our Heritage (official timeline)",
+      "publisher": "Tata Sons",
+      "url": "https://www.tata.com/about-us/tata-group-our-heritage/Our-Timeline",
+      "official": true
+    },
+    "godrej-story": {
+      "title": "Godrej — Our Story",
+      "publisher": "Godrej Consumer Products / Godrej & Boyce",
+      "url": "https://www.godrejcp.com/know-us/our-story",
+      "official": true
+    },
+    "mcgm-heritage-petit": {
+      "title": "Mumbai Legacy Project — Dinshaw Maneckji Petit (heritage note)",
+      "publisher": "Municipal Corporation of Greater Mumbai",
+      "url": "https://www.mcgm.gov.in/irj/go/km/docs/documents/D%20Ward/Heritage-Sites/Heritage-12.pdf",
+      "official": true
+    },
+    "sassoon-scholarship": {
+      "title": "The Rise and Fall of the Sassoons; Encyclopaedia entries on the Sassoon family",
+      "publisher": "The India Forum / Encyclopedia.com",
+      "url": "https://www.theindiaforum.in/history/rise-and-fall-sassoons",
+      "official": false,
+      "note": "Scholarly secondary sources. The Sassoons kept their own records but no single official archive publishes them."
+    },
+    "reliance-history": {
+      "title": "Reliance Industries — history; contemporary business press",
+      "publisher": "Reliance Industries / press",
+      "url": "https://www.ril.com/OurCompany/History.aspx",
+      "official": false,
+      "note": "Company account supplemented by contemporary reporting. Dates for a living company are well documented; interpretation is not neutral."
+    },
+    "culture-history": {
+      "title": "Published histories and standard references on Indian cinema and Mumbai institutions",
+      "publisher": "Britannica and standard references",
+      "url": "https://www.britannica.com/topic/Raja-Harishchandra",
+      "official": false,
+      "note": "Secondary sources. Dates for well-documented cultural firsts are firm; framing is the app’s."
+    }
+  },
+  "caveats": [
+    "The Greater Bombay gazetteer was published in 1986. Events after that date come from other sources, cited individually.",
+    "Casualty figures for the 1992–93 riots, the 1993 bombings and the 2006 attacks differ between official inquiries and press accounts. Approximate figures are given and marked.",
+    "Early dates — Bhimdev, the founding of Mahim — come from tradition recorded in the gazetteer, not from documentary evidence.",
+    "'Mumbai' names at least four different areas. Population figures here are for Greater Mumbai (M Corp) unless stated.",
+    "Ward boundaries are the corporation's published geometry, which contains around a hundred small self-overlaps between adjacent wards. These are repaired for display; do not treat the rendered edges as survey-accurate.",
+    "Business-family entries credit the founding and best-documented achievements of each house. Family histories are partly told by the families themselves; where the source is a company's own account it is marked as such."
+  ],
+  "divisions": {
+    "label": "BMC wards",
+    "singular": "ward",
+    "count": 24,
+    "note": "The 24 administrative wards of the Municipal Corporation of Greater Mumbai. The letter code is the official identifier; the localities listed are the areas each ward covers, given for orientation.",
+    "sourceId": "mcgm-gis",
+    "names": {
+      "A": "Colaba, Fort, Churchgate",
+      "B": "Dongri, Sandhurst Road",
+      "C": "Kalbadevi, Bhuleshwar, Marine Lines",
+      "D": "Malabar Hill, Grant Road, Tardeo",
+      "E": "Byculla, Mazgaon",
+      "F/S": "Parel, Sewri, Lalbaug",
+      "F/N": "Matunga, Sion, Wadala",
+      "G/S": "Worli, Prabhadevi",
+      "G/N": "Dadar, Mahim, Dharavi",
+      "H/E": "Bandra East, Santacruz East",
+      "H/W": "Bandra West, Khar, Santacruz West",
+      "K/E": "Andheri East, Jogeshwari East, Vile Parle East",
+      "K/W": "Andheri West, Juhu, Versova",
+      "P/S": "Goregaon",
+      "P/N": "Malad",
+      "R/S": "Kandivali, Charkop",
+      "R/C": "Borivali",
+      "R/N": "Dahisar",
+      "L": "Kurla, Chandivali",
+      "M/E": "Govandi, Mankhurd, Deonar",
+      "M/W": "Chembur",
+      "N": "Ghatkopar, Vikhroli",
+      "S": "Bhandup, Kanjurmarg, Powai",
+      "T": "Mulund"
+    },
+    "nameField": "NAME"
+  },
+  "dynasties": {
+    "note": "Business families and the industries they founded. Parsi and Baghdadi Jewish merchant houses built much of colonial Bombay; the same names, and a few newer ones, still run Indian industry.",
+    "list": [
+      {
+        "id": "wadia",
+        "name": "The Wadias",
+        "community": "Parsi",
+        "era": "company",
+        "span": "1735 – present",
+        "founded": 1735,
+        "industries": [
+          "Shipbuilding",
+          "Textiles"
+        ],
+        "summary": "The family that built Bombay's ships. Lovji Nusserwanji Wadia was brought from Surat in 1735 to run the East India Company's marine yard, and the Wadias built hundreds of teak vessels over the next century — including warships for the Royal Navy and HMS Trincomalee, still afloat today. The line later moved into textiles, founding Bombay Dyeing in 1879, which remains a Wadia company.",
+        "figures": [
+          "Lovji Nusserwanji Wadia (1702–1774), master shipbuilder",
+          "Nowrosjee Wadia, founder of Bombay Dyeing, 1879"
+        ],
+        "legacy": "Bombay Dyeing, the Wadia Group, and much of the old Bombay Dockyard.",
+        "place": "dockyard",
+        "sourceId": "gazetteer-gb-history"
+      },
+      {
+        "id": "jejeebhoy",
+        "name": "The Jejeebhoys",
+        "community": "Parsi",
+        "era": "company",
+        "span": "1783 – present",
+        "founded": 1803,
+        "industries": [
+          "China trade",
+          "Cotton",
+          "Philanthropy"
+        ],
+        "summary": "Sir Jamsetjee Jejeebhoy rose from an orphaned pedlar of empty bottles to the richest merchant in Bombay, trading cotton and opium with China in partnership with Jardine Matheson. The first Indian to be knighted (1842) and made a baronet (1857), he turned his fortune to the city: the J. J. Hospital, the J. J. School of Art and the first causeway to Salsette all carry his initials.",
+        "figures": [
+          "Sir Jamsetjee Jejeebhoy, 1st Baronet (1783–1859)"
+        ],
+        "legacy": "Sir J. J. Hospital, Sir J. J. School of Art, the Mahim causeway.",
+        "place": "fort",
+        "sourceId": "gazetteer-gb-history"
+      },
+      {
+        "id": "sassoon",
+        "name": "The Sassoons",
+        "community": "Baghdadi Jewish",
+        "era": "raj",
+        "span": "1832 – 1930s",
+        "founded": 1832,
+        "industries": [
+          "Cotton",
+          "China trade",
+          "Textile mills"
+        ],
+        "summary": "Baghdadi Jews who fled Ottoman persecution and reached Bombay in 1832, the Sassoons built a trading house so vast they were called 'the Rothschilds of the East'. They dominated the cotton and opium trade with China and put their capital into large-scale textile mills. Albert Sassoon built the Sassoon Docks in 1872–75, the first wet dock on India's west coast.",
+        "figures": [
+          "David Sassoon (1792–1864), founder of the house in Bombay",
+          "Sir Albert (Abdullah) Sassoon, builder of the Sassoon Docks"
+        ],
+        "legacy": "Sassoon Docks, the David Sassoon Library, the Magen David and Keneseth Eliyahoo synagogues.",
+        "place": "sassoon-docks",
+        "sourceId": "sassoon-scholarship"
+      },
+      {
+        "id": "petit",
+        "name": "The Petits",
+        "community": "Parsi",
+        "era": "raj",
+        "span": "1822 – present",
+        "founded": 1855,
+        "industries": [
+          "Cotton mills",
+          "Textiles",
+          "Philanthropy"
+        ],
+        "summary": "Among the first Indians to own cotton mills rather than merely trade in cotton. Sir Dinshaw Manockjee Petit erected the Oriental Spinning and Weaving Mill in 1855 — one of the earliest Indian-owned mills to weave cloth as well as spin yarn — and was made the first Petit baronet in 1890. The family endowed schools, hospitals and technical institutes, and married into the Tatas and the Wadias.",
+        "figures": [
+          "Sir Dinshaw Manockjee Petit, 1st Baronet (1823–1901)"
+        ],
+        "legacy": "Petit Hall, the Petit hospitals and schools, and the Bombay textile mill industry itself.",
+        "place": "girangaon",
+        "sourceId": "mcgm-heritage-petit"
+      },
+      {
+        "id": "tata",
+        "name": "The Tatas",
+        "community": "Parsi",
+        "era": "raj",
+        "span": "1868 – present",
+        "founded": 1868,
+        "industries": [
+          "Textiles",
+          "Steel",
+          "Hydroelectric power",
+          "Hospitality",
+          "Aviation",
+          "Software"
+        ],
+        "summary": "The family that industrialised India. Jamsetji Tata started with a trading firm in 1868 and a cotton mill at Nagpur (Empress Mills, 1874), then set three goals he mostly did not live to see: an Indian steel industry, hydroelectric power, and a world-class institute of science. His heirs delivered all three — Tata Steel (1907), Tata Power (1910), the Indian Institute of Science (1909) — while he himself built the Taj Mahal Palace Hotel in 1903. J. R. D. Tata then founded India's aviation industry, flying the first Tata Airlines mail run from Karachi to Bombay in 1932; it became Air India in 1946. The group's software arm, TCS, later made Mumbai a technology centre as well.",
+        "figures": [
+          "Jamsetji Nusserwanji Tata (1839–1904), founder",
+          "Sir Dorabji Tata, who realised Tata Steel",
+          "J. R. D. Tata (1904–1993), father of Indian civil aviation"
+        ],
+        "legacy": "Tata Steel, Tata Power, Air India, TCS, the Taj hotels, and the Indian Institute of Science.",
+        "place": "taj",
+        "sourceId": "tata-heritage"
+      },
+      {
+        "id": "godrej",
+        "name": "The Godrejs",
+        "community": "Parsi",
+        "era": "raj",
+        "span": "1897 – present",
+        "founded": 1897,
+        "industries": [
+          "Locks & safes",
+          "Consumer goods",
+          "Engineering",
+          "Aerospace"
+        ],
+        "summary": "Ardeshir Godrej gave up law for manufacturing and opened a lock business in a shed at Lalbaug in 1897. His springless lock did away with the failure-prone springs of British imports that rusted and jammed in the damp; his vegetable-oil soap — among the first made without animal tallow — was acceptable across caste and faith and turned Godrej into a household name. The firm went on to make India's first indigenous typewriter and refrigerator, and today its engineering arm builds components for India's rockets and satellites — and guards a 1,750-acre mangrove forest at Vikhroli.",
+        "figures": [
+          "Ardeshir Godrej (1868–1936), founder",
+          "Pirojsha Burjorji Godrej, who built the Vikhroli township"
+        ],
+        "legacy": "Godrej & Boyce and Godrej Consumer Products; locks, safes, appliances and aerospace components.",
+        "place": "godrej-vikhroli",
+        "sourceId": "godrej-story"
+      },
+      {
+        "id": "ambani",
+        "name": "The Ambanis",
+        "community": "Gujarati",
+        "era": "modern",
+        "span": "1966 – present",
+        "founded": 1966,
+        "industries": [
+          "Synthetic textiles",
+          "Petrochemicals",
+          "Telecom",
+          "Retail"
+        ],
+        "summary": "Dhirubhai Ambani came to Bombay as a clerk and built Reliance from a small textile trader (1966) into India's largest private company. Reliance's 'Vimal' polyester made synthetic fabric a mass product, then the group integrated backwards into petrochemicals and refining. Its 1977 share issue helped turn a generation of ordinary Indians into stockholders and made the Bombay Stock Exchange a household concern. The family remains the dominant force in modern Mumbai business.",
+        "figures": [
+          "Dhirubhai Ambani (1932–2002), founder of Reliance"
+        ],
+        "legacy": "Reliance Industries — petrochemicals, refining, telecom (Jio) and retail; and a retail-investor culture around the BSE.",
+        "place": "fort",
+        "sourceId": "reliance-history"
+      }
+    ]
+  }
+}

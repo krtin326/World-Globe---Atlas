@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Globe</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #1c2330; background: #fbfcfe; }
+  @media (prefers-color-scheme: dark) { body { color: #dfe6f2; background: #0f1420; } }
+  h1, h2, h3, h4 { line-height: 1.25; margin: 1.6em 0 .5em; }
+  h1 { font-size: 1.9em; border-bottom: 2px solid #3d7fd6; padding-bottom: .3em; }
+  h2 { font-size: 1.4em; border-bottom: 1px solid #8883; padding-bottom: .25em; }
+  h3 { font-size: 1.15em; }
+  a { color: #2f7fe0; } @media (prefers-color-scheme: dark){ a{ color:#7fb8ff; } }
+  code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: .88em;
+         background: #8882; padding: .12em .35em; border-radius: 4px; }
+  pre { background: #11182a; color: #cfe0ff; padding: 14px 16px; border-radius: 8px;
+        overflow-x: auto; } pre code { background: none; padding: 0; color: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #8884; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #3d7fd61a; }
+  blockquote { margin: 1em 0; padding: .4em 1em; border-left: 3px solid #3d7fd6; background: #3d7fd614; }
+  hr { border: none; border-top: 1px solid #8884; margin: 2em 0; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin: .2em 0; }
+</style></head><body>
+<h1>World Globe</h1>
+<p>An interactive 3D terrain globe in the browser — NASA satellite imagery with sun-responsive relief shading, every country and every state/province on Earth as selectable regions, and a searchable list of 34,027 cities.</p>
+<p>No build step, no bundler, no API keys, no network access at runtime.</p>
+<pre><code>npm install
+npm run build     # fetch sources, process imagery, build data (~5 min first run)
+npm run serve     # http://localhost:8080</code></pre>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Countries</td><td>258</td></tr><tr><td>States / provinces</td><td>4,596</td></tr><tr><td>Cities</td><td>34,027 (places of 15,000+; deeper tiers supported)</td></tr><tr><td>City histories</td><td>Mumbai — 62 events, 7 families, 254 places, roads + rail, 24 wards</td></tr></tbody></table>
+<p><strong>Drag</strong> to rotate · <strong>scroll</strong> to zoom · <strong>click</strong> a region or city to inspect it · <strong><code>/</code></strong> to search.</p>
+<p>Drill down through <strong>World → country → states → cities</strong>, or search across all three at once. Search is accent-insensitive: <code>sao paulo</code> finds <em>São Paulo</em>.</p>
+<p>Select <strong>Mumbai</strong> and press <em>Explore history</em> for the city sub-view: a rotating 3D model built from full-resolution NOAA coastline data and the corporation's own 24 ward boundaries, with a 62-event timeline running from the edicts of Ashoka to Atal Setu — and a Families tab tracing the seven business dynasties (Tata, Godrej, Wadia, Petit, Sassoon, Jejeebhoy, Ambani) that built Indian industry. Every entry names the source it came from and flags where accounts disagree.</p>
+<hr>
+<h2>Documentation</h2>
+<ul><li><strong><a href="docs/DOCUMENTATION.md" target="_blank" rel="noopener noreferrer">docs/DOCUMENTATION.md</a></strong> — reference: architecture,</li></ul>
+<p>  the terrain shader, the data pipeline, performance notes, how to extend it.</p>
+<ul><li><strong><a href="docs/DESIGN_AND_BUILD.md" target="_blank" rel="noopener noreferrer">docs/DESIGN_AND_BUILD.md</a></strong> — the design &amp; build</li></ul>
+<p>  story: how it was made, why each decision went the way it did, and the   thematic ensemble (the two visual registers) that holds it together.</p>
+<ul><li><strong><a href="docs/SOURCES.md" target="_blank" rel="noopener noreferrer">docs/SOURCES.md</a></strong> — every data source, its publisher, its</li></ul>
+<p>  licence, and what you must do if you publish this.</p>
+<ul><li><strong><a href="docs/SOURCES_AND_ANALYSIS.md" target="_blank" rel="noopener noreferrer">docs/SOURCES_AND_ANALYSIS.md</a></strong> — a</li></ul>
+<p>  consolidated source list plus a candid retrospective on how the information   was gathered and how the fetching could have been improved.</p>
+<h2>Attribution</h2>
+<p>City data is licensed <strong>CC BY 4.0 and attribution is required</strong>:</p>
+<blockquote><p>Boundaries: Natural Earth (public domain). Cities: © GeoNames, CC BY 4.0. Imagery: NASA Earth Observatory. Elevation: GEBCO (IHO/IOC-UNESCO). Coastline: GSHHG (NOAA). Wards: MCGM, GODL-India. Roads &amp; rail: © OpenStreetMap contributors, ODbL.</p></blockquote>
+<p>This credit is rendered in the app itself under <strong>Data sources</strong>, bottom right — that is what actually satisfies CC BY. Keep it if you fork the UI.</p>
+<p>The boundaries are simplified for display and reflect one editorial view of several dozen contested borders. They are not authoritative — see <a href="docs/SOURCES.md" target="_blank" rel="noopener noreferrer">SOURCES.md</a> before using them for anything that matters.</p>
+</body></html>

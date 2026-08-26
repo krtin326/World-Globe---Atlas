@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLAS — A Living Globe</title>
+<style>
+  :root {
+    --bg:     #05070d;
+    --bg2:    #0a1526;
+    --cyan:   #7fd4ff;
+    --neon:   #00f0ff;
+    --gold:   #ffc75a;
+    --magenta:#ff2d78;
+    --text:   #eaf3ff;
+    --muted:  #9fb6d0;
+    --mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+    --sans: "Segoe UI", -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #010206;
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+
+  /* The poster: A-series portrait, scales down on small screens */
+  .poster {
+    position: relative;
+    width: min(92vw, 840px);
+    aspect-ratio: 1 / 1.414;
+    background:
+      radial-gradient(130% 90% at 50% 8%, #0e1b31 0%, var(--bg) 52%, #02030a 100%);
+    border: 1px solid #1c2c47;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 40px 120px -30px #000, 0 0 0 1px #ffffff06 inset;
+    display: flex;
+    flex-direction: column;
+    /* everything scales with the poster width so print/scale stays true */
+    container-type: inline-size;
+  }
+  canvas#sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+
+  /* Fine scanline veil — the app's CRT signature */
+  .veil {
+    position: absolute; inset: 0; z-index: 5; pointer-events: none; mix-blend-mode: overlay; opacity: .35;
+    background: repeating-linear-gradient(0deg, #000 0 1px, transparent 1px 3px);
+  }
+  /* HUD corner brackets */
+  .brackets { position: absolute; inset: 18px; z-index: 6; pointer-events: none; }
+  .brackets::before, .brackets::after, .brackets i::before, .brackets i::after {
+    content: ""; position: absolute; width: 26px; height: 26px; border: 2px solid var(--cyan); opacity: .55;
+  }
+  .brackets::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+  .brackets::after  { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+  .brackets i::before { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+  .brackets i::after  { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+  .stack { position: relative; z-index: 4; display: flex; flex-direction: column; height: 100%; padding: 5.2cqw 5.6cqw 4.6cqw; }
+
+  /* Eyebrow */
+  .eyebrow {
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--mono); font-size: 2.35cqw; letter-spacing: .28em; text-transform: uppercase; color: var(--cyan);
+  }
+  .eyebrow .live { display: inline-flex; align-items: center; gap: .6em; color: var(--gold); }
+  .eyebrow .dot { width: .7em; height: .7em; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold); animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  /* Hero globe */
+  .hero { position: relative; flex: 1 1 auto; display: grid; place-items: center; min-height: 0; }
+  canvas#globe { width: auto; height: min(46cqw, 100%); aspect-ratio: 1 / 1; display: block;
+    filter: drop-shadow(0 0 40px #1b6fb033); }
+  .ring-caption {
+    position: absolute; bottom: 1.5cqw; left: 50%; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 2.15cqw; letter-spacing: .22em; text-transform: uppercase; color: var(--muted);
+    white-space: nowrap;
+  }
+  .ring-caption b { color: var(--cyan); }
+
+  /* The four verbs — a route, connected by a neon line */
+  .verbs { list-style: none; position: relative; margin: 1cqw 0 0; padding-left: 5.2cqw; }
+  .verbs::before {
+    content: ""; position: absolute; left: 1.5cqw; top: 1.6cqw; bottom: 1.6cqw; width: 2px;
+    background: linear-gradient(180deg, var(--cyan), var(--gold));
+    box-shadow: 0 0 10px #7fd4ff66;
+  }
+  .verbs li { position: relative; display: flex; align-items: baseline; gap: 2.6cqw; }
+  .verbs li + li { margin-top: -0.4cqw; }
+  .verbs .node {
+    position: absolute; left: -3.7cqw; top: 3.4cqw; width: 2.1cqw; height: 2.1cqw; transform: rotate(45deg);
+    background: var(--bg); border: 2px solid var(--cyan); box-shadow: 0 0 10px #7fd4ff88;
+  }
+  .verbs li:nth-child(2) .node { border-color: var(--neon); box-shadow: 0 0 10px #00f0ff88; }
+  .verbs li:nth-child(3) .node { border-color: var(--gold); box-shadow: 0 0 10px #ffc75a88; }
+  .verbs li:nth-child(4) .node { border-color: var(--gold); background: var(--gold); box-shadow: 0 0 16px var(--gold); }
+  .verbs .word {
+    font-family: var(--sans); font-weight: 800; text-transform: uppercase; letter-spacing: -.01em;
+    font-size: 9.6cqw; line-height: 1.04; color: var(--text);
+    text-shadow: -2px 0 var(--magenta), 2px 0 var(--neon);   /* the app's chromatic split */
+  }
+  .verbs li:nth-child(4) .word { color: var(--gold); text-shadow: -2px 0 var(--magenta), 2px 0 var(--gold); }
+  .verbs .idx { font-family: var(--mono); font-size: 2.3cqw; color: var(--muted); letter-spacing: .1em; align-self: flex-start; margin-top: 3.2cqw; }
+
+  .sub { margin: 2.6cqw 0 0 5.2cqw; max-width: 62ch; font-size: 2.75cqw; line-height: 1.55; color: var(--muted); }
+  .sub b { color: var(--text); font-weight: 600; }
+
+  /* CTA band */
+  .cta {
+    margin-top: 3.4cqw; display: flex; align-items: center; gap: 4cqw;
+    padding: 3.4cqw 4cqw; position: relative;
+    background: linear-gradient(100deg, #0c1a2e, #0a1424);
+    border: 1px solid #294668;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+  }
+  .cta::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--gold); box-shadow: 0 0 16px var(--gold); }
+  .price { font-family: var(--sans); font-weight: 800; color: var(--gold); line-height: 1;
+    font-size: 9cqw; text-shadow: 0 0 24px #ffc75a55; white-space: nowrap; }
+  .price .cur { font-size: 5cqw; vertical-align: .6em; margin-right: .05em; }
+  .price .per { font-family: var(--mono); font-size: 2.5cqw; font-weight: 400; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+  .cta-right { margin-left: auto; text-align: right; }
+  .signup {
+    font-family: var(--mono); font-weight: 700; font-size: 3.1cqw; letter-spacing: .12em; text-transform: uppercase;
+    color: #04121f; background: linear-gradient(180deg, #ffe3a0, var(--gold)); border: 0; cursor: pointer;
+    padding: 2.6cqw 4cqw; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow: 0 0 30px #ffc75a44; animation: glow 3.2s ease-in-out infinite;
+  }
+  @keyframes glow { 0%,100%{ box-shadow: 0 0 22px #ffc75a33; } 50%{ box-shadow: 0 0 40px #ffc75a77; } }
+  .cta-note { margin-top: 1.4cqw; font-family: var(--mono); font-size: 2cqw; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  footer.hud {
+    margin-top: 3cqw; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 1.85cqw; letter-spacing: .12em; text-transform: uppercase; color: #6f88a6;
+  }
+  footer.hud b { color: var(--cyan); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dot, .signup { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="poster" role="img" aria-label="ATLAS — a living globe. Think, Explore, Learn, Discover. Sign up now, just 99 per month.">
+  <canvas id="sky"></canvas>
+  <div class="veil"></div>
+  <div class="brackets"><i></i></div>
+
+  <div class="stack">
+    <div class="eyebrow">
+      <span>ATLAS&nbsp;&nbsp;//&nbsp;&nbsp;A Living Globe</span>
+      <span class="live"><span class="dot"></span>Feed Live</span>
+    </div>
+
+    <div class="hero">
+      <canvas id="globe"></canvas>
+      <div class="ring-caption"><b>34,027</b>&nbsp;cities &middot; <b>5</b>&nbsp;deep dossiers &middot; <b>1</b>&nbsp;planet</div>
+    </div>
+
+    <ul class="verbs">
+      <li><span class="node"></span><span class="word">Think</span><span class="idx">01</span></li>
+      <li><span class="node"></span><span class="word">Explore</span><span class="idx">02</span></li>
+      <li><span class="node"></span><span class="word">Learn</span><span class="idx">03</span></li>
+      <li><span class="node"></span><span class="word">Discover</span><span class="idx">04</span></li>
+    </ul>
+
+    <p class="sub">A photographic planet you can read like a map — and cities you can read like a story. Spin the globe, step into a holographic city, and dig through its history, families, culture and wars.</p>
+
+    <div class="cta">
+      <div class="price"><span class="cur">₹</span>99<span class="per">&nbsp;/ month</span></div>
+      <div class="cta-right">
+        <button class="signup">Sign up now →</button>
+        <div class="cta-note">Cancel anytime</div>
+      </div>
+    </div>
+
+    <footer class="hud">
+      <span>19.08°N&nbsp;·&nbsp;72.88°E</span>
+      <span>atlas<b>.globe</b></span>
+    </footer>
+  </div>
+</div>
+
+<script>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Starfield ---- */
+  (function () {
+    const c = document.getElementById('sky'), x = c.getContext('2d');
+    let stars = [];
+    function size() {
+      const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio, 2);
+      c.width = r.width * dpr; c.height = r.height * dpr; x.setTransform(dpr,0,0,dpr,0,0);
+      stars = Array.from({ length: Math.round(r.width * r.height / 2600) }, () => ({
+        x: Math.random() * r.width, y: Math.random() * r.height,
+        r: Math.random() * 1.3 + .2, p: Math.random() * Math.PI * 2,
+        s: Math.random() * .9 + .2
+      }));
+      W = r.width; H = r.height;
+    }
+    let W, H, t = 0;
+    function draw() {
+      x.clearRect(0, 0, W, H);
+      for (const st of stars) {
+        const tw = reduce ? .8 : (Math.sin(t * st.s + st.p) * .4 + .6);
+        x.globalAlpha = tw * .9;
+        x.fillStyle = st.r > 1.1 ? '#bcd8ff' : '#ffffff';
+        x.beginPath(); x.arc(st.x, st.y, st.r, 0, 7); x.fill();
+      }
+      x.globalAlpha = 1;
+      t += .02;
+      if (!reduce) requestAnimationFrame(draw);
+    }
+    addEventListener('resize', () => { size(); if (reduce) draw(); });
+    size(); draw();
+  })();
+
+  /* ---- Dotted rotating globe (Fibonacci sphere) ---- */
+  (function () {
+    const c = document.getElementById('globe'), x = c.getContext('2d');
+    const N = 720, pts = [];
+    const gold = 0.5 + Math.sqrt(1.25);      // golden ratio helper
+    for (let i = 0; i < N; i++) {
+      const y = 1 - (i / (N - 1)) * 2;         // 1 .. -1
+      const rad = Math.sqrt(1 - y * y);
+      const th = (i * 2.399963);               // golden angle
+      pts.push({ x: Math.cos(th) * rad, y, z: Math.sin(th) * rad });
+    }
+    // a few "cities" — bright gold markers at fixed directions
+    const cities = [
+      [0.16, 0.30, 0.94], [-0.55, 0.10, 0.83], [0.62, -0.20, 0.75],
+      [-0.20, -0.55, 0.81], [0.40, 0.55, 0.73]
+    ].map(v => { const m = Math.hypot(...v); return { x: v[0]/m, y: v[1]/m, z: v[2]/m }; });
+
+    let W, H, R, a = 0;
+    function size() {
+      const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio, 2);
+      c.width = r.width * dpr; c.height = r.height * dpr; x.setTransform(dpr,0,0,dpr,0,0);
+      W = r.width; H = r.height; R = Math.min(W, H) * 0.42;
+    }
+    function rot(p, ang) {
+      const ca = Math.cos(ang), sa = Math.sin(ang);
+      return { x: p.x * ca + p.z * sa, y: p.y, z: -p.x * sa + p.z * ca };
+    }
+    function draw() {
+      x.clearRect(0, 0, W, H);
+      const cx = W / 2, cy = H / 2;
+
+      // soft atmosphere halo
+      const g = x.createRadialGradient(cx, cy, R * .6, cx, cy, R * 1.5);
+      g.addColorStop(0, 'rgba(30,110,180,0.10)');
+      g.addColorStop(1, 'rgba(30,110,180,0)');
+      x.fillStyle = g; x.beginPath(); x.arc(cx, cy, R * 1.5, 0, 7); x.fill();
+
+      // dots, back-to-front by depth
+      const proj = pts.map(p => rot(p, a)).sort((p, q) => p.z - q.z);
+      for (const p of proj) {
+        const depth = (p.z + 1) / 2;              // 0 back .. 1 front
+        const sx = cx + p.x * R, sy = cy - p.y * R;
+        x.globalAlpha = 0.12 + depth * 0.85;
+        const rr = 0.6 + depth * 1.7;
+        // cyan front fading to deep blue at the back
+        x.fillStyle = `rgb(${Math.round(60 + depth*70)}, ${Math.round(150 + depth*70)}, ${Math.round(200 + depth*55)})`;
+        x.beginPath(); x.arc(sx, sy, rr, 0, 7); x.fill();
+      }
+
+      // city markers (only when on the near face)
+      for (const cpt of cities) {
+        const p = rot(cpt, a);
+        if (p.z < 0) continue;
+        const depth = (p.z + 1) / 2;
+        const sx = cx + p.x * R, sy = cy - p.y * R;
+        const pulse = reduce ? 1 : (Math.sin(a * 3 + cpt.x * 9) * .5 + .5);
+        x.globalAlpha = 0.5 + depth * 0.5;
+        x.fillStyle = '#ffc75a';
+        x.shadowColor = '#ffc75a'; x.shadowBlur = 8 + pulse * 12;
+        x.beginPath(); x.arc(sx, sy, 2.2 + depth * 1.6, 0, 7); x.fill();
+        x.shadowBlur = 0;
+      }
+      x.globalAlpha = 1;
+
+      // thin equatorial orbit ring
+      x.strokeStyle = 'rgba(127,212,255,0.30)'; x.lineWidth = 1;
+      x.beginPath(); x.ellipse(cx, cy, R * 1.16, R * 0.30, 0, 0, 7); x.stroke();
+
+      a += reduce ? 0 : 0.0045;
+      requestAnimationFrame(draw);
+    }
+    addEventListener('resize', size);
+    size(); draw();
+  })();
+</script>
+</body>
+</html>

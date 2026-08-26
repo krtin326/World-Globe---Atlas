@@ -1,0 +1,905 @@
+/* ==========================================================================
+   City sub-view — deliberately a different visual register from the globe.
+
+   The globe is cool, quiet and photographic. This is loud: hard magenta and
+   cyan, monospace everywhere, scanlines, clipped corners. The break is the
+   point — you should know at a glance that you have gone somewhere else.
+
+   Kept in its own stylesheet so none of it can leak into the globe UI.
+   ========================================================================== */
+
+.cityview {
+  --neon: #00f0ff;
+  --hot: #ff2d78;
+  --acid: #9dff3d;
+  --void: #04060e;
+  --panel: rgba(8, 12, 24, .86);
+  --line: rgba(0, 240, 255, .22);
+  --line-hot: rgba(255, 45, 120, .35);
+
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(255, 45, 120, .16) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 88%, rgba(0, 240, 255, .16) 0%, transparent 55%),
+    var(--void);
+  color: #dff2ff;
+  font-family: var(--mono);
+
+  opacity: 0;
+  transform: scale(.985);
+  transition: opacity .3s ease, transform .3s cubic-bezier(.2, .8, .2, 1);
+}
+.cityview.is-open { opacity: 1; transform: none; }
+.cityview[hidden] { display: none; }
+
+/* Scanlines. Pure decoration, pointer-transparent, and cheap: one repeating
+   gradient rather than an animated overlay. */
+.cv-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, .16) 0px,
+    rgba(0, 0, 0, .16) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+  opacity: .5;
+}
+
+/* -------------------------------- header -------------------------------- */
+
+.cv-head {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 45, 120, .1), transparent);
+}
+
+.cv-title {
+  margin: 0;
+  font-size: clamp(26px, 4.2vw, 46px);
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+  /* Chromatic split — the cheapest convincing "signal" look there is. */
+  text-shadow:
+    -2px 0 0 var(--hot),
+     2px 0 0 var(--neon),
+     0 0 26px rgba(0, 240, 255, .45);
+}
+
+.cv-subtitle {
+  margin-top: 7px;
+  font-size: 11.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(223, 242, 255, .58);
+}
+.city-local {
+  font-family: var(--font);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--acid);
+}
+
+.cv-head-tools { display: flex; gap: 8px; flex-shrink: 0; }
+
+.cv-btn {
+  background: rgba(0, 240, 255, .07);
+  border: 1px solid var(--line);
+  color: var(--neon);
+  font: inherit;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  cursor: pointer;
+  /* Clipped corner instead of a border radius — reads as panel, not button. */
+  clip-path: polygon(0 0, 100% 0, 100% 65%, calc(100% - 9px) 100%, 0 100%);
+  transition: background .15s, color .15s;
+}
+.cv-btn:hover { background: rgba(0, 240, 255, .18); color: #fff; }
+.cv-close { color: var(--hot); border-color: var(--line-hot); }
+.cv-close:hover { background: rgba(255, 45, 120, .2); }
+
+/* --------------------------------- body --------------------------------- */
+
+.cv-body {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(370px, .85fr);
+  min-height: 0;
+}
+
+/* ---------------------------------- map --------------------------------- */
+
+.cv-map { position: relative; min-height: 0; border-right: 1px solid var(--line); }
+#city-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+#city-canvas:active { cursor: grabbing; }
+
+.cv-map-label {
+  position: absolute;
+  top: 0; left: 0;
+  display: none;
+  padding: 3px 8px;
+  margin: -10px 0 0 12px;
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--acid);
+  background: rgba(4, 6, 14, .8);
+  border-left: 2px solid var(--acid);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cv-map-foot {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 16px;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(223, 242, 255, .4);
+  background: linear-gradient(0deg, rgba(4, 6, 14, .85), transparent);
+  pointer-events: none;
+}
+.cv-status { color: var(--neon); }
+
+/* --------------------------------- side --------------------------------- */
+
+.cv-side {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 18px 20px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 240, 255, .035), transparent 40%);
+}
+
+.cv-summary {
+  margin: 0 0 12px;
+  font-family: var(--font);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: rgba(223, 242, 255, .78);
+}
+
+.cv-timeline { min-height: 200px; }
+
+/* A horizontal strip rather than a grid. Stacked, five figure cards with notes
+   consumed most of the column and left the 37-row timeline about eight rows
+   tall; side-scrolling them gives that height back and suits the HUD look. */
+.cv-figures {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+}
+.cv-figures::-webkit-scrollbar { height: 5px; }
+.cv-figures::-webkit-scrollbar-thumb { background: var(--line); }
+
+.fig {
+  flex: 0 0 auto;
+  width: 168px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: rgba(0, 240, 255, .045);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  scroll-snap-align: start;
+}
+.fig-value { font-size: 15px; font-weight: 700; color: var(--neon); }
+.fig-label {
+  margin-top: 2px;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(223, 242, 255, .55);
+}
+.fig-note {
+  margin-top: 4px;
+  font-family: var(--font);
+  font-size: 10px;
+  line-height: 1.4;
+  color: rgba(223, 242, 255, .38);
+  /* Clamped, with the whole text on the tile's title attribute. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cv-section-label {
+  margin: 16px 0 8px;
+  font-size: 9.5px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--hot);
+}
+.cv-section-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, var(--line-hot), transparent);
+}
+
+.cv-eras { display: flex; flex-wrap: wrap; gap: 6px; }
+.era-chip {
+  background: color-mix(in srgb, var(--era) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--era) 45%, transparent);
+  color: var(--era);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+.era-chip:hover { background: color-mix(in srgb, var(--era) 28%, transparent); }
+
+/* ------------------------- timeline + detail ---------------------------- */
+
+.cv-timeline {
+  flex: 1;
+  margin-bottom: 14px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+  /* The vertical spine the dots sit on. */
+  background: linear-gradient(90deg, transparent 63px, var(--line) 63px, var(--line) 64px, transparent 64px);
+}
+.cv-timeline::-webkit-scrollbar { width: 6px; }
+.cv-timeline::-webkit-scrollbar-thumb { background: var(--line); }
+
+.tl-row {
+  display: grid;
+  grid-template-columns: 56px 16px 1fr;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 6px 8px 6px 0;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background .12s;
+}
+.tl-row:hover { background: rgba(0, 240, 255, .07); }
+.tl-row.is-active { background: rgba(255, 45, 120, .14); border-left-color: var(--hot); }
+
+.tl-year {
+  font-size: 10px;
+  letter-spacing: .04em;
+  color: rgba(223, 242, 255, .5);
+  text-align: right;
+  padding-right: 4px;
+}
+.tl-row.is-active .tl-year { color: var(--hot); }
+
+.tl-dot {
+  justify-self: center;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--era);
+  box-shadow: 0 0 7px var(--era);
+}
+.tl-row.is-pivotal .tl-dot {
+  width: 10px; height: 10px;
+  box-shadow: 0 0 12px var(--era), 0 0 22px var(--era);
+}
+
+.tl-title {
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(223, 242, 255, .78);
+}
+.tl-row.is-active .tl-title { color: #fff; }
+
+/* ------------------------------- detail --------------------------------- */
+
+/* Floating HUD card over the map, not a row in the side column. */
+.cv-detail {
+  position: absolute;
+  left: 16px;
+  bottom: 42px;
+  z-index: 2;
+  width: min(430px, calc(100% - 32px));
+  max-height: min(62%, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: rgba(6, 9, 18, .93);
+  backdrop-filter: blur(8px);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .6);
+}
+.cv-detail::-webkit-scrollbar { width: 6px; }
+.cv-detail::-webkit-scrollbar-thumb { background: var(--line); }
+.det-era {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--era);
+  border: 1px solid color-mix(in srgb, var(--era) 45%, transparent);
+  padding: 2px 7px;
+}
+.det-year {
+  margin-top: 8px;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--neon);
+  letter-spacing: .04em;
+}
+.det-title {
+  margin: 3px 0 8px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+}
+.det-body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: rgba(223, 242, 255, .78);
+}
+
+.det-place {
+  margin-top: 10px;
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--acid);
+}
+.det-place span {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--font);
+  font-size: 11px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: rgba(223, 242, 255, .45);
+}
+
+.det-flag {
+  margin-top: 10px;
+  padding: 6px 9px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: #ffd166;
+  border-left: 2px solid #ffd166;
+  background: rgba(255, 209, 102, .08);
+}
+
+.det-source {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.det-official, .det-unofficial {
+  align-self: flex-start;
+  font-size: 8.5px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+}
+.det-official { color: var(--acid); border: 1px solid rgba(157, 255, 61, .4); }
+.det-unofficial { color: #ffd166; border: 1px solid rgba(255, 209, 102, .4); }
+.det-source a { color: var(--neon); text-decoration: none; }
+.det-source a:hover { text-decoration: underline; }
+.det-pub { color: rgba(223, 242, 255, .45); }
+.det-note { color: rgba(223, 242, 255, .35); font-style: italic; }
+
+/* ------------------------------ responsive ------------------------------ */
+
+@media (max-width: 940px), (max-height: 620px) {
+  .cv-body { grid-template-columns: 1fr; grid-template-rows: 40vh minmax(0, 1fr); }
+  .cv-map { border-right: none; border-bottom: 1px solid var(--line); }
+
+  /* Not enough map left to float a card over, so put it back in the flow —
+     and let the whole side column scroll instead of fighting over height. */
+  .cv-detail {
+    position: static;
+    width: auto;
+    max-height: none;
+    margin-bottom: 14px;
+    clip-path: none;
+    box-shadow: none;
+  }
+  .cv-side { overflow-y: auto; }
+  .cv-timeline { flex: none; max-height: 46vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cityview { transition: none; }
+  .cv-scanlines { display: none; }
+}
+
+/* --------------------------- divisions (wards) --------------------------- */
+
+.cv-divisions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-height: 132px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+  margin-bottom: 4px;
+}
+.cv-divisions[hidden] { display: none; }
+.cv-divisions::-webkit-scrollbar { width: 5px; }
+.cv-divisions::-webkit-scrollbar-thumb { background: var(--line); }
+
+.div-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  max-width: 100%;
+  padding: 4px 8px;
+  background: color-mix(in srgb, var(--div) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--div) 40%, transparent);
+  color: var(--div);
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background .14s, box-shadow .14s;
+}
+.div-chip:hover { background: color-mix(in srgb, var(--div) 26%, transparent); }
+.div-chip.is-active {
+  background: color-mix(in srgb, var(--div) 40%, transparent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--div) 55%, transparent);
+  color: #fff;
+}
+.div-code { font-weight: 700; letter-spacing: .06em; flex: 0 0 auto; }
+.div-where {
+  font-family: var(--font);
+  font-size: 10px;
+  color: rgba(223, 242, 255, .5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.div-chip.is-active .div-where { color: rgba(255, 255, 255, .75); }
+
+/* Ward codes floating over their plate on the map. */
+.cv-ward-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ward-label {
+  position: absolute;
+  top: 0; left: 0;
+  display: none;
+  transform-origin: 0 0;
+  margin: -7px 0 0 -10px;
+  padding: 1px 5px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: rgba(223, 242, 255, .72);
+  background: rgba(4, 6, 14, .55);
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(0, 0, 0, .9);
+}
+.ward-label.is-active {
+  color: #fff;
+  background: rgba(255, 45, 120, .5);
+  font-size: 11.5px;
+  box-shadow: 0 0 14px rgba(255, 45, 120, .55);
+}
+
+/* Attribution for the sources this view adds. Mandatory under GODL-India and
+   LGPL respectively — see docs/SOURCES.md §11. Do not remove. */
+.cv-credit {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  z-index: 2;
+  max-width: 280px;
+  text-align: right;
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  color: rgba(223, 242, 255, .34);
+  pointer-events: auto;
+}
+.cv-credit a { color: rgba(0, 240, 255, .6); text-decoration: none; }
+.cv-credit a:hover { color: var(--neon); text-decoration: underline; }
+
+@media (max-width: 940px) { .cv-credit { position: static; max-width: none; text-align: left; padding: 8px 16px; } }
+
+/* ------------------------------ tabs ------------------------------------ */
+
+.cv-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 16px 0 8px;
+  border-bottom: 1px solid var(--line);
+}
+.cv-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(223, 242, 255, .5);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 6px 10px 8px;
+  cursor: pointer;
+  transition: color .14s, border-color .14s;
+}
+.cv-tab:hover { color: rgba(223, 242, 255, .85); }
+.cv-tab.is-active { color: var(--hot); border-bottom-color: var(--hot); }
+.cv-tab[hidden] { display: none; }
+
+/* --------------------------- family cards ------------------------------- */
+
+.cv-families {
+  flex: 1;
+  min-height: 200px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2px 6px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cv-families[hidden] { display: none; }
+.cv-families::-webkit-scrollbar { width: 6px; }
+.cv-families::-webkit-scrollbar-thumb { background: var(--line); }
+
+.fam-card {
+  border: 1px solid color-mix(in srgb, var(--era) 32%, transparent);
+  border-left-width: 3px;
+  background: color-mix(in srgb, var(--era) 7%, rgba(8, 12, 24, .6));
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background .14s, box-shadow .14s;
+}
+.fam-card:hover { background: color-mix(in srgb, var(--era) 14%, rgba(8, 12, 24, .6)); }
+.fam-card.is-open {
+  background: color-mix(in srgb, var(--era) 16%, rgba(8, 12, 24, .7));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--era) 30%, transparent);
+}
+
+.fam-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.fam-name {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+.fam-community {
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--era);
+  white-space: nowrap;
+}
+.fam-span {
+  margin-top: 2px;
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  color: rgba(223, 242, 255, .5);
+}
+
+.fam-inds { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.fam-ind {
+  font-size: 9px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  color: rgba(223, 242, 255, .78);
+  background: color-mix(in srgb, var(--era) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--era) 30%, transparent);
+}
+
+/* The body is hidden until the card is opened, so the list stays scannable. */
+.fam-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .22s ease;
+}
+.fam-card.is-open .fam-detail { grid-template-rows: 1fr; }
+.fam-detail > * { overflow: hidden; }
+.fam-detail > :first-child { margin-top: 0; }
+.fam-card:not(.is-open) .fam-detail { margin: 0; }
+.fam-card.is-open .fam-detail { margin-top: 10px; }
+
+.fam-summary {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(223, 242, 255, .8);
+}
+.fam-figures {
+  margin: 9px 0 0;
+  padding-left: 16px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(223, 242, 255, .62);
+}
+.fam-legacy {
+  margin: 9px 0 0;
+  font-family: var(--font);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--acid);
+}
+.fam-legacy span {
+  display: inline;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(157, 255, 61, .7);
+  margin-right: 5px;
+}
+.fam-source {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+.fam-source a { color: var(--neon); text-decoration: none; }
+.fam-source a:hover { text-decoration: underline; }
+
+/* --------------------------- POI labels --------------------------------- */
+/* The zoom-in place names. Category tints them so a station reads differently
+   from a neighbourhood or a landmark, without a legend. */
+
+.cv-poi-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.poi-label {
+  position: absolute;
+  top: 0; left: 0;
+  display: none;
+  transform-origin: 0 0;
+  margin: -6px 0 0 6px;
+  padding: 0 3px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  color: rgba(223, 242, 255, .82);
+  text-shadow: 0 0 4px rgba(0, 0, 0, .95), 0 1px 3px rgba(0, 0, 0, .85);
+}
+.poi-label::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 4px;
+  margin: 0 4px 1px -4px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: currentColor;
+  box-shadow: 0 0 5px currentColor;
+}
+.poi-label[data-cat="area"]      { color: #b7e0ff; }
+.poi-label[data-cat="transport"] { color: #ffc98a; }
+.poi-label[data-cat="civic"]     { color: #bcff8a; }
+.poi-label[data-cat="landmark"]  { color: #ff9fe0; }
+.poi-label[data-cat="nature"]    { color: #8fecc2; }
+.poi-label[data-cat="water"]     { color: #97c4ff; }
+
+/* =========================== floating panels ============================= */
+/* A tiny window manager over the map. The layer is pointer-transparent so the
+   map stays draggable; only the panels and the dock catch the mouse. */
+
+.cv-panels {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.cv-panel {
+  position: absolute;
+  left: 16px; top: 16px;
+  pointer-events: auto;
+  background: rgba(7, 11, 22, .93);
+  border: 1px solid var(--line);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .6);
+  backdrop-filter: blur(7px);
+  display: flex;
+  flex-direction: column;
+  max-height: 78%;
+}
+.cv-panel.is-dragging { box-shadow: 0 22px 60px rgba(0, 0, 0, .75); }
+
+.cv-panel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px 6px 11px;
+  cursor: grab;
+  background: linear-gradient(180deg, rgba(0, 240, 255, .12), transparent);
+  border-bottom: 1px solid var(--line);
+  touch-action: none;
+  user-select: none;
+}
+.cv-panel-bar:active { cursor: grabbing; }
+.cv-panel-title {
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neon);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cv-panel-tools { display: flex; gap: 2px; flex-shrink: 0; }
+.cv-panel-pin, .cv-panel-close {
+  background: none;
+  border: none;
+  color: rgba(223, 242, 255, .55);
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 6px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.cv-panel-pin:hover { color: var(--acid); background: rgba(157, 255, 61, .12); }
+.cv-panel-close:hover { color: var(--hot); background: rgba(255, 45, 120, .14); }
+
+.cv-panel-body {
+  padding: 12px 13px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+}
+.cv-panel-body::-webkit-scrollbar { width: 6px; }
+.cv-panel-body::-webkit-scrollbar-thumb { background: var(--line); }
+
+/* --------------------------------- dock --------------------------------- */
+
+.cv-dock {
+  position: absolute;
+  left: 12px; top: 12px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  background: rgba(5, 7, 13, .6);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.cv-dock-label {
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(223, 242, 255, .4);
+  margin-right: 2px;
+}
+.cv-dock-btn {
+  background: rgba(0, 240, 255, .06);
+  border: 1px solid var(--line);
+  color: var(--neon);
+  font: inherit;
+  font-size: 9.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background .14s, color .14s;
+}
+.cv-dock-btn:hover { background: rgba(0, 240, 255, .18); color: #fff; }
+
+/* ------------------------------ panel content --------------------------- */
+
+.cv-notes {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  background: rgba(0, 0, 0, .3);
+  border: 1px solid var(--line);
+  color: var(--text, #dff2ff);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 8px;
+  outline: none;
+}
+.cv-notes:focus { border-color: var(--neon); }
+
+.cv-coords-body { font-family: var(--mono); font-size: 12px; color: rgba(223, 242, 255, .8); }
+.cc-line { display: flex; justify-content: space-between; gap: 12px; padding: 2px 0; }
+.cc-line span { color: rgba(223, 242, 255, .5); }
+.cc-line b { color: var(--neon); }
+.cc-near { margin-top: 8px; padding-top: 7px; border-top: 1px solid var(--line); color: rgba(223, 242, 255, .55); }
+.cc-near b { color: var(--acid); }
+
+.lg-group { margin-bottom: 12px; }
+.lg-group:last-child { margin-bottom: 0; }
+.lg-head {
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--hot);
+  margin-bottom: 6px;
+}
+.lg-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: rgba(223, 242, 255, .78);
+  padding: 2px 0;
+}
+.lg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.lg-dot[data-cat="area"]      { background: #b7e0ff; box-shadow: 0 0 6px #b7e0ff; }
+.lg-dot[data-cat="transport"] { background: #ffc98a; box-shadow: 0 0 6px #ffc98a; }
+.lg-dot[data-cat="civic"]     { background: #bcff8a; box-shadow: 0 0 6px #bcff8a; }
+.lg-dot[data-cat="landmark"]  { background: #ff9fe0; box-shadow: 0 0 6px #ff9fe0; }
+.lg-dot[data-cat="nature"]    { background: #8fecc2; box-shadow: 0 0 6px #8fecc2; }
+.lg-dot[data-cat="water"]     { background: #97c4ff; box-shadow: 0 0 6px #97c4ff; }
+.lg-line { width: 16px; height: 0; border-top: 2px solid #fff; flex-shrink: 0; }
+.lg-line[data-road="motorway"]  { border-top-color: #ffe8c8; }
+.lg-line[data-road="trunk"]     { border-top-color: #ffd9a6; }
+.lg-line[data-road="primary"]   { border-top-color: #f3c489; }
+.lg-line[data-road="secondary"] { border-top-color: #cdb08a; }
+.lg-line[data-road="rail"]      { border-top: 2px dashed #c7a2ff; }
+
+/* Panels can float over the side column on small screens; keep them usable. */
+@media (max-width: 940px) {
+  .cv-panel { max-height: 60%; }
+}

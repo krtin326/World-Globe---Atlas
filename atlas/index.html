@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ATLAS — A Living Globe</title>
+<meta name="description" content="A realistic 3D globe with deep, sourced dossiers on five great cities of the world.">
+<link rel="stylesheet" href="css/atlas.css">
+<link rel="stylesheet" href="css/city.css">
+
+<!--
+  Import map so `import ... from 'three'` resolves with no bundler.
+  three.js and its addons are vendored one level up under /vendor, and the
+  NASA/GEBCO textures live under /textures — both are reused from the parent
+  WorldGlobe project. Everything is public-domain or MIT; see credits.html.
+  Because this uses ES modules, it must be SERVED over HTTP, not opened as a
+  file:// URL. From the WorldGlobe folder run:  npm run serve
+  then open  http://localhost:8080/atlas/
+-->
+<script type="importmap">
+{
+  "imports": {
+    "three": "../vendor/three.module.js",
+    "three/addons/": "../vendor/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ LOGIN GATE ============================ -->
+<!--
+  This is a client-side gate, NOT real security. It keeps casual visitors out
+  and demonstrates a login flow; anyone who can read the page source can read
+  the credential list. Never put a real secret behind it. Accounts live in
+  js/auth.js and are mirrored in docs/atlas_logins.xlsx as requested.
+-->
+<div id="gate" class="gate">
+  <div class="gate-stars" aria-hidden="true"></div>
+  <div class="gate-card">
+    <div class="gate-brand">
+      <span class="gate-globe" aria-hidden="true"></span>
+      <h1>ATLAS</h1>
+      <p class="gate-tag">A living globe &mdash; five cities, in depth</p>
+    </div>
+
+    <div class="gate-tabs" role="tablist">
+      <button type="button" class="gate-tab active" data-mode="login" role="tab" aria-selected="true">Log in</button>
+      <button type="button" class="gate-tab" data-mode="signup" role="tab" aria-selected="false">Sign up</button>
+    </div>
+
+    <!-- LOG IN -->
+    <form id="login-form" autocomplete="off">
+      <label class="field">
+        <span>Username</span>
+        <input id="u" name="u" type="text" autocomplete="username" spellcheck="false" required>
+      </label>
+      <label class="field">
+        <span>Password</span>
+        <input id="p" name="p" type="password" autocomplete="current-password" required>
+      </label>
+      <button id="login-btn" type="submit" class="gate-btn">Enter the atlas</button>
+      <p id="login-msg" class="gate-msg" role="alert" aria-live="polite"></p>
+    </form>
+
+    <!-- SIGN UP -->
+    <form id="signup-form" autocomplete="off" hidden>
+      <label class="field">
+        <span>Choose a username</span>
+        <input id="su" name="su" type="text" autocomplete="username" spellcheck="false"
+               minlength="3" maxlength="20" placeholder="3–20 chars: letters, numbers, . _ -">
+      </label>
+      <label class="field">
+        <span>Choose a password</span>
+        <input id="sp" name="sp" type="password" autocomplete="new-password" minlength="6" placeholder="at least 6 characters">
+      </label>
+      <label class="field">
+        <span>Confirm password</span>
+        <input id="sp2" name="sp2" type="password" autocomplete="new-password">
+      </label>
+      <button id="signup-btn" type="submit" class="gate-btn">Create account &amp; enter</button>
+      <p id="signup-msg" class="gate-msg" role="alert" aria-live="polite"></p>
+    </form>
+
+    <p class="gate-note">
+      Built-in accounts are recorded in <code>docs/atlas_logins.xlsx</code>.
+      A <strong>sign-up</strong> account is created and stored <em>in this browser only</em>
+      &mdash; it is a convenience gate, not a secure server login.
+    </p>
+  </div>
+</div>
+
+<!-- ============================ THE APP ============================== -->
+<div id="app" class="app" hidden>
+
+  <canvas id="globe"></canvas>
+  <div id="marker-layer" class="marker-layer" aria-hidden="false"></div>
+
+  <!-- Loading veil for the globe assets -->
+  <div id="loading" class="loading">
+    <div class="loading-inner">
+      <div class="loading-title">ATLAS</div>
+      <div class="loading-bar"><div id="loading-fill"></div></div>
+      <div id="loading-status" class="loading-status">Loading the planet…</div>
+    </div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <strong>ATLAS</strong>
+      <span class="muted">&mdash; a living globe</span>
+    </div>
+    <div class="topbar-right">
+      <span id="who" class="muted"></span>
+      <a class="ghost-btn" href="credits.html" target="_blank" rel="noopener">Sources</a>
+      <button id="logout" class="ghost-btn">Log out</button>
+    </div>
+  </header>
+
+  <!-- City chooser rail -->
+  <nav id="city-rail" class="city-rail" aria-label="Cities">
+    <div class="rail-title">Cities</div>
+    <div id="rail-list"></div>
+    <div class="rail-hint">Drag the globe to spin it. Click a marker or a city to enter its holographic view. Zoom is intentionally disabled.</div>
+  </nav>
+
+  <!-- The holographic city sub-view is created dynamically by js/cityview.js
+       when a city is selected; it takes over the whole screen. -->
+
+  <!-- Attribution footer (kept visible to honour data licences) -->
+  <footer class="credit">
+    Boundaries &amp; cities: Natural Earth (public domain), &copy; GeoNames (CC BY 4.0).
+    Imagery: NASA Earth Observatory. Elevation: GEBCO. Text: original, with sourced links.
+    <a href="credits.html" target="_blank" rel="noopener">Full sources &amp; licences</a>.
+  </footer>
+</div>
+
+<!-- Non-module guard: ES modules do not load from a file:// URL, so if the page
+     was opened by double-clicking the file, tell the user how to run it. -->
+<script>
+  if (location.protocol === 'file:') {
+    var m = document.getElementById('login-msg');
+    var b = document.getElementById('login-btn');
+    if (m) m.textContent = 'Please run this over a local server: in the WorldGlobe folder run "npm run serve", then open http://localhost:8080/atlas/';
+    if (b) b.disabled = true;
+  }
+</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

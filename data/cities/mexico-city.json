@@ -1,0 +1,568 @@
+{
+  "id": "mexico-city",
+  "name": "Mexico City",
+  "formerName": "Tenochtitlan",
+  "nameLocal": "Ciudad de México",
+  "country": "Mexico",
+  "geonameId": 3530597,
+  "centre": [
+    -99.1277,
+    19.4285
+  ],
+  "bbox": [
+    -99.3,
+    19.28,
+    -98.95,
+    19.58
+  ],
+  "renamed": "1521",
+  "summary": "Mexico City stands on the drained bed of a highland lake, at about 2,240 metres, directly on top of the Aztec island-capital of Tenochtitlan. Founded by the Mexica in 1325 where an eagle perched on a cactus — the omen now stamped on the national flag — it was besieged and razed by Hernán Cortés in 1521 and rebuilt as the capital of New Spain. It is the largest Spanish-speaking city on Earth and, sinking slowly back into its old lakebed, both endlessly troubled by water and impossible to move.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈9.2 million",
+      "note": "City proper (CDMX); ≈22 million in the metropolitan area.",
+      "sourceId": "gob-cdmx"
+    },
+    {
+      "label": "Founded",
+      "value": "1325",
+      "note": "As Aztec Tenochtitlan; rebuilt by Spain from 1521.",
+      "sourceId": "whe-aztec"
+    },
+    {
+      "label": "Altitude",
+      "value": "≈2,240 m",
+      "note": "Built in the drained bed of Lake Texcoco.",
+      "sourceId": "britannica-mx"
+    },
+    {
+      "label": "Language",
+      "value": "Spanish",
+      "note": "The largest Spanish-speaking city on Earth, over a Nahuatl heritage.",
+      "sourceId": "britannica-mx"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Historic Centre (1987)",
+      "note": "Inscribed with Xochimilco; built over the Aztec capital.",
+      "sourceId": "unesco-412"
+    }
+  ],
+  "eras": [
+    {
+      "id": "aztec",
+      "label": "Mexica / Tenochtitlan",
+      "from": 1325,
+      "to": 1521,
+      "color": "#f5a623"
+    },
+    {
+      "id": "conquest",
+      "label": "Conquest & Early New Spain",
+      "from": 1521,
+      "to": 1650,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "viceroyalty",
+      "label": "Viceroyalty",
+      "from": 1650,
+      "to": 1821,
+      "color": "#e8467c"
+    },
+    {
+      "id": "independence",
+      "label": "Independent 19th century",
+      "from": 1821,
+      "to": 1910,
+      "color": "#a56bff"
+    },
+    {
+      "id": "revolution",
+      "label": "Revolution & Modern",
+      "from": 1910,
+      "to": 1980,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "megacity",
+      "label": "Megacity",
+      "from": 1980,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": 1325,
+      "era": "aztec",
+      "title": "Tenochtitlan is founded",
+      "body": "The Mexica found Tenochtitlan on an island in Lake Texcoco, guided by the eagle-and-cactus omen.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "major"
+      ],
+      "place": "templo-mayor",
+      "pivotal": true
+    },
+    {
+      "year": 1375,
+      "era": "aztec",
+      "title": "The first tlatoani",
+      "body": "Acamapichtli becomes the first tlatoani (ruler) of the Mexica.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1428,
+      "era": "aztec",
+      "title": "The Triple Alliance",
+      "body": "The Aztec Triple Alliance is forged; the empire begins to expand.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1440,
+      "era": "aztec",
+      "title": "Dykes against the lake",
+      "body": "Under Moctezuma I the city builds a great dyke and aqueducts against flooding.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1487,
+      "era": "aztec",
+      "title": "The Templo Mayor dedicated",
+      "body": "The rebuilt Templo Mayor is dedicated with mass sacrificial rites.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "culture"
+      ],
+      "place": "templo-mayor"
+    },
+    {
+      "year": 1502,
+      "era": "aztec",
+      "title": "Moctezuma II at the height",
+      "body": "Moctezuma II ascends the throne at the empire’s height.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1519,
+      "era": "aztec",
+      "title": "Cortés reaches Tenochtitlan",
+      "body": "Hernán Cortés reaches Tenochtitlan and takes Moctezuma hostage.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "conflict"
+      ],
+      "place": "templo-mayor"
+    },
+    {
+      "year": 1520,
+      "era": "aztec",
+      "title": "The Sad Night",
+      "body": "The “Sad Night”: the Mexica drive the Spanish from the city with heavy losses.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1521,
+      "era": "conquest",
+      "title": "The fall of Tenochtitlan",
+      "body": "After a brutal siege and smallpox, Tenochtitlan falls; Cortés founds Mexico City on the ruins.",
+      "sourceId": "whe-aztec",
+      "tags": [
+        "major"
+      ],
+      "place": "templo-mayor",
+      "pivotal": true
+    },
+    {
+      "year": 1531,
+      "era": "conquest",
+      "title": "The Virgin of Guadalupe",
+      "body": "Our Lady of Guadalupe is said to appear to Juan Diego on Tepeyac hill.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "culture"
+      ],
+      "place": "guadalupe"
+    },
+    {
+      "year": 1535,
+      "era": "conquest",
+      "title": "Capital of New Spain",
+      "body": "Mexico City becomes the capital of the Viceroyalty of New Spain.",
+      "sourceId": "unesco-412",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1551,
+      "era": "conquest",
+      "title": "The Royal University",
+      "body": "The Royal University of Mexico is founded, among the first in the Americas.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1629,
+      "era": "conquest",
+      "title": "The great flood of 1629",
+      "body": "A catastrophic flood submerges the city for years, prompting vast drainage works.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1692,
+      "era": "viceroyalty",
+      "title": "The maize riots",
+      "body": "Riots over maize shortages burn the viceroy’s palace on the Zócalo.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1810,
+      "era": "viceroyalty",
+      "title": "The Cry of Dolores",
+      "body": "Father Hidalgo’s “Cry of Dolores” launches the war of independence.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1821,
+      "era": "independence",
+      "title": "Independence won",
+      "body": "Independence is won; Mexico City becomes capital of a new nation.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "major"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1847,
+      "era": "independence",
+      "title": "The Niños Héroes",
+      "body": "US troops storm Chapultepec Castle; the young cadets die as the Niños Héroes.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ],
+      "place": "chapultepec"
+    },
+    {
+      "year": 1864,
+      "era": "independence",
+      "title": "Maximilian’s empire",
+      "body": "The French install the Habsburg Maximilian as emperor in Mexico City.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "politics"
+      ],
+      "place": "chapultepec"
+    },
+    {
+      "year": 1867,
+      "era": "independence",
+      "title": "The republic restored",
+      "body": "Maximilian is overthrown and executed; the republic is restored under Juárez.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1877,
+      "era": "independence",
+      "title": "The Porfiriato begins",
+      "body": "Porfirio Díaz begins decades of rule, modernising and beautifying the capital.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1910,
+      "era": "revolution",
+      "title": "The Revolution erupts",
+      "body": "The Mexican Revolution erupts against the Díaz dictatorship.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1913,
+      "era": "revolution",
+      "title": "The Ten Tragic Days",
+      "body": "The “Ten Tragic Days” of street fighting devastate central Mexico City.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1929,
+      "era": "revolution",
+      "title": "The founding of the PRI",
+      "body": "The party that will rule for 71 years (later the PRI) is founded.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1934,
+      "era": "revolution",
+      "title": "The Palace of Fine Arts",
+      "body": "The Palace of Fine Arts opens, filling with murals by Rivera and his rivals.",
+      "sourceId": "unesco-412",
+      "tags": [
+        "culture"
+      ],
+      "place": "bellas-artes"
+    },
+    {
+      "year": 1968,
+      "era": "revolution",
+      "title": "The Tlatelolco massacre",
+      "body": "Troops massacre student protesters at Tlatelolco days before the Olympics.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "conflict"
+      ],
+      "place": "tlatelolco"
+    },
+    {
+      "year": 1968,
+      "era": "revolution",
+      "title": "The 1968 Olympics",
+      "body": "Mexico City hosts the Summer Olympics, the first in Latin America.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1978,
+      "era": "revolution",
+      "title": "The Templo Mayor rediscovered",
+      "body": "Electrical workers rediscover the buried Templo Mayor beneath the centre.",
+      "sourceId": "unesco-412",
+      "tags": [
+        "culture"
+      ],
+      "place": "templo-mayor"
+    },
+    {
+      "year": 1985,
+      "era": "megacity",
+      "title": "The 1985 earthquake",
+      "body": "A magnitude-8 earthquake kills thousands and flattens whole districts.",
+      "sourceId": "gob-cdmx",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 2009,
+      "era": "megacity",
+      "title": "The H1N1 pandemic",
+      "body": "The H1N1 flu pandemic first alarms the world from Mexico City.",
+      "sourceId": "britannica-mx",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 2016,
+      "era": "megacity",
+      "title": "CDMX is born",
+      "body": "The Federal District becomes the autonomous entity of Mexico City (CDMX).",
+      "sourceId": "gob-cdmx",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 2017,
+      "era": "megacity",
+      "title": "The 2017 earthquake",
+      "body": "Another major earthquake — 32 years to the day after 1985 — strikes the city.",
+      "sourceId": "gob-cdmx",
+      "tags": [
+        "disaster"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "templo-mayor",
+      "name": "Templo Mayor / Zócalo",
+      "lat": 19.4344,
+      "lon": -99.1319,
+      "note": "The great Aztec temple and the vast main square built over it."
+    },
+    {
+      "id": "chapultepec",
+      "name": "Chapultepec",
+      "lat": 19.4204,
+      "lon": -99.1817,
+      "note": "The ancient forested hill and its castle, west of the centre."
+    },
+    {
+      "id": "guadalupe",
+      "name": "Basilica of Guadalupe",
+      "lat": 19.4847,
+      "lon": -99.1176,
+      "note": "On Tepeyac hill, where the Virgin is said to have appeared in 1531."
+    },
+    {
+      "id": "bellas-artes",
+      "name": "Palace of Fine Arts",
+      "lat": 19.4352,
+      "lon": -99.1413,
+      "note": "The marble concert hall (1934), filled with murals by Rivera and rivals."
+    },
+    {
+      "id": "tlatelolco",
+      "name": "Tlatelolco",
+      "lat": 19.4506,
+      "lon": -99.137,
+      "note": "Aztec sister-city and market; site of the 1968 massacre."
+    }
+  ],
+  "sources": {
+    "unesco-412": {
+      "title": "Historic Centre of Mexico City and Xochimilco — UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/412/",
+      "official": true
+    },
+    "gob-cdmx": {
+      "title": "Gobierno de la Ciudad de México — official portal",
+      "publisher": "Gobierno de la Ciudad de México",
+      "url": "https://www.cdmx.gob.mx/",
+      "official": true
+    },
+    "britannica-mx": {
+      "title": "Mexico City — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Mexico-City",
+      "official": false
+    },
+    "whe-aztec": {
+      "title": "Tenochtitlan — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Tenochtitlan/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "The ruling lines of the city, from the Mexica tlatoque to the makers of modern Mexico.",
+    "list": [
+      {
+        "id": "mexica",
+        "era": "aztec",
+        "span": "c. 1375–1521",
+        "community": "Aztec ruling dynasty",
+        "industries": [
+          "Rule",
+          "War",
+          "Religion"
+        ],
+        "figures": [
+          "Acamapichtli",
+          "Moctezuma I & II",
+          "Cuauhtémoc"
+        ],
+        "legacy": "Tenochtitlan and the Aztec empire",
+        "sourceId": "whe-aztec",
+        "place": "templo-mayor",
+        "name": "The Mexica tlatoque",
+        "summary": "The line of rulers (tlatoque) from Acamapichtli (c. 1375) through Moctezuma I and II to Cuauhtémoc, who built and led an empire from Tenochtitlan until the Spanish conquest ended it."
+      },
+      {
+        "id": "conquistadors",
+        "era": "conquest",
+        "span": "From 1521",
+        "community": "Spanish conquest",
+        "industries": [
+          "Conquest",
+          "Rule"
+        ],
+        "figures": [
+          "Hernán Cortés"
+        ],
+        "legacy": "Mexico City and the pattern of New Spain",
+        "sourceId": "britannica-mx",
+        "place": "templo-mayor",
+        "name": "Hernán Cortés & the conquistadors",
+        "summary": "Cortés destroyed Tenochtitlan in 1521 and founded Mexico City over it, becoming the first Marqués del Valle de Oaxaca and setting the pattern of colonial New Spain."
+      },
+      {
+        "id": "criollo",
+        "era": "viceroyalty",
+        "span": "16th–19th century",
+        "community": "Colonial aristocracy",
+        "industries": [
+          "Silver mining",
+          "Land",
+          "Politics"
+        ],
+        "legacy": "The wealth of New Spain — and the drive to independence",
+        "sourceId": "britannica-mx",
+        "name": "The criollo elite",
+        "summary": "American-born Spanish families grew immensely wealthy on silver mining and vast estates during three centuries as capital of New Spain, and ultimately led the drive to independence against the Crown."
+      },
+      {
+        "id": "revolutionaries",
+        "era": "revolution",
+        "span": "1810–1920",
+        "community": "Makers of modern Mexico",
+        "industries": [
+          "Politics",
+          "Revolution"
+        ],
+        "figures": [
+          "Hidalgo",
+          "Juárez",
+          "Madero",
+          "Zapata",
+          "Villa"
+        ],
+        "legacy": "The modern nation, shaped from its capital",
+        "sourceId": "britannica-mx",
+        "name": "Revolutionary leaders",
+        "summary": "From Miguel Hidalgo’s 1810 cry for independence and Benito Juárez’s reforms to Madero, Zapata and Villa in the Revolution, these figures reshaped the nation from and around its capital."
+      }
+    ]
+  }
+}

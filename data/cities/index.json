@@ -1,0 +1,47 @@
+{
+  "note": "Cities that have a history file and a coastline, and therefore an 'Explore history' button. Keyed by GeoNames id, which is stable, rather than by name, which is not.",
+  "cities": {
+    "360630": {
+      "id": "cairo",
+      "name": "Cairo",
+      "events": 38,
+      "coverage": "c. 3100 BC – 2021",
+      "families": 4,
+      "places": 6
+    },
+    "1275339": {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "events": 62,
+      "coverage": "c. 250 BC – 2024",
+      "divisions": 24,
+      "families": 7,
+      "places": 254,
+      "roadWays": 8609
+    },
+    "1850147": {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "events": 31,
+      "coverage": "645 – 2021",
+      "families": 4,
+      "places": 5
+    },
+    "3169070": {
+      "id": "rome",
+      "name": "Rome",
+      "events": 40,
+      "coverage": "753 BC – 2000",
+      "families": 4,
+      "places": 6
+    },
+    "3530597": {
+      "id": "mexico-city",
+      "name": "Mexico City",
+      "events": 31,
+      "coverage": "1325 – 2017",
+      "families": 4,
+      "places": 5
+    }
+  }
+}

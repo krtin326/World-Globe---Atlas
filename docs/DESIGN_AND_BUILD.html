@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Globe — Design &amp; Build Log</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 820px; margin: 0 auto; padding: 40px 22px 80px;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #1c2330; background: #fbfcfe; }
+  @media (prefers-color-scheme: dark) { body { color: #dfe6f2; background: #0f1420; } }
+  h1, h2, h3, h4 { line-height: 1.25; margin: 1.6em 0 .5em; }
+  h1 { font-size: 1.9em; border-bottom: 2px solid #3d7fd6; padding-bottom: .3em; }
+  h2 { font-size: 1.4em; border-bottom: 1px solid #8883; padding-bottom: .25em; }
+  h3 { font-size: 1.15em; }
+  a { color: #2f7fe0; } @media (prefers-color-scheme: dark){ a{ color:#7fb8ff; } }
+  code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: .88em;
+         background: #8882; padding: .12em .35em; border-radius: 4px; }
+  pre { background: #11182a; color: #cfe0ff; padding: 14px 16px; border-radius: 8px;
+        overflow-x: auto; } pre code { background: none; padding: 0; color: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93em; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #8884; padding: 7px 11px; text-align: left; vertical-align: top; }
+  th { background: #3d7fd61a; }
+  blockquote { margin: 1em 0; padding: .4em 1em; border-left: 3px solid #3d7fd6; background: #3d7fd614; }
+  hr { border: none; border-top: 1px solid #8884; margin: 2em 0; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin: .2em 0; }
+</style></head><body>
+<h1>World Globe — Design &amp; Build Log</h1>
+<p>A narrative record of how this project was designed and built across the session: what was made, in what order, why each decision went the way it did, and the thematic ensemble that holds the whole thing together.</p>
+<p>This is the <em>story</em> document. For the day-to-day reference (how to run it, the file map, the shader maths) see <a href="DOCUMENTATION.md" target="_blank" rel="noopener noreferrer">DOCUMENTATION.md</a>; for provenance and licensing see <a href="SOURCES.md" target="_blank" rel="noopener noreferrer">SOURCES.md</a>; for a critical look at how the information was gathered see <a href="SOURCES_AND_ANALYSIS.md" target="_blank" rel="noopener noreferrer">SOURCES_AND_ANALYSIS.md</a>.</p>
+<hr>
+<h2>1. What it is</h2>
+<p>Two things wearing one skin:</p>
+<ol><li><strong>A global terrain globe</strong> — NASA satellite imagery on a three.js sphere,</li></ol>
+<p>   with sun-responsive relief shading, every country and every first-level    administrative division on Earth as selectable regions, and a searchable    gazetteer of <strong>34,027 cities</strong> you can browse down from the whole world to a    single town.</p>
+<ol><li><strong>A city sub-view</strong> — open a city that has a history file (so far, Mumbai)</li></ol>
+<p>   and the globe hands off to a rotating 3D city model rendered in a deliberately    different, loud, "cyber-tech" register: a full-resolution coastline, the 24    municipal wards, 254 zoom-revealed places, the arterial road and railway    network, a 65-event sourced timeline across six historical eras, seven    business dynasties, and a floating panel system you can drag, pin and stack.</p>
+<p>Everything runs from static files: <strong>no build step at runtime, no bundler, no API keys, no network access once built.</strong> Every dependency is vendored.</p>
+<hr>
+<h2>2. How the build actually unfolded</h2>
+<p>The project grew in layers, each one a response to a specific request. That order matters, because a lot of the architecture exists to make the <em>next</em> layer cheap to add.</p>
+<table><thead><tr><th>Phase</th><th>What was added</th><th>The key idea introduced</th></tr></thead><tbody><tr><td>1</td><td>The globe: terrain shader, atmosphere, stars</td><td>Re-derive lighting from an elevation map, don't fake it</td></tr><tr><td>2</td><td>Country + state boundaries, click-picking</td><td>One shared point-in-polygon module for build <strong>and</strong> browser</td></tr><tr><td>3</td><td>34,027-city layer + searchable browse UI</td><td>GPU level-of-detail; a virtualised list</td></tr><tr><td>4</td><td>Documentation + a real sources audit</td><td>Provenance is a first-class deliverable</td></tr><tr><td>5</td><td>Licence-compliance pass</td><td>Two real breaches found and fixed</td></tr><tr><td>6</td><td>The Mumbai city sub-view: coastline + timeline</td><td>A second visual register; data-driven per city</td></tr><tr><td>7</td><td>24 BMC ward plates</td><td>A licensing decision made explicit (GODL vs CC-BY-SA)</td></tr><tr><td>8</td><td>Timeline expanded to six eras</td><td>Cross-checked dates; disputed figures flagged</td></tr><tr><td>9</td><td>Seven business dynasties (Families tab)</td><td>A tabbed side column; map/label state derived, not cached</td></tr><tr><td>10</td><td>254 zoom level-of-detail places</td><td>Reveal by rank, not raw score; rectangle label de-overlap</td></tr><tr><td>11</td><td>Primary roads + suburban railway</td><td>The one OSM/ODbL layer, isolated and toggleable</td></tr><tr><td>12</td><td>Zoom-adaptive drag sensitivity</td><td>Feel scaled to camera distance</td></tr><tr><td>13</td><td>Draggable, multi-instance info panels</td><td>A tiny floating-window manager</td></tr><tr><td>14</td><td>Data accuracy pass</td><td>Fixed the 2006 toll, the rename date, added cinema</td></tr><tr><td>—</td><td>Holographic family member (designed, <strong>not yet built</strong>)</td><td>See §9</td></tr></tbody></table>
+<p>The consistent through-line: <strong>surface every judgement call rather than bury it.</strong> Where the data is a compromise, the code says so; where a source could be wrong, the UI flags it.</p>
+<hr>
+<h2>3. Architecture — the shape of the code</h2>
+<pre><code>index.html            markup + import map (no bundler)
+styles.css            globe interface
+styles-city.css       city sub-view (kept separate so its theme can't leak)
+src/
+  main.js             the only file that knows about both the globe and the panels
+  globe/
+    scene.js          renderer, camera, OrbitControls, animation loop, camera flights
+    earth.js          globe mesh + terrain shader, atmosphere, star field
+  layers/
+    boundaries.js     country/state borders, hover + selection
+    cities.js         34k markers (GPU LOD) + DOM labels
+  data/cities.js      CityTable — columnar gazetteer, search, nearest-city
+  geo/
+    polygon.js        point-in-polygon + spatial index  (shared with build tools)
+    tessellate.js     GeoJSON polygons → sphere-hugging triangles + outlines
+  city/
+    citymap.js        the 3D city model: coastline, wards, POIs, roads, markers
+    cityview.js       the sub-view shell: timeline, families, panels, tabs
+    panels.js         floating-window manager (drag, pin, stack)
+  ui/
+    browser.js        left panel drill-down + search
+    details.js        globe's right-hand info card
+    VirtualList.js    windowed list — 34k rows cost the same as 258
+  util/geo.js         lat/lon ↔ scene coordinates, distances, formatting
+tools/
+  fetch-sources.mjs   download every raw input
+  build-textures.mjs  resample imagery
+  build-data.mjs      shapefiles → GeoJSON, gazetteer → cities.json
+  build-city.mjs      coastline, wards, POIs, roads for one city
+  serve.mjs           static dev server</code></pre>
+<p>Three principles run through it:</p>
+<ul><li><strong>One-way dependencies.</strong> Layers know nothing about the UI; the UI knows</li></ul>
+<p>  nothing about three.js; <code>main.js</code> is the single place the two meet. You can   reason about any layer in isolation.</p>
+<ul><li><strong>Share the code that must agree.</strong> <code>geo/polygon.js</code> is imported by <em>both</em> the</li></ul>
+<p>  Node build script and the browser. A city's country is assigned at build time   by the same point-in-polygon routine that resolves a click at run time — so   the map and the data can never contradict each other. There is one   implementation and no second opinion.</p>
+<ul><li><strong>Data-driven, not hard-coded.</strong> Every city feature (history, coastline,</li></ul>
+<p>  wards, POIs, roads) is an optional file. A city without a <code>-divisions.geojson</code>   simply shows no ward layer and hides its toggle. Adding a second city is data   plus a coastline clip — no code changes.</p>
+<hr>
+<h2>4. The globe</h2>
+<h3>4.1 Terrain that responds to light</h3>
+<p>The colour map is NASA's Blue Marble Next Generation, which already has relief baked in — but baked relief is lit from a fixed direction and can't respond to a moving sun, so it reads as a photo pasted on a ball. Instead the fragment shader <strong>re-derives a surface normal</strong> from the GEBCO elevation map (central differences) and lights <em>that</em>. Mountains catch the light and cast the right way as the terminator moves.</p>
+<p>Two details earned their keep:</p>
+<ul><li>A <code>cos(latitude)</code> correction on the east–west slope, without which Greenland</li></ul>
+<p>  and Antarctica dissolve into noise (the equirectangular projection compresses   longitude toward the poles).</p>
+<ul><li>The elevation map is <strong>gamma-lifted at build time</strong> because GEBCO encodes</li></ul>
+<p>  ocean as 0 and most land is low-lying — 63% of the raw image is pure black.   It's used only for shading, never measurement, so trading linearity for   legibility is correct.</p>
+<p>The ocean glint is deliberately weak and drops further when "sun follows camera" is on: a perfect sphere lit by a directional source turns any broad specular lobe into a white blob over a whole ocean basin.</p>
+<h3>4.2 Boundaries: two draw calls, not 4,854</h3>
+<p>All 258 country outlines live in one merged line object; all 4,596 states in another. That's two draw calls for every border on Earth. The cost of merging is that individual features can't be restyled — so hover and selection are drawn by <em>separate</em> objects rebuilt on demand, holding one feature each. Filled highlights subdivide any triangle longer than ~2° before projecting, so a country patch hugs the sphere instead of chording through the planet; countries crossing the antimeridian are "unwrapped" first.</p>
+<h3>4.3 34,027 cities on the GPU</h3>
+<p>Every city carries a threshold altitude derived logarithmically from its population; visibility is decided <strong>per-vertex on the GPU</strong>, so zooming never touches a buffer. Tokyo is visible from orbit, a 15,000-person town only when you're close enough to read it. Labels are DOM (crisp text, de-overlapped on a screen grid), updated at 20 Hz because DOM writes cost far more than the draw call they annotate.</p>
+<hr>
+<h2>5. The city sub-view</h2>
+<p>This is where the project got ambitious. Opening a city stops the globe's render loop (two WebGL contexts at 60 fps for one visible view makes a laptop fan audible) and hands to a separate scene.</p>
+<ul><li><strong>Coastline</strong> — NOAA GSHHG at full resolution. Natural Earth's 1:10m coastline</li></ul>
+<p>  reduces Mumbai to ~5 vertices; GSHHG clipped to the city is 2,157 vertices and   renders the peninsula, creeks and Elephanta properly. It's extruded into a   slab (earcut top + wall quads) and traced again as an emissive line that bloom   turns neon.</p>
+<ul><li><strong>24 BMC wards</strong> — translucent tinted plates, coloured on a cyan→magenta ramp</li></ul>
+<p>  in the corporation's own A–T order so the tint is a geographic gradient.</p>
+<ul><li><strong>254 zoom-revealed places</strong> — neighbourhoods, stations, campuses, forts,</li></ul>
+<p>  hills. They <strong>reveal by rank, not raw importance</strong>: the scores bunch near 0.5,   so mapping them straight to a threshold made the map jump from sparse to   saturated in one scroll notch. Ranking gives an even fill (1 → 32 → 63 → 90 →   119 → 153 → 202 → 254 as you zoom in). Labels de-overlap by <strong>rectangle</strong> —   a grid version let long names (the airport) graze their neighbours.</p>
+<ul><li><strong>Roads + railway</strong> — the OpenStreetMap arterial network (7,602 ways) and</li></ul>
+<p>  suburban railway (1,007 ways), five merged line objects with per-class   level-of-detail, railway in violet dashes.</p>
+<ul><li><strong>A 65-event timeline</strong> across six eras (Ancient → Sultanate → Portuguese →</li></ul>
+<p>  Company → British Raj → Independent), every entry sourced and badged, disputed   figures flagged.</p>
+<ul><li><strong>Seven business dynasties</strong> (Tata, Godrej, Wadia, Petit, Sassoon, Jejeebhoy,</li></ul>
+<p>  Ambani) in a Families tab, each expanding to industries, key figures, legacy   and a source.</p>
+<h3>5.1 Floating panels</h3>
+<p>The information card started welded to a corner. It's now a small <strong>floating-window manager</strong> (<code>panels.js</code>): the Detail panel follows your selection and is draggable anywhere (clamped on-screen); a dock opens Legend, Coordinates (live lat/lon from a ground-plane raycast) and Notes; any panel has a <strong>pin</strong> that spawns a frozen copy so you can line several up and compare. The panel overlay is pointer-transparent, so the map underneath stays fully draggable — only the panels themselves catch the mouse.</p>
+<hr>
+<h2>6. The thematic ensemble</h2>
+<p>The project is built on <strong>one deliberate contrast</strong>: two visual registers that should feel like two different places.</p>
+<h3>6.1 The globe — cool, quiet, photographic</h3>
+<ul><li><strong>Palette:</strong> deep space blue-black (<code>#05070d</code>), a single cool accent</li></ul>
+<p>  (<code>#7fd4ff</code>) and a warm one (<code>#ffc75a</code>) for capitals/selection. Nothing shouts.</p>
+<ul><li><strong>Type:</strong> a clean system sans for reading, a monospace only for coordinates.</li><li><strong>Surfaces:</strong> translucent, blurred panels that float over the planet so the</li></ul>
+<p>  Earth stays readable underneath. The globe <em>is</em> the document; everything else   gets out of its way.</p>
+<ul><li><strong>Motion:</strong> damped orbit, eased camera flights, a slow implied rotation. Calm.</li></ul>
+<h3>6.2 The city view — loud, neon, "cyber-tech"</h3>
+<p>Selecting a city is meant to feel like stepping through a door into a different aesthetic. The components of that ensemble:</p>
+<ul><li><strong>Colour:</strong> a hard cyberpunk triad — neon cyan <code>#00f0ff</code>, hot magenta</li></ul>
+<p>  <code>#ff2d78</code>, acid green <code>#9dff3d</code> — over a near-black void, with warm ramps for   roads and violet for rail.</p>
+<ul><li><strong>Typography:</strong> monospace <em>everywhere</em>, wide letter-spacing, uppercase labels</li></ul>
+<p>  — the readout look of a console rather than a document.</p>
+<ul><li><strong>Chromatic split:</strong> the city title is offset-shadowed magenta-left / cyan-right,</li></ul>
+<p>  the cheapest convincing "signal / VHS" cue there is.</p>
+<ul><li><strong>Scanlines:</strong> a single repeating-gradient overlay with multiply blend — a CRT</li></ul>
+<p>  veil over the whole sub-view, pointer-transparent and effectively free.</p>
+<ul><li><strong>Clipped corners:</strong> panels and buttons use <code>clip-path</code> polygons with one</li></ul>
+<p>  chamfered corner instead of border-radius, so they read as HUD panels, not web   buttons.</p>
+<ul><li><strong>Bloom:</strong> an UnrealBloom pass makes the emissive coastline and markers bleed</li></ul>
+<p>  light; the whole model glows like a hologram table rather than a printed map.</p>
+<ul><li><strong>Glowing marks:</strong> history events are pink light-beams rising off the land;</li></ul>
+<p>  the active one pulses; place dots carry a soft additive halo; the railway is a   dashed violet line so it never reads as a road.</p>
+<ul><li><strong>Layered depth:</strong> land slab, ward plates, road lines, POI dots and history</li></ul>
+<p>  beams each sit at their own height above the surface, so the model has real   parallax as it rotates rather than being a flat decal.</p>
+<p>The two registers never mix: <code>styles.css</code> and <code>styles-city.css</code> are separate files precisely so the neon can't leak onto the globe, and the globe's calm can't dull the city view.</p>
+<h3>6.3 Motion and feedback as theme</h3>
+<ul><li>The city model <strong>auto-rotates</strong> slowly (the "specimen on a turntable" feel),</li></ul>
+<p>  and dragging is <strong>zoom-adaptive</strong> — gentle when you're close, so precision   work never feels twitchy.</p>
+<ul><li>Layers <strong>fade in with zoom</strong> rather than popping (state borders on the globe,</li></ul>
+<p>  POIs on the city map), which reads as a system resolving detail as you lean in.</p>
+<ul><li>Selection is always echoed in three places at once — the list row, the map</li></ul>
+<p>  marker, and the detail panel — so the interface always agrees with itself.</p>
+<hr>
+<h2>7. Engineering decisions worth remembering</h2>
+<p>A handful of choices define the project's character more than any feature:</p>
+<ul><li><strong>Measured, not guessed, tolerances.</strong> The click-to-select radius, the</li></ul>
+<p>  coastal-snap distance for picking, the label de-overlap box — each was tuned   against real test cases and the numbers are recorded in comments, not left as   magic constants.</p>
+<ul><li><strong>Bugs are documented where they were fixed.</strong> The earcut winding flip (which</li></ul>
+<p>  made the city land render black), the stale-panel-label trap, the   render-loop-re-entrancy guard — each carries a comment explaining the symptom,   because each <em>looked</em> like a different kind of bug than it was.</p>
+<ul><li><strong>Provenance travels with the pixel.</strong> Every timeline event and every figure</li></ul>
+<p>  names its source on screen with an Official / Secondary badge, and where   accounts differ the UI shows the disagreement rather than inventing precision.</p>
+<hr>
+<h2>8. Correctness passes</h2>
+<p>Two accuracy reviews shaped the Mumbai data:</p>
+<ul><li>Verified the shaky facts against multiple sources and <strong>corrected</strong> the 2006</li></ul>
+<p>  train-bombing toll (≈209, not "over 180"), dropped a false-precise rename date   ("4 March 1995" → simply 1995, flagged as disputed), and reconciled the Wadia   founding year with the gazetteer.</p>
+<ul><li><strong>Filled real gaps:</strong> the birth of Indian cinema (Raja Harishchandra, Bombay,</li></ul>
+<p>  1913), the dabbawalas (1890), and Film City (1977) — because a Mumbai history   without its film industry is incomplete.</p>
+<ul><li>Reconciled the population figure the globe shows (GeoNames, ~12.69 M) with the</li></ul>
+<p>  Census figure the history panel shows (12,442,373) so the two views no longer   look contradictory. Both are correct; they are different compilers of the same   city. (See <a href="SOURCES_AND_ANALYSIS.md" target="_blank" rel="noopener noreferrer">SOURCES_AND_ANALYSIS.md</a> for why this   number is so easy to get wrong.)</p>
+<hr>
+<h2>9. What is designed but not yet built</h2>
+<ul><li><strong>Holographic family member.</strong> The intended behaviour: clicking a family in</li></ul>
+<p>  the Families tab replaces the city map with a rotating holographic point-cloud   bust of a notable member (procedural and licence-clean — no copyrighted   photos or scans), tinted to the family's era, with a floating info panel of   their biography. This was designed (a procedural bust point cloud with a   scanline/flicker shader, driven by a <code>notable</code> field per dynasty) but the   session redirected to documentation before it was coded. The Families tab and   panel system it would build on are already in place.</p>
+<hr>
+<h2>10. In one line</h2>
+<p>A calm, photographic planet you can read like a map, and a loud, neon city you can read like a story — sharing one codebase, one data pipeline, and a single rule: <strong>show the seams, cite the source, and never pretend to a precision the data doesn't have.</strong></p>
+</body></html>
