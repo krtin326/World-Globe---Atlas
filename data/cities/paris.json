@@ -1,0 +1,511 @@
+{
+  "id": "paris",
+  "name": "Paris",
+  "formerName": "Lutetia",
+  "nameLocal": null,
+  "country": "France",
+  "geonameId": 2988507,
+  "centre": [
+    2.3488,
+    48.8534
+  ],
+  "bbox": [
+    2.18,
+    48.75,
+    2.52,
+    48.94
+  ],
+  "renamed": "360",
+  "summary": "Paris grew from Lutetia, a Roman town on an island in the Seine, into the capital of the Frankish kings and then of France itself. It gave the world Notre-Dame and the Sorbonne, the storming of the Bastille and the Terror, Haussmann's boulevards and the Eiffel Tower. Occupied and liberated within living memory, it remains a world capital of art, ideas and style on the river that has always defined it.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈2.1 million",
+      "note": "City of Paris; ≈11 million in the Île-de-France metropolitan region.",
+      "sourceId": "mairie"
+    },
+    {
+      "label": "Founded",
+      "value": "52 BC",
+      "note": "As Roman Lutetia; renamed Paris, after the Parisii, in the 4th century.",
+      "sourceId": "whe-gaul"
+    },
+    {
+      "label": "Setting",
+      "value": "On the Seine",
+      "note": "Île-de-France, in the north of France.",
+      "sourceId": "britannica-paris"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Banks of the Seine (1991)",
+      "note": "The riverfront from the Louvre to the Eiffel Tower.",
+      "sourceId": "britannica-paris"
+    },
+    {
+      "label": "Known for",
+      "value": "Art, revolution, style",
+      "note": "A world capital of culture for centuries.",
+      "sourceId": "britannica-paris"
+    }
+  ],
+  "eras": [
+    {
+      "id": "gallo-roman",
+      "label": "Gallo-Roman",
+      "from": -52,
+      "to": 486,
+      "color": "#f5a623"
+    },
+    {
+      "id": "medieval",
+      "label": "Medieval",
+      "from": 486,
+      "to": 1515,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "bourbon",
+      "label": "Renaissance & Bourbon",
+      "from": 1515,
+      "to": 1789,
+      "color": "#e8467c"
+    },
+    {
+      "id": "revolution",
+      "label": "Revolution & Empire",
+      "from": 1789,
+      "to": 1852,
+      "color": "#a56bff"
+    },
+    {
+      "id": "haussmann",
+      "label": "Haussmann to War",
+      "from": 1852,
+      "to": 1944,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1944,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -52,
+      "era": "gallo-roman",
+      "title": "Roman Lutetia",
+      "body": "Rome conquers the Gaulish Parisii and builds the town of Lutetia on the Seine’s island and left bank.",
+      "sourceId": "whe-gaul",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "52 BC",
+      "place": "ile-de-la-cite",
+      "pivotal": true
+    },
+    {
+      "year": 360,
+      "era": "gallo-roman",
+      "title": "Julian and the name “Paris”",
+      "body": "Roman troops here proclaim Julian emperor; over the 4th century the town takes the name of its people, the Parisii.",
+      "sourceId": "whe-gaul",
+      "tags": [
+        "origins"
+      ]
+    },
+    {
+      "year": 451,
+      "era": "gallo-roman",
+      "title": "Sainte Geneviève",
+      "body": "By tradition Geneviève rallies the townsfolk, and their prayers turn Attila’s Huns away from Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "religion"
+      ]
+    },
+    {
+      "year": 508,
+      "era": "medieval",
+      "title": "Clovis makes it his capital",
+      "body": "The Frankish king Clovis settles Paris as the capital of his new kingdom.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 845,
+      "era": "medieval",
+      "title": "The Vikings sack Paris",
+      "body": "Norse raiders sail up the Seine and pillage the city; more sieges follow.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1163,
+      "era": "medieval",
+      "title": "Notre-Dame begun",
+      "body": "Construction starts on the great cathedral of Notre-Dame de Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "religion"
+      ],
+      "place": "notredame"
+    },
+    {
+      "year": 1257,
+      "era": "medieval",
+      "title": "The Sorbonne",
+      "body": "Robert de Sorbon founds the college that anchors the famed University of Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1348,
+      "era": "medieval",
+      "title": "The Black Death",
+      "body": "Plague devastates Paris, killing tens of thousands.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "disaster"
+      ]
+    },
+    {
+      "year": 1431,
+      "era": "medieval",
+      "title": "An English coronation",
+      "body": "During the Hundred Years’ War the boy-king Henry VI of England is crowned king of France in Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1572,
+      "era": "bourbon",
+      "title": "St Bartholomew's Day Massacre",
+      "body": "Thousands of Protestants are slaughtered in Paris during the Wars of Religion.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1594,
+      "era": "bourbon",
+      "title": "“Paris is worth a Mass”",
+      "body": "Henri IV converts to Catholicism and enters Paris, ending the religious wars.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1682,
+      "era": "bourbon",
+      "title": "The court leaves for Versailles",
+      "body": "Louis XIV moves the royal court out of Paris to his new palace at Versailles.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1789,
+      "era": "revolution",
+      "title": "The Bastille falls",
+      "body": "A Paris crowd storms the Bastille on 14 July, igniting the French Revolution.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ],
+      "place": "bastille",
+      "pivotal": true
+    },
+    {
+      "year": 1793,
+      "era": "revolution",
+      "title": "The king guillotined",
+      "body": "Louis XVI is executed on today’s Place de la Concorde; the Terror follows.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1804,
+      "era": "revolution",
+      "title": "Napoleon crowned",
+      "body": "Napoleon crowns himself Emperor of the French at Notre-Dame.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ],
+      "place": "notredame"
+    },
+    {
+      "year": 1836,
+      "era": "revolution",
+      "title": "The Arc de Triomphe",
+      "body": "Napoleon’s great triumphal arch is finally completed.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1852,
+      "era": "haussmann",
+      "title": "Haussmann remakes Paris",
+      "body": "Baron Haussmann drives broad boulevards and sewers through the medieval city.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "growth"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1871,
+      "era": "haussmann",
+      "title": "The Paris Commune",
+      "body": "A radical commune governs Paris for two months before being crushed in a bloody week.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1889,
+      "era": "haussmann",
+      "title": "The Eiffel Tower",
+      "body": "Built for the World’s Fair, the tower becomes the enduring symbol of Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "culture"
+      ],
+      "place": "eiffel",
+      "pivotal": true
+    },
+    {
+      "year": 1900,
+      "era": "haussmann",
+      "title": "The Métro and the Belle Époque",
+      "body": "The Paris Métro opens as the city dazzles the world at another World’s Fair.",
+      "sourceId": "mairie",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1919,
+      "era": "haussmann",
+      "title": "The Treaty of Versailles",
+      "body": "The peace ending the First World War is signed just outside Paris.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1940,
+      "era": "haussmann",
+      "title": "The Nazi occupation",
+      "body": "German troops march into Paris; the occupation lasts four years.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1944,
+      "era": "modern",
+      "title": "The Liberation",
+      "body": "Allied and Free French forces liberate Paris in August 1944.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1968,
+      "era": "modern",
+      "title": "May 1968",
+      "body": "A student revolt and general strike shake the French state to its foundations.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1977,
+      "era": "modern",
+      "title": "The Pompidou Centre",
+      "body": "A radical modern-art museum opens, part of a wave of grand cultural projects.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1989,
+      "era": "modern",
+      "title": "The Louvre Pyramid",
+      "body": "I. M. Pei’s glass pyramid opens for the bicentenary of the Revolution.",
+      "sourceId": "mairie",
+      "tags": [
+        "culture"
+      ],
+      "place": "louvre"
+    },
+    {
+      "year": 2015,
+      "era": "modern",
+      "title": "The November attacks",
+      "body": "Coordinated terrorist attacks across the city kill 130 people.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 2019,
+      "era": "modern",
+      "title": "Notre-Dame burns",
+      "body": "Fire ravages Notre-Dame; a global effort begins to restore it.",
+      "sourceId": "britannica-paris",
+      "tags": [
+        "disaster"
+      ],
+      "place": "notredame"
+    },
+    {
+      "year": 2024,
+      "era": "modern",
+      "title": "The Paris Olympics",
+      "body": "Paris hosts the Summer Games a century after it last did, in 1924.",
+      "sourceId": "mairie",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "ile-de-la-cite",
+      "name": "Île de la Cité",
+      "lat": 48.855,
+      "lon": 2.347,
+      "note": "The island in the Seine where Roman and medieval Paris began."
+    },
+    {
+      "id": "notredame",
+      "name": "Notre-Dame",
+      "lat": 48.853,
+      "lon": 2.3499,
+      "note": "The Gothic cathedral begun in 1163."
+    },
+    {
+      "id": "louvre",
+      "name": "The Louvre",
+      "lat": 48.8606,
+      "lon": 2.3376,
+      "note": "Royal palace turned the world’s most-visited museum."
+    },
+    {
+      "id": "bastille",
+      "name": "The Bastille",
+      "lat": 48.8532,
+      "lon": 2.3692,
+      "note": "The fortress-prison whose fall in 1789 began the Revolution."
+    },
+    {
+      "id": "eiffel",
+      "name": "The Eiffel Tower",
+      "lat": 48.8584,
+      "lon": 2.2945,
+      "note": "Built for the 1889 World’s Fair; the symbol of Paris."
+    }
+  ],
+  "sources": {
+    "britannica-paris": {
+      "title": "Paris — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Paris",
+      "official": false
+    },
+    "mairie": {
+      "title": "Ville de Paris — official city portal",
+      "publisher": "Ville de Paris",
+      "url": "https://www.paris.fr/",
+      "official": true
+    },
+    "whe-gaul": {
+      "title": "Roman Gaul — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Gaul/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Paris.",
+    "list": [
+      {
+        "id": "capetians",
+        "name": "The Capetians",
+        "community": "Founding royal dynasty",
+        "span": "987–1328",
+        "industries": [
+          "Monarchy"
+        ],
+        "legacy": "Paris as the fixed capital of France",
+        "era": "medieval",
+        "sourceId": "britannica-paris",
+        "place": "ile-de-la-cite",
+        "summary": "The line that made Paris the permanent capital of France and raised its first great monuments."
+      },
+      {
+        "id": "bourbons",
+        "name": "House of Bourbon",
+        "community": "Absolutist dynasty",
+        "span": "1589–1792",
+        "industries": [
+          "Monarchy"
+        ],
+        "legacy": "Royal Paris — before the court left for Versailles",
+        "era": "bourbon",
+        "sourceId": "britannica-paris",
+        "place": "louvre",
+        "summary": "Henri IV and Louis XIV shaped Paris before moving the court to Versailles; the Revolution ended their reign."
+      },
+      {
+        "id": "bonaparte",
+        "name": "House of Bonaparte",
+        "community": "Imperial dynasty",
+        "span": "1804–1870",
+        "industries": [
+          "Empire",
+          "War"
+        ],
+        "legacy": "The Arc de Triomphe and Haussmann’s boulevards",
+        "era": "revolution",
+        "sourceId": "britannica-paris",
+        "place": "notredame",
+        "summary": "Napoleon I and III crowned themselves in Paris and reshaped it, from triumphal arch to grand boulevards."
+      }
+    ]
+  }
+}

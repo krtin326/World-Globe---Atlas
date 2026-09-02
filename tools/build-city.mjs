@@ -149,6 +149,21 @@ const CITIES = {
   cairo: { name: 'Cairo', bbox: [31.10, 29.92, 31.42, 30.20], centre: [31.2497, 30.0626] },
   tokyo: { name: 'Tokyo', bbox: [139.55, 35.50, 139.92, 35.82], centre: [139.6917, 35.6895] },
   'mexico-city': { name: 'Mexico City', bbox: [-99.30, 19.28, -98.95, 19.58], centre: [-99.1277, 19.4285] },
+
+  // Ten more world cities (coastline only). Coastal frames (London, Istanbul,
+  // Athens, New York) get real GSHHG shoreline; inland ones (Paris, Jerusalem,
+  // Beijing, Delhi, Baghdad, Moscow) clip to a solid land plane — noted in each
+  // city file's caveats.
+  london: { name: 'London', bbox: [-0.35, 51.38, 0.15, 51.62], centre: [-0.1257, 51.5085] },
+  paris: { name: 'Paris', bbox: [2.18, 48.75, 2.52, 48.94], centre: [2.3488, 48.8534] },
+  istanbul: { name: 'Istanbul', bbox: [28.85, 40.95, 29.15, 41.15], centre: [28.9497, 41.0138] },
+  athens: { name: 'Athens', bbox: [23.55, 37.87, 23.85, 38.06], centre: [23.7278, 37.9838] },
+  jerusalem: { name: 'Jerusalem', bbox: [35.12, 31.70, 35.31, 31.84], centre: [35.2163, 31.769] },
+  beijing: { name: 'Beijing', bbox: [116.25, 39.80, 116.55, 40.02], centre: [116.3972, 39.9075] },
+  delhi: { name: 'Delhi', bbox: [77.10, 28.50, 77.36, 28.75], centre: [77.2315, 28.652] },
+  baghdad: { name: 'Baghdad', bbox: [44.28, 33.24, 44.52, 33.44], centre: [44.4009, 33.3406] },
+  moscow: { name: 'Moscow', bbox: [37.45, 55.66, 37.80, 55.84], centre: [37.6178, 55.752] },
+  'new-york-city': { name: 'New York City', bbox: [-74.10, 40.55, -73.85, 40.85], centre: [-74.006, 40.7143] },
 };
 
 /** GSHHG levels. L1 is the land/ocean boundary; L2 is lakes. */

@@ -1,0 +1,436 @@
+{
+  "id": "baghdad",
+  "name": "Baghdad",
+  "formerName": null,
+  "nameLocal": "بغداد",
+  "country": "Iraq",
+  "geonameId": 98182,
+  "centre": [
+    44.4009,
+    33.3406
+  ],
+  "bbox": [
+    44.28,
+    33.24,
+    44.52,
+    33.44
+  ],
+  "renamed": null,
+  "summary": "Founded in 762 by the caliph al-Mansur as a perfectly round 'City of Peace', Baghdad became the capital of the Abbasid caliphate and, for a time, the largest and most learned city on Earth — the Baghdad of Harun al-Rashid, the House of Wisdom and the Thousand and One Nights. The Mongols ended that golden age in 1258. Ottoman for centuries, it became the capital of Iraq in 1921 and the stage, within living memory, for revolution, dictatorship and war. It still stands on the Tigris that made it.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈7 million",
+      "note": "Greater Baghdad; the largest city in Iraq.",
+      "sourceId": "britannica-baghdad"
+    },
+    {
+      "label": "Founded",
+      "value": "AD 762",
+      "note": "By the Abbasid caliph al-Mansur as the round “City of Peace.”",
+      "sourceId": "whe-baghdad"
+    },
+    {
+      "label": "Setting",
+      "value": "On the Tigris",
+      "note": "In the Mesopotamian plain of central Iraq.",
+      "sourceId": "britannica-baghdad"
+    },
+    {
+      "label": "Golden Age",
+      "value": "8th–9th century",
+      "note": "The world’s largest city and its greatest centre of learning.",
+      "sourceId": "whe-baghdad"
+    },
+    {
+      "label": "Known for",
+      "value": "The House of Wisdom",
+      "note": "And the tales of the Thousand and One Nights.",
+      "sourceId": "whe-baghdad"
+    }
+  ],
+  "eras": [
+    {
+      "id": "abbasid-golden",
+      "label": "Abbasid Golden Age",
+      "from": 762,
+      "to": 1055,
+      "color": "#f5a623"
+    },
+    {
+      "id": "seljuk",
+      "label": "Seljuk & Late Abbasid",
+      "from": 1055,
+      "to": 1258,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "mongol",
+      "label": "Mongol & Turkmen",
+      "from": 1258,
+      "to": 1534,
+      "color": "#e8467c"
+    },
+    {
+      "id": "ottoman",
+      "label": "Ottoman",
+      "from": 1534,
+      "to": 1917,
+      "color": "#a56bff"
+    },
+    {
+      "id": "modern-iraq",
+      "label": "Modern Iraq",
+      "from": 1917,
+      "to": 1968,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "contemporary",
+      "label": "Contemporary",
+      "from": 1968,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": 762,
+      "era": "abbasid-golden",
+      "title": "Al-Mansur founds Baghdad",
+      "body": "The Abbasid caliph al-Mansur builds the round “City of Peace” on the Tigris.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "origins"
+      ],
+      "place": "roundcity",
+      "pivotal": true
+    },
+    {
+      "year": 786,
+      "era": "abbasid-golden",
+      "title": "Harun al-Rashid",
+      "body": "Under Harun al-Rashid, Baghdad becomes the fabled city of the Thousand and One Nights.",
+      "sourceId": "whe-baghdad",
+      "tags": [
+        "culture"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 830,
+      "era": "abbasid-golden",
+      "title": "The House of Wisdom",
+      "body": "Caliph al-Ma’mun makes Baghdad the world’s centre of learning and translation.",
+      "sourceId": "whe-baghdad",
+      "tags": [
+        "culture"
+      ],
+      "place": "mustansiriya"
+    },
+    {
+      "year": 836,
+      "era": "abbasid-golden",
+      "title": "The court moves to Samarra",
+      "body": "The caliphs briefly shift the capital upriver to Samarra.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 892,
+      "era": "abbasid-golden",
+      "title": "The caliphs return",
+      "body": "Baghdad resumes as the Abbasid capital and remains the largest city in the world.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 945,
+      "era": "abbasid-golden",
+      "title": "The Buyids take power",
+      "body": "Persian Buyid emirs seize real power, keeping the caliph as a figurehead.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1055,
+      "era": "seljuk",
+      "title": "The Seljuk Turks",
+      "body": "Seljuk sultans enter Baghdad and rule in the caliph’s name.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1227,
+      "era": "seljuk",
+      "title": "The Mustansiriya",
+      "body": "One of the world’s first true universities is founded in Baghdad.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "culture"
+      ],
+      "place": "mustansiriya"
+    },
+    {
+      "year": 1258,
+      "era": "mongol",
+      "title": "The Mongol sack",
+      "body": "Hulagu Khan destroys Baghdad and kills the last Abbasid caliph — the end of the golden age.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ],
+      "place": "tigris-banks",
+      "pivotal": true
+    },
+    {
+      "year": 1401,
+      "era": "mongol",
+      "title": "Timur’s massacre",
+      "body": "Timur sacks Baghdad and, by report, builds towers from the skulls of the dead.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1534,
+      "era": "ottoman",
+      "title": "The Ottomans",
+      "body": "Süleyman the Magnificent takes Baghdad for the Ottoman Empire.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1623,
+      "era": "ottoman",
+      "title": "A Safavid interlude",
+      "body": "Persia’s Safavids seize Baghdad before the Ottomans retake it.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1638,
+      "era": "ottoman",
+      "title": "Ottoman reconquest",
+      "body": "Murad IV storms Baghdad; it stays Ottoman for nearly three centuries.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1869,
+      "era": "ottoman",
+      "title": "Midhat Pasha reforms",
+      "body": "A reforming governor begins to modernise the city.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1917,
+      "era": "modern-iraq",
+      "title": "The British take Baghdad",
+      "body": "British forces capture Baghdad from the Ottomans in the First World War.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1921,
+      "era": "modern-iraq",
+      "title": "Capital of Iraq",
+      "body": "Baghdad becomes the capital of the new Kingdom of Iraq under King Faisal I.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1932,
+      "era": "modern-iraq",
+      "title": "Independence",
+      "body": "Iraq gains independence, with Baghdad as its capital.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1958,
+      "era": "modern-iraq",
+      "title": "The monarchy falls",
+      "body": "A revolution overthrows the monarchy and Iraq becomes a republic.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1968,
+      "era": "contemporary",
+      "title": "The Ba’ath seize power",
+      "body": "A coup brings the Ba’ath Party — and eventually Saddam Hussein — to power.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1979,
+      "era": "contemporary",
+      "title": "Saddam takes control",
+      "body": "Saddam Hussein becomes president, ruling Iraq from Baghdad.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1991,
+      "era": "contemporary",
+      "title": "The Gulf War",
+      "body": "US-led bombing strikes Baghdad after Iraq’s invasion of Kuwait.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 2003,
+      "era": "contemporary",
+      "title": "The US invasion",
+      "body": "American forces take Baghdad and Saddam’s statue is toppled.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ],
+      "place": "tahrir-baghdad",
+      "pivotal": true
+    },
+    {
+      "year": 2007,
+      "era": "contemporary",
+      "title": "Sectarian war",
+      "body": "Baghdad is torn by sectarian violence at the height of the insurgency.",
+      "sourceId": "britannica-baghdad",
+      "tags": [
+        "conflict"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "roundcity",
+      "name": "The Round City",
+      "lat": 33.355,
+      "lon": 44.37,
+      "note": "Al-Mansur’s perfectly circular “City of Peace,” long since vanished."
+    },
+    {
+      "id": "mustansiriya",
+      "name": "Mustansiriya",
+      "lat": 33.3392,
+      "lon": 44.3861,
+      "note": "One of the oldest surviving universities in the world."
+    },
+    {
+      "id": "tigris-banks",
+      "name": "The Tigris",
+      "lat": 33.3406,
+      "lon": 44.4009,
+      "note": "The river along which Baghdad was built and burned."
+    },
+    {
+      "id": "tahrir-baghdad",
+      "name": "Tahrir Square",
+      "lat": 33.3152,
+      "lon": 44.4236,
+      "note": "The civic square of the modern city."
+    }
+  ],
+  "sources": {
+    "britannica-baghdad": {
+      "title": "Baghdad — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Baghdad",
+      "official": false
+    },
+    "whe-baghdad": {
+      "title": "Baghdad — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Baghdad/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Baghdad.",
+    "list": [
+      {
+        "id": "abbasids",
+        "name": "The Abbasid caliphs",
+        "community": "Founders & rulers",
+        "span": "762–1258",
+        "industries": [
+          "Caliphate",
+          "Learning"
+        ],
+        "legacy": "Baghdad and its golden age",
+        "era": "abbasid-golden",
+        "sourceId": "whe-baghdad",
+        "place": "roundcity",
+        "summary": "The dynasty that built Baghdad and made it the heart of an Islamic golden age, until the Mongols killed the last caliph."
+      },
+      {
+        "id": "barmakids",
+        "name": "The Barmakids",
+        "community": "Vizier dynasty",
+        "span": "8th century",
+        "industries": [
+          "Administration",
+          "Patronage"
+        ],
+        "legacy": "The learned court of Harun al-Rashid",
+        "era": "abbasid-golden",
+        "sourceId": "whe-baghdad",
+        "summary": "A family of viziers who ran the empire and patronised its learning under Harun al-Rashid."
+      },
+      {
+        "id": "hashemites",
+        "name": "The Hashemites",
+        "community": "Kings of Iraq",
+        "span": "1921–1958",
+        "industries": [
+          "Monarchy"
+        ],
+        "legacy": "The modern Iraqi state",
+        "era": "modern-iraq",
+        "sourceId": "britannica-baghdad",
+        "summary": "The dynasty installed by Britain to rule the new Iraqi state from Baghdad."
+      }
+    ]
+  }
+}

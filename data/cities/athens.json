@@ -1,0 +1,507 @@
+{
+  "id": "athens",
+  "name": "Athens",
+  "formerName": null,
+  "nameLocal": "Αθήνα",
+  "country": "Greece",
+  "geonameId": 264371,
+  "centre": [
+    23.7278,
+    37.9838
+  ],
+  "bbox": [
+    23.55,
+    37.87,
+    23.85,
+    38.06
+  ],
+  "renamed": null,
+  "summary": "Athens has been lived in for over three thousand years — from a Bronze Age citadel on the Acropolis to the city that gave the world democracy, philosophy and drama in its 5th-century-BC golden age. The Parthenon crowned that height; Rome, Byzantium and the Ottomans followed, and a Venetian shell shattered the temple in 1687. Chosen as the capital of a newly independent Greece in 1834, when it was barely a town, Athens grew into a metropolis of over three million beneath the ancient rock.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈664,000",
+      "note": "City proper; ≈3.6 million in the Athens metropolitan area.",
+      "sourceId": "britannica-athens"
+    },
+    {
+      "label": "Founded",
+      "value": "c. 1600 BC",
+      "note": "Continuously inhabited for over 3,000 years.",
+      "sourceId": "whe-athens"
+    },
+    {
+      "label": "Setting",
+      "value": "The Attic plain",
+      "note": "Its port, Piraeus, lies 8 km to the southwest.",
+      "sourceId": "britannica-athens"
+    },
+    {
+      "label": "World Heritage",
+      "value": "The Acropolis (1987)",
+      "note": "Crowned by the Parthenon.",
+      "sourceId": "unesco-404"
+    },
+    {
+      "label": "Birthplace of",
+      "value": "Democracy",
+      "note": "And of Western philosophy and drama.",
+      "sourceId": "whe-athens"
+    }
+  ],
+  "eras": [
+    {
+      "id": "ancient",
+      "label": "Bronze & Archaic",
+      "from": -1600,
+      "to": -508,
+      "color": "#f5a623"
+    },
+    {
+      "id": "classical",
+      "label": "Classical",
+      "from": -508,
+      "to": -323,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "hellenistic-roman",
+      "label": "Hellenistic & Roman",
+      "from": -323,
+      "to": 330,
+      "color": "#e8467c"
+    },
+    {
+      "id": "byzantine-ottoman",
+      "label": "Byzantine & Ottoman",
+      "from": 330,
+      "to": 1833,
+      "color": "#a56bff"
+    },
+    {
+      "id": "kingdom",
+      "label": "Capital of Greece",
+      "from": 1833,
+      "to": 1946,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1946,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -1600,
+      "era": "ancient",
+      "title": "Mycenaean Athens",
+      "body": "A fortified palace crowns the Acropolis in the Bronze Age.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "c. 1600 BC",
+      "place": "acropolis",
+      "pivotal": true
+    },
+    {
+      "year": -1050,
+      "era": "ancient",
+      "title": "An Ionian refuge",
+      "body": "Athens survives the Bronze Age collapse and grows as an Ionian centre.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "c. 1050 BC"
+    },
+    {
+      "year": -621,
+      "era": "ancient",
+      "title": "Draco’s harsh laws",
+      "body": "Draco gives Athens its first written — and famously severe — law code.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "621 BC"
+    },
+    {
+      "year": -594,
+      "era": "ancient",
+      "title": "Solon’s reforms",
+      "body": "Solon reforms debt and citizenship, laying the ground for democracy.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "594 BC"
+    },
+    {
+      "year": -561,
+      "era": "ancient",
+      "title": "Peisistratus the tyrant",
+      "body": "The tyrant Peisistratus beautifies Athens and promotes its great festivals.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "history"
+      ],
+      "yearDisplay": "561 BC",
+      "place": "acropolis"
+    },
+    {
+      "year": -508,
+      "era": "classical",
+      "title": "Democracy is born",
+      "body": "Cleisthenes establishes the world’s first democracy at Athens.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "508 BC",
+      "place": "agora",
+      "pivotal": true
+    },
+    {
+      "year": -490,
+      "era": "classical",
+      "title": "Marathon",
+      "body": "Athenian hoplites defeat the invading Persians on the plain of Marathon.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "490 BC"
+    },
+    {
+      "year": -480,
+      "era": "classical",
+      "title": "Salamis and the sack",
+      "body": "Persia burns the Acropolis, but the Athenian fleet wins a decisive victory at Salamis.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "480 BC",
+      "place": "acropolis"
+    },
+    {
+      "year": -447,
+      "era": "classical",
+      "title": "The Parthenon",
+      "body": "Under Pericles the Parthenon rises on the rebuilt Acropolis at the height of Athens’ power.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "447 BC",
+      "place": "parthenon",
+      "pivotal": true
+    },
+    {
+      "year": -431,
+      "era": "classical",
+      "title": "The Peloponnesian War",
+      "body": "Athens and Sparta begin a long war that will end the Athenian golden age.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "431 BC"
+    },
+    {
+      "year": -399,
+      "era": "classical",
+      "title": "The death of Socrates",
+      "body": "Socrates is condemned by an Athenian jury and drinks hemlock.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "399 BC",
+      "place": "agora"
+    },
+    {
+      "year": -387,
+      "era": "classical",
+      "title": "Plato’s Academy",
+      "body": "Plato founds the Academy; Aristotle’s Lyceum will follow.",
+      "sourceId": "whe-athens",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "387 BC"
+    },
+    {
+      "year": -338,
+      "era": "classical",
+      "title": "Macedon takes Greece",
+      "body": "Philip II of Macedon defeats Athens and Thebes at Chaeronea.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "338 BC"
+    },
+    {
+      "year": -86,
+      "era": "hellenistic-roman",
+      "title": "Rome sacks Athens",
+      "body": "The Roman general Sulla storms and plunders the city.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "86 BC"
+    },
+    {
+      "year": 125,
+      "era": "hellenistic-roman",
+      "title": "Hadrian’s Athens",
+      "body": "The emperor Hadrian lavishes new buildings and a great arch on the city.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ],
+      "yearDisplay": "AD 125"
+    },
+    {
+      "year": 529,
+      "era": "byzantine-ottoman",
+      "title": "The schools are closed",
+      "body": "The emperor Justinian closes the ancient philosophical schools of Athens.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "religion"
+      ]
+    },
+    {
+      "year": 1204,
+      "era": "byzantine-ottoman",
+      "title": "Frankish Athens",
+      "body": "Crusaders seize Athens and the Parthenon becomes a Latin cathedral.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ],
+      "place": "parthenon"
+    },
+    {
+      "year": 1456,
+      "era": "byzantine-ottoman",
+      "title": "The Ottoman conquest",
+      "body": "The Ottomans take Athens; the Parthenon is turned into a mosque.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1687,
+      "era": "byzantine-ottoman",
+      "title": "The Parthenon explodes",
+      "body": "A Venetian shell ignites Ottoman gunpowder stored in the Parthenon, wrecking the temple.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "disaster"
+      ],
+      "place": "parthenon",
+      "pivotal": true
+    },
+    {
+      "year": 1801,
+      "era": "byzantine-ottoman",
+      "title": "The Elgin Marbles",
+      "body": "Lord Elgin removes much of the Parthenon’s sculpture to Britain.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ],
+      "place": "parthenon"
+    },
+    {
+      "year": 1834,
+      "era": "kingdom",
+      "title": "Capital of Greece",
+      "body": "After independence, Athens — then a small town — is chosen as capital of the new Greek kingdom.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "politics"
+      ],
+      "place": "syntagma",
+      "pivotal": true
+    },
+    {
+      "year": 1896,
+      "era": "kingdom",
+      "title": "The first modern Olympics",
+      "body": "Athens hosts the revived Olympic Games.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1923,
+      "era": "kingdom",
+      "title": "The refugee flood",
+      "body": "Nearly a million Greek refugees from Anatolia swell the city.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1944,
+      "era": "kingdom",
+      "title": "Occupation and civil war",
+      "body": "Nazi occupation ends, but fighting in Athens opens the Greek Civil War.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1981,
+      "era": "modern",
+      "title": "Into Europe",
+      "body": "Greece joins the European Community, with Athens as its capital.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 2004,
+      "era": "modern",
+      "title": "The Games return",
+      "body": "Athens hosts the Summer Olympics for the first time since 1896.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 2009,
+      "era": "modern",
+      "title": "The debt crisis",
+      "body": "A sovereign-debt crisis brings years of austerity and protest to the streets of Athens.",
+      "sourceId": "britannica-athens",
+      "tags": [
+        "politics"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "acropolis",
+      "name": "The Acropolis",
+      "lat": 37.9715,
+      "lon": 23.7257,
+      "note": "The sacred rock and citadel above the city."
+    },
+    {
+      "id": "parthenon",
+      "name": "The Parthenon",
+      "lat": 37.9715,
+      "lon": 23.7267,
+      "note": "Pericles’ temple to Athena, symbol of classical Greece."
+    },
+    {
+      "id": "agora",
+      "name": "The Ancient Agora",
+      "lat": 37.9755,
+      "lon": 23.7228,
+      "note": "The civic heart where democracy and philosophy were practised."
+    },
+    {
+      "id": "syntagma",
+      "name": "Syntagma Square",
+      "lat": 37.9755,
+      "lon": 23.7348,
+      "note": "The square before Parliament, centre of the modern city."
+    },
+    {
+      "id": "piraeus",
+      "name": "Piraeus",
+      "lat": 37.9421,
+      "lon": 23.6465,
+      "note": "Athens’ ancient and modern port on the Saronic Gulf."
+    }
+  ],
+  "sources": {
+    "britannica-athens": {
+      "title": "Athens — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Athens",
+      "official": false
+    },
+    "unesco-404": {
+      "title": "Acropolis, Athens — UNESCO World Heritage List",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/404/",
+      "official": true
+    },
+    "whe-athens": {
+      "title": "Athens — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/athens/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Athens.",
+    "list": [
+      {
+        "id": "alcmaeonidae",
+        "name": "The Alcmaeonidae",
+        "community": "Aristocratic reforming clan",
+        "span": "7th–5th c. BC",
+        "industries": [
+          "Politics"
+        ],
+        "legacy": "Cleisthenes and Pericles",
+        "era": "classical",
+        "sourceId": "whe-athens",
+        "place": "agora",
+        "summary": "The clan of Cleisthenes, father of democracy, and later of Pericles, who built the Parthenon."
+      },
+      {
+        "id": "peisistratids",
+        "name": "The Peisistratids",
+        "community": "Tyrant dynasty",
+        "span": "561–510 BC",
+        "industries": [
+          "Politics",
+          "Building"
+        ],
+        "legacy": "Festivals and monuments of archaic Athens",
+        "era": "ancient",
+        "sourceId": "whe-athens",
+        "place": "acropolis",
+        "summary": "Tyrants who adorned Athens and fostered its festivals before democracy replaced them."
+      },
+      {
+        "id": "glucksburg",
+        "name": "The House of Glücksburg",
+        "community": "Kings of the Hellenes",
+        "span": "1863–1973",
+        "industries": [
+          "Monarchy"
+        ],
+        "legacy": "Athens as a modern European capital",
+        "era": "kingdom",
+        "sourceId": "britannica-athens",
+        "place": "syntagma",
+        "summary": "The royal house under which Athens grew from a small town into a modern capital."
+      }
+    ]
+  }
+}

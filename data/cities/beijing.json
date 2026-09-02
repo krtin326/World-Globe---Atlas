@@ -1,0 +1,473 @@
+{
+  "id": "beijing",
+  "name": "Beijing",
+  "formerName": "Dadu",
+  "nameLocal": "北京",
+  "country": "China",
+  "geonameId": 1816670,
+  "centre": [
+    116.3972,
+    39.9075
+  ],
+  "bbox": [
+    116.25,
+    39.8,
+    116.55,
+    40.02
+  ],
+  "renamed": "1403",
+  "summary": "A capital in some form for over a thousand years, Beijing began as the frontier town of Ji and became the Mongol Dadu of Kublai Khan, described in wonder by Marco Polo. The Ming renamed it Beijing and built the Forbidden City and the Temple of Heaven; the Manchu Qing ruled a vast empire from it until 1912. From Tiananmen Gate, Mao proclaimed the People's Republic in 1949. Twice an Olympic host, it is today one of the largest and most powerful cities in the world.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈21 million",
+      "note": "Beijing Municipality; among the largest cities in the world.",
+      "sourceId": "britannica-beijing"
+    },
+    {
+      "label": "Capital since",
+      "value": "1271",
+      "note": "As Mongol Dadu; renamed Beijing in 1403.",
+      "sourceId": "whe-china"
+    },
+    {
+      "label": "Setting",
+      "value": "North China Plain",
+      "note": "At its northern edge, near the mountains and the Great Wall.",
+      "sourceId": "britannica-beijing"
+    },
+    {
+      "label": "World Heritage",
+      "value": "The Forbidden City (1987)",
+      "note": "The largest surviving palace complex on Earth.",
+      "sourceId": "unesco-439"
+    },
+    {
+      "label": "Seat of",
+      "value": "Ming, Qing & modern China",
+      "note": "The imperial and then national capital.",
+      "sourceId": "britannica-beijing"
+    }
+  ],
+  "eras": [
+    {
+      "id": "early",
+      "label": "Ji to Liao",
+      "from": -1045,
+      "to": 1153,
+      "color": "#f5a623"
+    },
+    {
+      "id": "jin-yuan",
+      "label": "Zhongdu & Dadu",
+      "from": 1153,
+      "to": 1368,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "ming",
+      "label": "Ming",
+      "from": 1368,
+      "to": 1644,
+      "color": "#e8467c"
+    },
+    {
+      "id": "qing",
+      "label": "Qing",
+      "from": 1644,
+      "to": 1912,
+      "color": "#a56bff"
+    },
+    {
+      "id": "republic",
+      "label": "Republic & War",
+      "from": 1912,
+      "to": 1949,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "prc",
+      "label": "People's Republic",
+      "from": 1949,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -1045,
+      "era": "early",
+      "title": "The town of Ji",
+      "body": "A walled town called Ji, capital of the state of Yan, stands near modern Beijing.",
+      "sourceId": "whe-china",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "c. 1045 BC",
+      "pivotal": true
+    },
+    {
+      "year": 938,
+      "era": "early",
+      "title": "A Liao capital",
+      "body": "The Khitan Liao make the city one of their secondary capitals, Nanjing.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "AD 938"
+    },
+    {
+      "year": 1153,
+      "era": "jin-yuan",
+      "title": "Jin Zhongdu",
+      "body": "The Jurchen Jin make the city their central capital, Zhongdu.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1215,
+      "era": "jin-yuan",
+      "title": "Genghis Khan sacks it",
+      "body": "Mongol armies destroy Zhongdu.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1271,
+      "era": "jin-yuan",
+      "title": "Kublai’s Dadu",
+      "body": "Kublai Khan builds a grand new capital, Dadu, seat of the Yuan dynasty.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "place": "forbiddencity",
+      "pivotal": true
+    },
+    {
+      "year": 1275,
+      "era": "jin-yuan",
+      "title": "Marco Polo",
+      "body": "The Venetian traveller describes the splendour of Kublai Khan’s capital.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1368,
+      "era": "ming",
+      "title": "The Ming take the city",
+      "body": "The Ming overthrow the Mongols and rename the city Beiping.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1403,
+      "era": "ming",
+      "title": "Renamed Beijing",
+      "body": "The Yongle Emperor makes it his capital and names it Beijing — “northern capital.”",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1420,
+      "era": "ming",
+      "title": "The Forbidden City",
+      "body": "Yongle completes the vast palace complex at the heart of the city.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "culture"
+      ],
+      "place": "forbiddencity",
+      "pivotal": true
+    },
+    {
+      "year": 1421,
+      "era": "ming",
+      "title": "The Temple of Heaven",
+      "body": "The great ritual complex is built for the emperor’s sacrifices.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "religion"
+      ],
+      "place": "templeheaven"
+    },
+    {
+      "year": 1553,
+      "era": "ming",
+      "title": "The outer wall",
+      "body": "A new southern wall encloses the growing city.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1644,
+      "era": "qing",
+      "title": "The Qing conquest",
+      "body": "The Manchu Qing seize Beijing as the Ming dynasty falls.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1750,
+      "era": "qing",
+      "title": "The Summer Palace",
+      "body": "The Qing build lavish gardens and palaces northwest of the city.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "culture"
+      ],
+      "place": "summerpalace"
+    },
+    {
+      "year": 1860,
+      "era": "qing",
+      "title": "The Old Summer Palace burned",
+      "body": "British and French troops loot and burn the Yuanmingyuan during the Second Opium War.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ],
+      "place": "summerpalace",
+      "pivotal": true
+    },
+    {
+      "year": 1900,
+      "era": "qing",
+      "title": "The Boxer siege",
+      "body": "The foreign legations are besieged in the Boxer Rebellion; an eight-nation army then sacks the city.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1912,
+      "era": "republic",
+      "title": "The last emperor abdicates",
+      "body": "The Qing dynasty ends; the boy emperor Puyi abdicates in the Forbidden City.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "place": "forbiddencity",
+      "pivotal": true
+    },
+    {
+      "year": 1919,
+      "era": "republic",
+      "title": "The May Fourth Movement",
+      "body": "Student protests in Beijing launch a new nationalist and cultural movement.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "place": "tiananmen"
+    },
+    {
+      "year": 1937,
+      "era": "republic",
+      "title": "Japanese occupation",
+      "body": "Japan seizes Beijing at the start of the wider war in China.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1949,
+      "era": "prc",
+      "title": "The People’s Republic",
+      "body": "Mao Zedong proclaims the People’s Republic of China from Tiananmen Gate.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "place": "tiananmen",
+      "pivotal": true
+    },
+    {
+      "year": 1958,
+      "era": "prc",
+      "title": "Remaking the centre",
+      "body": "The old city walls come down and Tiananmen Square is vastly enlarged.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "growth"
+      ],
+      "place": "tiananmen"
+    },
+    {
+      "year": 1966,
+      "era": "prc",
+      "title": "The Cultural Revolution",
+      "body": "Mao launches the Cultural Revolution; Red Guards rally in Beijing.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1976,
+      "era": "prc",
+      "title": "Mao dies",
+      "body": "Chairman Mao dies; his mausoleum is built on Tiananmen Square.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "politics"
+      ],
+      "place": "tiananmen"
+    },
+    {
+      "year": 1989,
+      "era": "prc",
+      "title": "Tiananmen",
+      "body": "Pro-democracy protests centred on Tiananmen Square are suppressed.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "conflict"
+      ],
+      "place": "tiananmen",
+      "pivotal": true
+    },
+    {
+      "year": 2008,
+      "era": "prc",
+      "title": "The Summer Olympics",
+      "body": "Beijing hosts the Summer Games, announcing a rising China to the world.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 2022,
+      "era": "prc",
+      "title": "The Winter Olympics",
+      "body": "Beijing becomes the first city to host both the Summer and Winter Games.",
+      "sourceId": "britannica-beijing",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "forbiddencity",
+      "name": "The Forbidden City",
+      "lat": 39.9163,
+      "lon": 116.3972,
+      "note": "The vast imperial palace of the Ming and Qing."
+    },
+    {
+      "id": "tiananmen",
+      "name": "Tiananmen Square",
+      "lat": 39.9055,
+      "lon": 116.3976,
+      "note": "The great square before the palace, stage of modern China."
+    },
+    {
+      "id": "templeheaven",
+      "name": "Temple of Heaven",
+      "lat": 39.8822,
+      "lon": 116.4066,
+      "note": "The ritual complex where emperors prayed for good harvests."
+    },
+    {
+      "id": "summerpalace",
+      "name": "The Summer Palace",
+      "lat": 39.9999,
+      "lon": 116.2755,
+      "note": "The Qing pleasure gardens northwest of the city."
+    }
+  ],
+  "sources": {
+    "britannica-beijing": {
+      "title": "Beijing — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Beijing",
+      "official": false
+    },
+    "unesco-439": {
+      "title": "Imperial Palaces of the Ming and Qing (Forbidden City) — UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/439/",
+      "official": true
+    },
+    "whe-china": {
+      "title": "Ancient China — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/china/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Beijing.",
+    "list": [
+      {
+        "id": "yuan",
+        "name": "The Yuan (Mongol) dynasty",
+        "community": "Mongol emperors",
+        "span": "1271–1368",
+        "industries": [
+          "Empire"
+        ],
+        "legacy": "Dadu, the first imperial capital here",
+        "era": "jin-yuan",
+        "sourceId": "whe-china",
+        "place": "forbiddencity",
+        "summary": "Kublai Khan built Dadu as the capital of a Mongol empire that spanned Asia."
+      },
+      {
+        "id": "ming",
+        "name": "The Ming dynasty",
+        "community": "Chinese imperial house",
+        "span": "1368–1644",
+        "industries": [
+          "Empire",
+          "Building"
+        ],
+        "legacy": "The Forbidden City and Temple of Heaven",
+        "era": "ming",
+        "sourceId": "britannica-beijing",
+        "place": "forbiddencity",
+        "summary": "The Ming made Beijing the capital and built its greatest monuments."
+      },
+      {
+        "id": "qing",
+        "name": "The Qing dynasty",
+        "community": "Manchu emperors",
+        "span": "1644–1912",
+        "industries": [
+          "Empire"
+        ],
+        "legacy": "A vast empire ruled from the Forbidden City",
+        "era": "qing",
+        "sourceId": "britannica-beijing",
+        "place": "summerpalace",
+        "summary": "China’s last dynasty ruled a vast empire from Beijing until 1912."
+      }
+    ]
+  }
+}

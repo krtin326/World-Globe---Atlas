@@ -1,0 +1,448 @@
+{
+  "id": "moscow",
+  "name": "Moscow",
+  "formerName": null,
+  "nameLocal": "Москва",
+  "country": "Russia",
+  "geonameId": 524901,
+  "centre": [
+    37.6178,
+    55.752
+  ],
+  "bbox": [
+    37.45,
+    55.66,
+    37.8,
+    55.84
+  ],
+  "renamed": null,
+  "summary": "First mentioned in 1147, Moscow rose from a small fort on the Moskva River to the heart of Russia. Its princes gathered power under Mongol overlordship, then threw it off; Ivan the Terrible was crowned the first tsar here in 1547 beneath the new domes of St Basil's. Peter the Great moved the capital to St Petersburg in 1712, but the Bolsheviks brought it back in 1918, and from the Kremlin Lenin and Stalin ruled the Soviet Union. Burned by Napoleon, besieged by Hitler, it endures as Europe's largest city.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈12.6 million",
+      "note": "Moscow city; the most populous city in Europe.",
+      "sourceId": "mosru"
+    },
+    {
+      "label": "First mentioned",
+      "value": "1147",
+      "note": "It grew from a small fort into the capital of Russia.",
+      "sourceId": "britannica-moscow"
+    },
+    {
+      "label": "Setting",
+      "value": "On the Moskva River",
+      "note": "In the forests and plains of western Russia.",
+      "sourceId": "britannica-moscow"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Kremlin & Red Square (1990)",
+      "note": "The fortified heart of the city and state.",
+      "sourceId": "unesco-545"
+    },
+    {
+      "label": "Capital",
+      "value": "1263–1712; 1918–",
+      "note": "St Petersburg was the capital in between.",
+      "sourceId": "britannica-moscow"
+    }
+  ],
+  "eras": [
+    {
+      "id": "founding",
+      "label": "Founding",
+      "from": 1147,
+      "to": 1263,
+      "color": "#f5a623"
+    },
+    {
+      "id": "grand-duchy",
+      "label": "Grand Duchy",
+      "from": 1263,
+      "to": 1547,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "tsardom",
+      "label": "Tsardom",
+      "from": 1547,
+      "to": 1712,
+      "color": "#e8467c"
+    },
+    {
+      "id": "imperial",
+      "label": "Imperial (second city)",
+      "from": 1712,
+      "to": 1917,
+      "color": "#a56bff"
+    },
+    {
+      "id": "soviet",
+      "label": "Soviet",
+      "from": 1917,
+      "to": 1991,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1991,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": 1147,
+      "era": "founding",
+      "title": "First mention",
+      "body": "Moscow is first recorded when Prince Yuri Dolgoruky invites an ally to feast here.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "origins"
+      ],
+      "place": "kremlin",
+      "pivotal": true
+    },
+    {
+      "year": 1237,
+      "era": "founding",
+      "title": "The Mongols burn Moscow",
+      "body": "The Mongol invasion destroys the small wooden town.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1263,
+      "era": "grand-duchy",
+      "title": "A princely seat",
+      "body": "Moscow becomes the seat of a minor branch of the Rurikid princes.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1327,
+      "era": "grand-duchy",
+      "title": "Ivan Kalita",
+      "body": "Ivan I gathers wealth and the seat of the Orthodox Church, raising Moscow’s power.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "place": "kremlin"
+    },
+    {
+      "year": 1380,
+      "era": "grand-duchy",
+      "title": "Kulikovo",
+      "body": "Dmitry Donskoy of Moscow beats a Mongol army at Kulikovo.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1480,
+      "era": "grand-duchy",
+      "title": "The Mongol yoke ends",
+      "body": "Ivan III ends Mongol overlordship and builds the brick Kremlin that still stands.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "place": "kremlin",
+      "pivotal": true
+    },
+    {
+      "year": 1547,
+      "era": "tsardom",
+      "title": "Ivan the Terrible, Tsar",
+      "body": "Ivan IV is crowned the first Tsar of all Russia in Moscow.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1561,
+      "era": "tsardom",
+      "title": "St Basil's Cathedral",
+      "body": "Ivan builds the fantastical St Basil’s on Red Square.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "culture"
+      ],
+      "place": "stbasil"
+    },
+    {
+      "year": 1571,
+      "era": "tsardom",
+      "title": "The Tatars burn Moscow",
+      "body": "A Crimean Tatar raid burns almost the entire city.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1612,
+      "era": "tsardom",
+      "title": "The Time of Troubles",
+      "body": "Muscovites expel a Polish garrison from the Kremlin, ending years of chaos.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ],
+      "place": "kremlin"
+    },
+    {
+      "year": 1712,
+      "era": "imperial",
+      "title": "The capital moves away",
+      "body": "Peter the Great moves the capital to St Petersburg; Moscow becomes the second city.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1755,
+      "era": "imperial",
+      "title": "Moscow University",
+      "body": "Russia’s first university is founded in Moscow.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1812,
+      "era": "imperial",
+      "title": "Napoleon and the great fire",
+      "body": "Napoleon takes Moscow, but the city burns and his army retreats to ruin.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1851,
+      "era": "imperial",
+      "title": "The railway to St Petersburg",
+      "body": "The two capitals are linked by rail.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1905,
+      "era": "imperial",
+      "title": "Revolution",
+      "body": "An armed uprising in Moscow is crushed in the revolution of 1905.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1917,
+      "era": "soviet",
+      "title": "The Bolsheviks",
+      "body": "Revolution sweeps Russia; fierce fighting takes the Kremlin.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1918,
+      "era": "soviet",
+      "title": "Capital again",
+      "body": "Lenin moves the capital back to Moscow; the Kremlin becomes the seat of Soviet power.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "place": "kremlin",
+      "pivotal": true
+    },
+    {
+      "year": 1935,
+      "era": "soviet",
+      "title": "The Metro opens",
+      "body": "Moscow’s palatial underground railway opens.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1941,
+      "era": "soviet",
+      "title": "The Battle of Moscow",
+      "body": "The Red Army halts the Nazi advance at the very gates of the city.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1953,
+      "era": "soviet",
+      "title": "Stalin dies",
+      "body": "The dictator dies; his long rule from the Kremlin ends.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1980,
+      "era": "soviet",
+      "title": "The Moscow Olympics",
+      "body": "The USSR hosts the Summer Games, boycotted by much of the West.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1991,
+      "era": "modern",
+      "title": "The Soviet collapse",
+      "body": "A failed coup in Moscow hastens the end of the Soviet Union.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "politics"
+      ],
+      "place": "redsquare",
+      "pivotal": true
+    },
+    {
+      "year": 1993,
+      "era": "modern",
+      "title": "The constitutional crisis",
+      "body": "Tanks shell the Russian parliament in a violent political standoff.",
+      "sourceId": "britannica-moscow",
+      "tags": [
+        "conflict"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "kremlin",
+      "name": "The Kremlin",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "note": "The fortified seat of princely, tsarist and Soviet power."
+    },
+    {
+      "id": "redsquare",
+      "name": "Red Square",
+      "lat": 55.7539,
+      "lon": 37.6208,
+      "note": "The great square beside the Kremlin."
+    },
+    {
+      "id": "stbasil",
+      "name": "St Basil's Cathedral",
+      "lat": 55.7525,
+      "lon": 37.6231,
+      "note": "Ivan the Terrible’s fantastical domed church."
+    },
+    {
+      "id": "bolshoi",
+      "name": "The Bolshoi Theatre",
+      "lat": 55.7602,
+      "lon": 37.6186,
+      "note": "The home of Russian ballet and opera."
+    }
+  ],
+  "sources": {
+    "britannica-moscow": {
+      "title": "Moscow — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Moscow",
+      "official": false
+    },
+    "unesco-545": {
+      "title": "Kremlin and Red Square, Moscow — UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/545/",
+      "official": true
+    },
+    "mosru": {
+      "title": "Moscow city government — official portal",
+      "publisher": "Government of Moscow",
+      "url": "https://www.mos.ru/en/",
+      "official": true
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Moscow.",
+    "list": [
+      {
+        "id": "daniilovich",
+        "name": "The Daniilovich princes",
+        "community": "Grand princes of Moscow",
+        "span": "1263–1598",
+        "industries": [
+          "Monarchy",
+          "Church"
+        ],
+        "legacy": "Moscow as the head of Russia",
+        "era": "grand-duchy",
+        "sourceId": "britannica-moscow",
+        "place": "kremlin",
+        "summary": "The Rurikid line that raised Moscow from a small town to the head of Russia and threw off Mongol rule."
+      },
+      {
+        "id": "romanovs",
+        "name": "The House of Romanov",
+        "community": "Russian dynasty",
+        "span": "1613–1917",
+        "industries": [
+          "Monarchy"
+        ],
+        "legacy": "Three centuries of Russian empire",
+        "era": "tsardom",
+        "sourceId": "britannica-moscow",
+        "place": "kremlin",
+        "summary": "The tsars who ruled Russia for three centuries, crowned in Moscow though their capital lay at St Petersburg."
+      },
+      {
+        "id": "soviet",
+        "name": "The Soviet leadership",
+        "community": "Communist rulers",
+        "span": "1918–1991",
+        "industries": [
+          "Governance",
+          "Ideology"
+        ],
+        "legacy": "The USSR, ruled from the Kremlin",
+        "era": "soviet",
+        "sourceId": "britannica-moscow",
+        "place": "kremlin",
+        "summary": "Lenin and Stalin ruled the Soviet Union from the Kremlin after making Moscow the capital once more."
+      }
+    ]
+  }
+}

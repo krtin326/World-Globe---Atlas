@@ -1,0 +1,452 @@
+{
+  "id": "delhi",
+  "name": "Delhi",
+  "formerName": null,
+  "nameLocal": "दिल्ली",
+  "country": "India",
+  "geonameId": 1273294,
+  "centre": [
+    77.2315,
+    28.652
+  ],
+  "bbox": [
+    77.1,
+    28.5,
+    77.36,
+    28.75
+  ],
+  "renamed": null,
+  "summary": "Delhi is really many cities layered on one plain by the Yamuna — said to have been founded and destroyed seven times. Legend makes it the Pandavas' Indraprastha; history brings the Rajputs, then the Delhi Sultanate whose Qutb Minar still towers, then the Mughals, whose Shah Jahan built the Red Fort and the Jama Masjid. Sacked by Timur and Nadir Shah, centre of the 1857 rebellion, it became the capital of British India in 1911 and of independent India in 1947 — today one of the largest urban areas on Earth.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈11 million",
+      "note": "Delhi proper; ≈32 million in the National Capital Territory and its metro — among the largest on Earth.",
+      "sourceId": "britannica-delhi"
+    },
+    {
+      "label": "Capital since",
+      "value": "1911",
+      "note": "When the British moved India’s capital here; a Mughal capital 1638–1857.",
+      "sourceId": "britannica-delhi"
+    },
+    {
+      "label": "Setting",
+      "value": "On the Yamuna",
+      "note": "On the plains of northern India.",
+      "sourceId": "britannica-delhi"
+    },
+    {
+      "label": "World Heritage",
+      "value": "3 sites",
+      "note": "The Qutb Minar, the Red Fort and Humayun’s Tomb.",
+      "sourceId": "asi"
+    },
+    {
+      "label": "Built",
+      "value": "Seven times",
+      "note": "Delhi is traditionally said to have been founded and rebuilt seven times.",
+      "sourceId": "whe-india"
+    }
+  ],
+  "eras": [
+    {
+      "id": "early",
+      "label": "Indraprastha to Rajput",
+      "from": -1400,
+      "to": 1206,
+      "color": "#f5a623"
+    },
+    {
+      "id": "sultanate",
+      "label": "Delhi Sultanate",
+      "from": 1206,
+      "to": 1526,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "mughal",
+      "label": "Mughal",
+      "from": 1526,
+      "to": 1739,
+      "color": "#e8467c"
+    },
+    {
+      "id": "decline",
+      "label": "Decline & Company",
+      "from": 1739,
+      "to": 1911,
+      "color": "#a56bff"
+    },
+    {
+      "id": "raj",
+      "label": "Imperial Capital",
+      "from": 1911,
+      "to": 1947,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Republic",
+      "from": 1947,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -1400,
+      "era": "early",
+      "title": "Indraprastha",
+      "body": "Legend places the Pandavas’ city of Indraprastha here, in the epic Mahabharata.",
+      "sourceId": "whe-india",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "c. 1400 BC",
+      "pivotal": true
+    },
+    {
+      "year": 736,
+      "era": "early",
+      "title": "Tomara Dhillika",
+      "body": "The Tomara Rajputs found a town, Dhillika, an ancestor of the name Delhi.",
+      "sourceId": "whe-india",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "AD 736"
+    },
+    {
+      "year": 1052,
+      "era": "early",
+      "title": "The Lal Kot",
+      "body": "The Tomaras and then the Chauhans build the first of Delhi’s fortified cities.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1192,
+      "era": "early",
+      "title": "The Ghurid conquest",
+      "body": "Muhammad of Ghor’s victory opens northern India to Muslim rule from Delhi.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1199,
+      "era": "early",
+      "title": "The Qutb Minar",
+      "body": "Qutb al-Din Aibak begins the towering Qutb Minar, victory tower of a new order.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "culture"
+      ],
+      "place": "qutbminar"
+    },
+    {
+      "year": 1206,
+      "era": "sultanate",
+      "title": "The Delhi Sultanate",
+      "body": "Qutb al-Din Aibak founds the Sultanate — the first great Muslim empire of India.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "politics"
+      ],
+      "place": "qutbminar",
+      "pivotal": true
+    },
+    {
+      "year": 1298,
+      "era": "sultanate",
+      "title": "The Khalji sultans",
+      "body": "Alauddin Khalji repels repeated Mongol invasions and expands across India.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1327,
+      "era": "sultanate",
+      "title": "Tughlaq’s failed move",
+      "body": "Muhammad bin Tughlaq forces Delhi’s people to march to a new southern capital, then back again.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1398,
+      "era": "sultanate",
+      "title": "Timur sacks Delhi",
+      "body": "Timur (Tamerlane) storms Delhi and massacres its people.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1526,
+      "era": "mughal",
+      "title": "Babur founds the Mughals",
+      "body": "Babur defeats the last sultan at Panipat and founds the Mughal Empire.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1565,
+      "era": "mughal",
+      "title": "Humayun's Tomb",
+      "body": "The great garden-tomb of the emperor Humayun is built, forerunner of the Taj.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "culture"
+      ],
+      "place": "humayuntomb"
+    },
+    {
+      "year": 1638,
+      "era": "mughal",
+      "title": "Shah Jahan’s new city",
+      "body": "Shah Jahan moves the Mughal capital to Delhi and builds Shahjahanabad.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "growth"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1648,
+      "era": "mughal",
+      "title": "The Red Fort and Jama Masjid",
+      "body": "His Red Fort and great congregational mosque are completed.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "culture"
+      ],
+      "place": "redfort"
+    },
+    {
+      "year": 1739,
+      "era": "decline",
+      "title": "Nadir Shah’s sack",
+      "body": "The Persian Nadir Shah plunders Delhi and carries off the Peacock Throne.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1803,
+      "era": "decline",
+      "title": "The British take Delhi",
+      "body": "The East India Company seizes the city, keeping a powerless Mughal emperor on the throne.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1857,
+      "era": "decline",
+      "title": "The Great Rebellion",
+      "body": "Delhi is the centre of the 1857 uprising; its recapture ends Mughal rule for good.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ],
+      "place": "redfort",
+      "pivotal": true
+    },
+    {
+      "year": 1911,
+      "era": "raj",
+      "title": "Capital of the Raj",
+      "body": "Britain moves the capital of India from Calcutta to Delhi.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1931,
+      "era": "raj",
+      "title": "New Delhi inaugurated",
+      "body": "Edwin Lutyens’ grand imperial capital, New Delhi, is formally opened.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "growth"
+      ],
+      "place": "indiagate"
+    },
+    {
+      "year": 1947,
+      "era": "modern",
+      "title": "Independence and Partition",
+      "body": "India wins independence; Partition brings a flood of refugees to Delhi.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1948,
+      "era": "modern",
+      "title": "Gandhi assassinated",
+      "body": "Mahatma Gandhi is shot dead in Delhi and cremated at Raj Ghat.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ],
+      "place": "rajghat"
+    },
+    {
+      "year": 1984,
+      "era": "modern",
+      "title": "The anti-Sikh riots",
+      "body": "The assassination of Indira Gandhi triggers deadly riots across the capital.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 2010,
+      "era": "modern",
+      "title": "The Commonwealth Games",
+      "body": "Delhi hosts the Games amid rapid, sprawling growth.",
+      "sourceId": "britannica-delhi",
+      "tags": [
+        "culture"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "qutbminar",
+      "name": "Qutb Minar",
+      "lat": 28.5245,
+      "lon": 77.1855,
+      "note": "The soaring victory tower begun by the first sultan of Delhi."
+    },
+    {
+      "id": "redfort",
+      "name": "The Red Fort",
+      "lat": 28.6562,
+      "lon": 77.241,
+      "note": "Shah Jahan’s Mughal citadel, heart of Shahjahanabad."
+    },
+    {
+      "id": "humayuntomb",
+      "name": "Humayun's Tomb",
+      "lat": 28.5933,
+      "lon": 77.2507,
+      "note": "The garden-tomb that inspired the Taj Mahal."
+    },
+    {
+      "id": "jamamasjid",
+      "name": "Jama Masjid",
+      "lat": 28.6507,
+      "lon": 77.2334,
+      "note": "Shah Jahan’s great congregational mosque."
+    },
+    {
+      "id": "indiagate",
+      "name": "India Gate / New Delhi",
+      "lat": 28.6129,
+      "lon": 77.2295,
+      "note": "The ceremonial heart of Lutyens’ New Delhi."
+    },
+    {
+      "id": "rajghat",
+      "name": "Raj Ghat",
+      "lat": 28.6406,
+      "lon": 77.2495,
+      "note": "The riverside memorial where Gandhi was cremated."
+    }
+  ],
+  "sources": {
+    "britannica-delhi": {
+      "title": "Delhi — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Delhi",
+      "official": false
+    },
+    "asi": {
+      "title": "Archaeological Survey of India",
+      "publisher": "Archaeological Survey of India, Govt. of India",
+      "url": "https://asi.nic.in/",
+      "official": true
+    },
+    "whe-india": {
+      "title": "Ancient India — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/india/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Delhi.",
+    "list": [
+      {
+        "id": "sultanate-dyn",
+        "name": "The Delhi Sultans",
+        "community": "Turkic & Afghan dynasties",
+        "span": "1206–1526",
+        "industries": [
+          "Empire",
+          "War"
+        ],
+        "legacy": "The Qutb complex and Muslim rule in India",
+        "era": "sultanate",
+        "sourceId": "britannica-delhi",
+        "place": "qutbminar",
+        "summary": "Five dynasties — Mamluk, Khalji, Tughlaq, Sayyid and Lodi — ruled north India from Delhi and built its first great monuments."
+      },
+      {
+        "id": "mughals-delhi",
+        "name": "The Mughals",
+        "community": "Imperial dynasty",
+        "span": "1526–1857",
+        "industries": [
+          "Empire",
+          "Architecture"
+        ],
+        "legacy": "The Red Fort, Jama Masjid and Shahjahanabad",
+        "era": "mughal",
+        "sourceId": "britannica-delhi",
+        "place": "redfort",
+        "summary": "Shah Jahan made Delhi his capital and built the Red Fort and the Jama Masjid; the last emperor fell in 1857."
+      },
+      {
+        "id": "british-raj",
+        "name": "The British Raj",
+        "community": "Colonial rulers",
+        "span": "1803–1947",
+        "industries": [
+          "Governance"
+        ],
+        "legacy": "Lutyens’ New Delhi",
+        "era": "raj",
+        "sourceId": "britannica-delhi",
+        "place": "indiagate",
+        "summary": "The British built New Delhi as the monumental capital of their Indian empire."
+      }
+    ]
+  }
+}

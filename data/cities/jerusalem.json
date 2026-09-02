@@ -1,0 +1,506 @@
+{
+  "id": "jerusalem",
+  "name": "Jerusalem",
+  "formerName": null,
+  "nameLocal": "ירושלים · القدس",
+  "country": "Israel",
+  "geonameId": 281184,
+  "centre": [
+    35.2163,
+    31.769
+  ],
+  "bbox": [
+    35.12,
+    31.7,
+    35.31,
+    31.84
+  ],
+  "renamed": null,
+  "summary": "Jerusalem is among the oldest cities on Earth and holy to three faiths. A Canaanite town became King David's capital around 1000 BC and the site of Solomon's Temple; that Temple was destroyed by Babylon, rebuilt, and destroyed again by Rome in AD 70, leaving the Western Wall. Christians revere it as the place of the Crucifixion and Resurrection, Muslims as the site of the Dome of the Rock and al-Aqsa. Fought over by Crusaders, Ayyubids and Ottomans, it remains one of the world's most contested cities — its status disputed to this day.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈970,000",
+      "note": "The most populous city administered by Israel; its status is internationally disputed.",
+      "sourceId": "britannica-jerusalem"
+    },
+    {
+      "label": "Founded",
+      "value": "c. 1800 BC",
+      "note": "One of the oldest cities on Earth.",
+      "sourceId": "whe-jerusalem"
+    },
+    {
+      "label": "Setting",
+      "value": "The Judaean hills",
+      "note": "About 750 m above sea level.",
+      "sourceId": "britannica-jerusalem"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Old City & walls (1981)",
+      "note": "Also on the List of World Heritage in Danger.",
+      "sourceId": "unesco-148"
+    },
+    {
+      "label": "Holy to",
+      "value": "Three faiths",
+      "note": "Judaism, Christianity and Islam.",
+      "sourceId": "britannica-jerusalem"
+    }
+  ],
+  "eras": [
+    {
+      "id": "canaanite",
+      "label": "Canaanite & Israelite",
+      "from": -2000,
+      "to": -586,
+      "color": "#f5a623"
+    },
+    {
+      "id": "second-temple",
+      "label": "Second Temple",
+      "from": -586,
+      "to": 70,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "roman-byzantine",
+      "label": "Roman & Byzantine",
+      "from": 70,
+      "to": 638,
+      "color": "#e8467c"
+    },
+    {
+      "id": "islamic-crusader",
+      "label": "Islamic & Crusader",
+      "from": 638,
+      "to": 1517,
+      "color": "#a56bff"
+    },
+    {
+      "id": "ottoman",
+      "label": "Ottoman",
+      "from": 1517,
+      "to": 1917,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1917,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -1800,
+      "era": "canaanite",
+      "title": "Canaanite Jerusalem",
+      "body": "A Canaanite town called Urusalim appears in Egyptian records.",
+      "sourceId": "whe-jerusalem",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "c. 1800 BC",
+      "pivotal": true
+    },
+    {
+      "year": -1000,
+      "era": "canaanite",
+      "title": "David’s capital",
+      "body": "King David takes the city and makes it the capital of Israel.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "politics"
+      ],
+      "yearDisplay": "c. 1000 BC",
+      "place": "davidcity",
+      "pivotal": true
+    },
+    {
+      "year": -957,
+      "era": "canaanite",
+      "title": "Solomon’s Temple",
+      "body": "Solomon builds the First Temple on Mount Moriah.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "religion"
+      ],
+      "yearDisplay": "c. 957 BC",
+      "place": "templemount"
+    },
+    {
+      "year": -701,
+      "era": "canaanite",
+      "title": "Assyria repelled",
+      "body": "Hezekiah’s Jerusalem survives an Assyrian siege; his water tunnel still runs beneath the city.",
+      "sourceId": "whe-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "701 BC"
+    },
+    {
+      "year": -586,
+      "era": "second-temple",
+      "title": "Babylon destroys the Temple",
+      "body": "Nebuchadnezzar razes the city and Temple and exiles the people of Judah.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "586 BC",
+      "place": "templemount",
+      "pivotal": true
+    },
+    {
+      "year": -516,
+      "era": "second-temple",
+      "title": "The Second Temple",
+      "body": "Returned exiles rebuild the Temple.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "religion"
+      ],
+      "yearDisplay": "c. 516 BC",
+      "place": "templemount"
+    },
+    {
+      "year": -164,
+      "era": "second-temple",
+      "title": "The Maccabees",
+      "body": "The Maccabean revolt frees Jerusalem and rededicates the Temple, remembered at Hanukkah.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "164 BC"
+    },
+    {
+      "year": -37,
+      "era": "second-temple",
+      "title": "Herod the Great",
+      "body": "Herod rebuilds the Temple on a vast scale and fortifies the city.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "growth"
+      ],
+      "yearDisplay": "37 BC",
+      "place": "templemount"
+    },
+    {
+      "year": 30,
+      "era": "second-temple",
+      "title": "The Crucifixion",
+      "body": "By Christian tradition Jesus is crucified and buried in Jerusalem.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "religion"
+      ],
+      "yearDisplay": "c. AD 30",
+      "place": "holysepulchre"
+    },
+    {
+      "year": 70,
+      "era": "roman-byzantine",
+      "title": "Rome destroys the Temple",
+      "body": "Titus sacks Jerusalem and burns the Second Temple, leaving only its retaining wall.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "place": "westernwall",
+      "pivotal": true
+    },
+    {
+      "year": 135,
+      "era": "roman-byzantine",
+      "title": "Aelia Capitolina",
+      "body": "After the Bar Kokhba revolt Rome rebuilds the city as pagan Aelia Capitolina and bars Jews from it.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 335,
+      "era": "roman-byzantine",
+      "title": "The Holy Sepulchre",
+      "body": "Constantine’s mother Helena builds the Church of the Holy Sepulchre over the tomb of Christ.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "religion"
+      ],
+      "place": "holysepulchre"
+    },
+    {
+      "year": 638,
+      "era": "islamic-crusader",
+      "title": "The Muslim conquest",
+      "body": "The Caliph Umar takes Jerusalem peacefully from Byzantium.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 691,
+      "era": "islamic-crusader",
+      "title": "The Dome of the Rock",
+      "body": "The Umayyads build the Dome of the Rock on the Temple Mount.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "religion"
+      ],
+      "place": "templemount",
+      "pivotal": true
+    },
+    {
+      "year": 1099,
+      "era": "islamic-crusader",
+      "title": "The Crusaders",
+      "body": "The First Crusade storms Jerusalem in a notorious massacre and founds a Latin kingdom.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1187,
+      "era": "islamic-crusader",
+      "title": "Saladin retakes the city",
+      "body": "Saladin recaptures Jerusalem for Islam after the Battle of Hattin.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1517,
+      "era": "ottoman",
+      "title": "Ottoman rule",
+      "body": "The Ottomans take Jerusalem; it stays under their rule for four centuries.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "politics"
+      ],
+      "place": "oldcity"
+    },
+    {
+      "year": 1538,
+      "era": "ottoman",
+      "title": "Süleyman’s walls",
+      "body": "Süleyman the Magnificent rebuilds the Old City walls that still stand today.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "history"
+      ],
+      "place": "oldcity"
+    },
+    {
+      "year": 1860,
+      "era": "ottoman",
+      "title": "Beyond the walls",
+      "body": "The first neighbourhoods are built outside the crowded Old City.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1917,
+      "era": "modern",
+      "title": "General Allenby enters",
+      "body": "British forces take Jerusalem from the Ottomans in the First World War.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1947,
+      "era": "modern",
+      "title": "The UN partition vote",
+      "body": "The United Nations votes to partition Palestine, proposing Jerusalem as an international city.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1948,
+      "era": "modern",
+      "title": "A divided city",
+      "body": "War splits Jerusalem between Israel and Jordan.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1967,
+      "era": "modern",
+      "title": "The Six-Day War",
+      "body": "Israel captures the Old City and East Jerusalem.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "place": "westernwall",
+      "pivotal": true
+    },
+    {
+      "year": 1980,
+      "era": "modern",
+      "title": "Israel’s declaration",
+      "body": "Israel declares a united Jerusalem its capital — a status not recognised by most of the world.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 2000,
+      "era": "modern",
+      "title": "The Second Intifada",
+      "body": "Tensions on the Temple Mount help ignite a Palestinian uprising.",
+      "sourceId": "britannica-jerusalem",
+      "tags": [
+        "conflict"
+      ],
+      "place": "templemount"
+    }
+  ],
+  "places": [
+    {
+      "id": "templemount",
+      "name": "Temple Mount / Haram al-Sharif",
+      "lat": 31.778,
+      "lon": 35.2354,
+      "note": "Site of the Jewish Temples and of the Dome of the Rock and al-Aqsa."
+    },
+    {
+      "id": "westernwall",
+      "name": "The Western Wall",
+      "lat": 31.7767,
+      "lon": 35.2345,
+      "note": "The surviving retaining wall of Herod’s Temple Mount."
+    },
+    {
+      "id": "holysepulchre",
+      "name": "Church of the Holy Sepulchre",
+      "lat": 31.7784,
+      "lon": 35.2297,
+      "note": "Built over the traditional site of Christ’s tomb."
+    },
+    {
+      "id": "davidcity",
+      "name": "City of David",
+      "lat": 31.7736,
+      "lon": 35.2358,
+      "note": "The oldest settled core, south of the Temple Mount."
+    },
+    {
+      "id": "oldcity",
+      "name": "The Old City walls",
+      "lat": 31.7767,
+      "lon": 35.2312,
+      "note": "The present walls, rebuilt by Süleyman the Magnificent."
+    }
+  ],
+  "sources": {
+    "britannica-jerusalem": {
+      "title": "Jerusalem — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Jerusalem",
+      "official": false
+    },
+    "unesco-148": {
+      "title": "Old City of Jerusalem and its Walls — UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/148/",
+      "official": true
+    },
+    "whe-jerusalem": {
+      "title": "Jerusalem — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/jerusalem/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented.",
+    "Jerusalem’s political status and boundaries are internationally disputed; this account records widely agreed history as neutrally as it can, and takes no position on any claim."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Jerusalem.",
+    "list": [
+      {
+        "id": "house-of-david",
+        "name": "The House of David",
+        "community": "Israelite royal dynasty",
+        "span": "from c. 1000 BC",
+        "industries": [
+          "Monarchy",
+          "Religion"
+        ],
+        "legacy": "The First Temple and a central place in three faiths",
+        "era": "canaanite",
+        "sourceId": "whe-jerusalem",
+        "place": "davidcity",
+        "summary": "David and Solomon made Jerusalem their capital and built the First Temple; the line runs deep through Jewish and Christian tradition."
+      },
+      {
+        "id": "hasmoneans",
+        "name": "The Hasmoneans",
+        "community": "Priest-kings",
+        "span": "164–37 BC",
+        "industries": [
+          "Religion",
+          "War"
+        ],
+        "legacy": "A brief independent Jewish state",
+        "era": "second-temple",
+        "sourceId": "whe-jerusalem",
+        "place": "templemount",
+        "summary": "The Maccabees and their heirs, who freed Jerusalem and rededicated the Temple."
+      },
+      {
+        "id": "herodians",
+        "name": "The Herodian dynasty",
+        "community": "Roman client kings",
+        "span": "37 BC – AD 92",
+        "industries": [
+          "Monarchy",
+          "Building"
+        ],
+        "legacy": "The Temple Mount whose Western Wall still stands",
+        "era": "second-temple",
+        "sourceId": "britannica-jerusalem",
+        "place": "westernwall",
+        "summary": "Herod the Great rebuilt the Temple and its mount on a monumental scale."
+      },
+      {
+        "id": "crusader-kings",
+        "name": "Kings of Jerusalem",
+        "community": "Crusader dynasty",
+        "span": "1099–1291",
+        "industries": [
+          "Monarchy",
+          "War"
+        ],
+        "legacy": "The Latin Kingdom of Jerusalem",
+        "era": "islamic-crusader",
+        "sourceId": "britannica-jerusalem",
+        "place": "holysepulchre",
+        "summary": "The Latin rulers of the Crusader kingdom centred on the holy city."
+      }
+    ]
+  }
+}

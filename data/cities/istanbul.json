@@ -1,0 +1,493 @@
+{
+  "id": "istanbul",
+  "name": "Istanbul",
+  "formerName": "Constantinople",
+  "nameLocal": "İstanbul",
+  "country": "Turkey",
+  "geonameId": 745044,
+  "centre": [
+    28.9497,
+    41.0138
+  ],
+  "bbox": [
+    28.85,
+    40.95,
+    29.15,
+    41.15
+  ],
+  "renamed": "1930",
+  "summary": "No city has been the capital of more history than this one. Founded as the Greek colony of Byzantion around 660 BC on the point where Europe meets Asia, it was refounded by Constantine in 330 as Constantinople — capital of the Roman and then Byzantine empire and centre of Orthodox Christianity for over a thousand years. Conquered by the Ottomans in 1453, it ruled an Islamic empire from Topkapı until 1922. Renamed Istanbul, it is today the largest city in Europe, and the only one that straddles two continents.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈15.7 million",
+      "note": "The largest city in Europe; its metropolitan area spans two continents.",
+      "sourceId": "britannica-istanbul"
+    },
+    {
+      "label": "Founded",
+      "value": "660 BC",
+      "note": "As Greek Byzantion; refounded as Constantinople in AD 330.",
+      "sourceId": "whe-constantinople"
+    },
+    {
+      "label": "Setting",
+      "value": "On the Bosphorus",
+      "note": "The strait joining the Black Sea and the Mediterranean, between Europe and Asia.",
+      "sourceId": "britannica-istanbul"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Historic Areas (1985)",
+      "note": "The old city of Constantinople and its monuments.",
+      "sourceId": "unesco-356"
+    },
+    {
+      "label": "Capital of",
+      "value": "Three empires",
+      "note": "Roman/Byzantine, Latin and Ottoman.",
+      "sourceId": "britannica-istanbul"
+    }
+  ],
+  "eras": [
+    {
+      "id": "byzantion",
+      "label": "Greek Byzantion",
+      "from": -660,
+      "to": 330,
+      "color": "#f5a623"
+    },
+    {
+      "id": "byzantine",
+      "label": "Constantinople / Byzantine",
+      "from": 330,
+      "to": 1453,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "ottoman-classical",
+      "label": "Ottoman Classical",
+      "from": 1453,
+      "to": 1703,
+      "color": "#e8467c"
+    },
+    {
+      "id": "ottoman-late",
+      "label": "Late Ottoman",
+      "from": 1703,
+      "to": 1922,
+      "color": "#a56bff"
+    },
+    {
+      "id": "republic",
+      "label": "Turkish Republic",
+      "from": 1922,
+      "to": 1980,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "from": 1980,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": -660,
+      "era": "byzantion",
+      "title": "Greek Byzantion",
+      "body": "Greek colonists from Megara found Byzantion on the point where Europe meets the Bosphorus.",
+      "sourceId": "whe-constantinople",
+      "tags": [
+        "origins"
+      ],
+      "yearDisplay": "660 BC",
+      "place": "topkapi",
+      "pivotal": true
+    },
+    {
+      "year": -512,
+      "era": "byzantion",
+      "title": "Persians and Greeks",
+      "body": "Byzantion passes between Persian, Athenian and Spartan control through the classical centuries.",
+      "sourceId": "whe-constantinople",
+      "tags": [
+        "conflict"
+      ],
+      "yearDisplay": "c. 512 BC"
+    },
+    {
+      "year": 196,
+      "era": "byzantion",
+      "title": "Rome rebuilds it",
+      "body": "Emperor Septimius Severus razes and then rebuilds Byzantium after a long siege.",
+      "sourceId": "whe-constantinople",
+      "tags": [
+        "history"
+      ],
+      "yearDisplay": "AD 196"
+    },
+    {
+      "year": 330,
+      "era": "byzantine",
+      "title": "Constantinople founded",
+      "body": "Constantine refounds the city as the new capital of the Roman Empire — Constantinople.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ],
+      "place": "hagiasophia",
+      "pivotal": true
+    },
+    {
+      "year": 537,
+      "era": "byzantine",
+      "title": "Hagia Sophia",
+      "body": "Justinian completes the vast domed church of Hagia Sophia, wonder of the age.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "culture"
+      ],
+      "place": "hagiasophia"
+    },
+    {
+      "year": 674,
+      "era": "byzantine",
+      "title": "Arab sieges repelled",
+      "body": "The city withstands the first great Arab sieges, saved partly by the secret weapon of “Greek fire.”",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1054,
+      "era": "byzantine",
+      "title": "The Great Schism",
+      "body": "The Christian church splits between Rome and Constantinople.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "religion"
+      ]
+    },
+    {
+      "year": 1204,
+      "era": "byzantine",
+      "title": "The Fourth Crusade sacks the city",
+      "body": "Crusaders storm and pillage Constantinople — a wound from which Byzantium never fully recovers.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1261,
+      "era": "byzantine",
+      "title": "Byzantine restoration",
+      "body": "The Palaiologos emperors retake the diminished city from its Latin rulers.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1453,
+      "era": "ottoman-classical",
+      "title": "The Ottoman conquest",
+      "body": "Mehmed II takes Constantinople; the Byzantine Empire ends and the city becomes Ottoman.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ],
+      "place": "topkapi",
+      "pivotal": true
+    },
+    {
+      "year": 1459,
+      "era": "ottoman-classical",
+      "title": "Topkapı Palace",
+      "body": "Mehmed begins Topkapı Palace, seat of the sultans for the next four centuries.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "history"
+      ],
+      "place": "topkapi"
+    },
+    {
+      "year": 1481,
+      "era": "ottoman-classical",
+      "title": "Hagia Sophia a mosque",
+      "body": "The great church is converted to a mosque and minarets rise around it.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "religion"
+      ],
+      "place": "hagiasophia"
+    },
+    {
+      "year": 1520,
+      "era": "ottoman-classical",
+      "title": "Süleyman the Magnificent",
+      "body": "Under Süleyman the city becomes the dazzling heart of a Mediterranean empire.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1557,
+      "era": "ottoman-classical",
+      "title": "Sinan’s Süleymaniye",
+      "body": "The architect Sinan completes the Süleymaniye Mosque crowning the skyline.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1616,
+      "era": "ottoman-classical",
+      "title": "The Blue Mosque",
+      "body": "The Sultan Ahmed (Blue) Mosque is completed opposite Hagia Sophia.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "culture"
+      ],
+      "place": "bluemosque"
+    },
+    {
+      "year": 1730,
+      "era": "ottoman-late",
+      "title": "The end of the Tulip Era",
+      "body": "A janissary revolt ends the westernising “Tulip Era” of the early 18th century.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1826,
+      "era": "ottoman-late",
+      "title": "The Auspicious Incident",
+      "body": "Sultan Mahmud II violently destroys the rebellious janissary corps.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1853,
+      "era": "ottoman-late",
+      "title": "The Crimean War",
+      "body": "The city becomes a base and hospital hub in the Crimean War.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1889,
+      "era": "ottoman-late",
+      "title": "The Orient Express",
+      "body": "The famous luxury train links Paris with Constantinople.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1922,
+      "era": "republic",
+      "title": "The sultanate abolished",
+      "body": "The Ottoman sultanate ends and the last sultan quietly leaves the city.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1923,
+      "era": "republic",
+      "title": "Ankara made capital",
+      "body": "The new Turkish Republic moves its capital to Ankara.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1930,
+      "era": "republic",
+      "title": "Renamed Istanbul",
+      "body": "The city’s name is officially fixed as Istanbul.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1955,
+      "era": "republic",
+      "title": "The Istanbul pogrom",
+      "body": "Mobs attack the Greek and other minority communities; many leave for good.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1973,
+      "era": "republic",
+      "title": "The Bosphorus Bridge",
+      "body": "The first bridge links Europe and Asia across the strait.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1985,
+      "era": "modern",
+      "title": "World Heritage",
+      "body": "The historic areas of the old city are inscribed on the UNESCO World Heritage List.",
+      "sourceId": "unesco-356",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 2013,
+      "era": "modern",
+      "title": "The Gezi Park protests",
+      "body": "Protests over a park in Taksim Square swell into a nationwide movement.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 2020,
+      "era": "modern",
+      "title": "Hagia Sophia a mosque again",
+      "body": "Hagia Sophia is reconverted from a museum into a working mosque.",
+      "sourceId": "britannica-istanbul",
+      "tags": [
+        "religion"
+      ],
+      "place": "hagiasophia"
+    }
+  ],
+  "places": [
+    {
+      "id": "hagiasophia",
+      "name": "Hagia Sophia",
+      "lat": 41.0086,
+      "lon": 28.9802,
+      "note": "Justinian’s great domed church of 537, later mosque, museum and mosque again."
+    },
+    {
+      "id": "topkapi",
+      "name": "Topkapı Palace",
+      "lat": 41.0115,
+      "lon": 28.9834,
+      "note": "Seat of the Ottoman sultans for nearly four centuries."
+    },
+    {
+      "id": "bluemosque",
+      "name": "The Blue Mosque",
+      "lat": 41.0054,
+      "lon": 28.9768,
+      "note": "The Sultan Ahmed Mosque of 1616, facing Hagia Sophia."
+    },
+    {
+      "id": "grandbazaar",
+      "name": "The Grand Bazaar",
+      "lat": 41.0106,
+      "lon": 28.9681,
+      "note": "One of the world’s oldest and largest covered markets."
+    },
+    {
+      "id": "galata",
+      "name": "Galata",
+      "lat": 41.0256,
+      "lon": 28.9744,
+      "note": "The old Genoese quarter across the Golden Horn."
+    }
+  ],
+  "sources": {
+    "britannica-istanbul": {
+      "title": "Istanbul — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/Istanbul",
+      "official": false
+    },
+    "unesco-356": {
+      "title": "Historic Areas of Istanbul — UNESCO World Heritage List",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/356/",
+      "official": true
+    },
+    "whe-constantinople": {
+      "title": "Constantinople — World History Encyclopedia",
+      "publisher": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Constantinople/",
+      "official": false
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped Istanbul.",
+    "list": [
+      {
+        "id": "constantinian",
+        "name": "The House of Constantine",
+        "community": "Founders of Constantinople",
+        "span": "324–363",
+        "industries": [
+          "Empire",
+          "Church"
+        ],
+        "legacy": "The Christian capital of the Roman world",
+        "era": "byzantine",
+        "sourceId": "whe-constantinople",
+        "place": "hagiasophia",
+        "summary": "Constantine and his heirs made the city the Christian capital of the Roman Empire."
+      },
+      {
+        "id": "komnenos",
+        "name": "The Komnenos & Palaiologos",
+        "community": "Byzantine imperial houses",
+        "span": "1081–1453",
+        "industries": [
+          "Empire"
+        ],
+        "legacy": "The last defence of Byzantium",
+        "era": "byzantine",
+        "sourceId": "britannica-istanbul",
+        "summary": "The last great Byzantine dynasties, who defended, lost and briefly restored the city before its final fall."
+      },
+      {
+        "id": "osman",
+        "name": "The House of Osman",
+        "community": "Ottoman sultans",
+        "span": "1453–1922",
+        "industries": [
+          "Empire",
+          "Religion"
+        ],
+        "legacy": "A Mediterranean empire ruled from Topkapı",
+        "era": "ottoman-classical",
+        "sourceId": "britannica-istanbul",
+        "place": "topkapi",
+        "summary": "The Ottoman dynasty ruled an empire from Topkapı Palace for four and a half centuries."
+      }
+    ]
+  }
+}

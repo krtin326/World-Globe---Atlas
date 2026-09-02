@@ -18,7 +18,7 @@ npm run serve     # http://localhost:8080
 | States / provinces | 4,596 |
 | Cities | 34,027 (places of 15,000+; deeper tiers supported) |
 | City histories | Mumbai — 62 events, 7 families, 254 places, roads + rail, 24 wards |
-| | Rome · Cairo · Tokyo · Mexico City — timeline + families + map (see below) |
+| | + 14 more: Rome, Cairo, Tokyo, Mexico City, London, Paris, Istanbul, Athens, Jerusalem, Beijing, Delhi, Baghdad, Moscow, New York — timeline + families + map |
 
 **Drag** to rotate · **scroll** to zoom · **click** a region or city to inspect
 it · **`/`** to search.
@@ -34,14 +34,21 @@ Ashoka to Atal Setu — and a Families tab tracing the seven business dynasties
 industry. Every entry names the source it came from and flags where accounts
 disagree.
 
-**Four more cities** — Rome, Cairo, Tokyo and Mexico City — now have the same
-history view: a full-resolution GSHHG coastline, an era-banded timeline (31–40
-events each), a Families tab of the dynasties that built them, and map markers
-for their landmarks. Their prose is ported from the `atlas/` dossiers; because
-it's compiled from general references (UNESCO, national/city portals,
-Britannica, World History Encyclopedia) rather than Mumbai's per-event
-gazetteers, each city file says so in its `caveats`. To add or regenerate them:
-`npm run build:atlas-cities` then `node tools/build-city.mjs <id>` for the
+**Fourteen more cities** now have the same history view — a full-resolution
+GSHHG coastline, an era-banded timeline (22–40 events each), a Families tab of
+the dynasties that built them, and map markers for their landmarks:
+
+- **Rome, Cairo, Tokyo, Mexico City** — prose ported from the `atlas/` dossiers
+  (`npm run build:atlas-cities`).
+- **London, Paris, Istanbul, Athens, Jerusalem, Beijing, Delhi, Baghdad,
+  Moscow, New York City** — authored fresh (`npm run build:world-cities`).
+
+Because these timelines are compiled from general references (UNESCO,
+national/city portals, Britannica, World History Encyclopedia) rather than
+Mumbai's per-event gazetteers, each city file says so in its `caveats`. Coastal
+frames get real shoreline; inland cities (Cairo, Paris, Jerusalem, Beijing,
+Delhi, Baghdad, Moscow…) clip to a solid land plane, also noted in `caveats`.
+After (re)generating a city, run `node tools/build-city.mjs <id>` for its
 coastline.
 
 ## Sharing it beyond your own PC

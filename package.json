@@ -12,6 +12,7 @@
     "serve:network": "python serve.py",
     "build:city": "node tools/build-city.mjs",
     "build:atlas-cities": "node tools/build-atlas-cities.mjs",
+    "build:world-cities": "node tools/build-world-cities.mjs",
     "docs:html": "node tools/md2html.mjs"
   },
   "keywords": [],

@@ -1,12 +1,60 @@
 {
   "note": "Cities that have a history file and a coastline, and therefore an 'Explore history' button. Keyed by GeoNames id, which is stable, rather than by name, which is not.",
   "cities": {
+    "98182": {
+      "id": "baghdad",
+      "name": "Baghdad",
+      "events": 23,
+      "coverage": "762 – 2003",
+      "families": 3,
+      "places": 4
+    },
+    "264371": {
+      "id": "athens",
+      "name": "Athens",
+      "events": 27,
+      "coverage": "c. 1600 BC – 2009",
+      "families": 3,
+      "places": 5
+    },
+    "281184": {
+      "id": "jerusalem",
+      "name": "Jerusalem",
+      "events": 25,
+      "coverage": "c. 1800 BC – 2000",
+      "families": 4,
+      "places": 5
+    },
     "360630": {
       "id": "cairo",
       "name": "Cairo",
       "events": 38,
       "coverage": "c. 3100 BC – 2021",
       "families": 4,
+      "places": 6
+    },
+    "524901": {
+      "id": "moscow",
+      "name": "Moscow",
+      "events": 23,
+      "coverage": "1147 – 1991",
+      "families": 3,
+      "places": 4
+    },
+    "745044": {
+      "id": "istanbul",
+      "name": "Istanbul",
+      "events": 27,
+      "coverage": "660 BC – 2020",
+      "families": 3,
+      "places": 5
+    },
+    "1273294": {
+      "id": "delhi",
+      "name": "Delhi",
+      "events": 22,
+      "coverage": "c. 1400 BC – 2010",
+      "families": 3,
       "places": 6
     },
     "1275339": {
@@ -19,12 +67,36 @@
       "places": 254,
       "roadWays": 8609
     },
+    "1816670": {
+      "id": "beijing",
+      "name": "Beijing",
+      "events": 25,
+      "coverage": "c. 1045 BC – 2022",
+      "families": 3,
+      "places": 4
+    },
     "1850147": {
       "id": "tokyo",
       "name": "Tokyo",
       "events": 31,
       "coverage": "645 – 2021",
       "families": 4,
+      "places": 5
+    },
+    "2643743": {
+      "id": "london",
+      "name": "London",
+      "events": 29,
+      "coverage": "47 AD – 2012",
+      "families": 4,
+      "places": 5
+    },
+    "2988507": {
+      "id": "paris",
+      "name": "Paris",
+      "events": 29,
+      "coverage": "52 BC – 2024",
+      "families": 3,
       "places": 5
     },
     "3169070": {
@@ -42,6 +114,14 @@
       "coverage": "1325 – 2017",
       "families": 4,
       "places": 5
+    },
+    "5128581": {
+      "id": "new-york-city",
+      "name": "New York City",
+      "events": 25,
+      "coverage": "1609 – 2012",
+      "families": 4,
+      "places": 6
     }
   }
 }

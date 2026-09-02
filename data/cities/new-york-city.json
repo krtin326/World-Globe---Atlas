@@ -1,0 +1,498 @@
+{
+  "id": "new-york-city",
+  "name": "New York City",
+  "formerName": "New Amsterdam",
+  "nameLocal": null,
+  "country": "United States",
+  "geonameId": 5128581,
+  "centre": [
+    -74.006,
+    40.7143
+  ],
+  "bbox": [
+    -74.1,
+    40.55,
+    -73.85,
+    40.85
+  ],
+  "renamed": "1664",
+  "summary": "New York began as New Amsterdam, a Dutch fur-trading post founded on Manhattan in 1624 and seized by the English forty years later. The Erie Canal made it the nation's greatest port; the Statue of Liberty and Ellis Island made it the gateway for millions of immigrants; Wall Street made it the capital of American finance. Consolidated into five boroughs in 1898 and home to the United Nations since 1945, it endured the Crash of 1929 and the attacks of September 11, 2001, and remains the largest and most influential city in the United States.",
+  "figures": [
+    {
+      "label": "Population",
+      "value": "≈8.8 million",
+      "note": "City proper; ≈20 million in the metropolitan area — the most populous US city.",
+      "sourceId": "nyc-gov"
+    },
+    {
+      "label": "Founded",
+      "value": "1624",
+      "note": "As Dutch New Amsterdam; renamed New York in 1664.",
+      "sourceId": "britannica-nyc"
+    },
+    {
+      "label": "Setting",
+      "value": "A great natural harbour",
+      "note": "At the mouth of the Hudson River.",
+      "sourceId": "britannica-nyc"
+    },
+    {
+      "label": "World Heritage",
+      "value": "Statue of Liberty (1984)",
+      "note": "France’s gift in the harbour.",
+      "sourceId": "unesco-307"
+    },
+    {
+      "label": "Known for",
+      "value": "Immigration & finance",
+      "note": "Ellis Island and Wall Street.",
+      "sourceId": "britannica-nyc"
+    }
+  ],
+  "eras": [
+    {
+      "id": "dutch",
+      "label": "New Amsterdam",
+      "from": 1609,
+      "to": 1664,
+      "color": "#f5a623"
+    },
+    {
+      "id": "colonial",
+      "label": "British New York",
+      "from": 1664,
+      "to": 1783,
+      "color": "#ff7a45"
+    },
+    {
+      "id": "early-republic",
+      "label": "Early Republic",
+      "from": 1783,
+      "to": 1865,
+      "color": "#e8467c"
+    },
+    {
+      "id": "gilded",
+      "label": "Gilded Age & Immigration",
+      "from": 1865,
+      "to": 1929,
+      "color": "#a56bff"
+    },
+    {
+      "id": "modern",
+      "label": "Depression to Postwar",
+      "from": 1929,
+      "to": 1990,
+      "color": "#00e5ff"
+    },
+    {
+      "id": "contemporary",
+      "label": "Contemporary",
+      "from": 1990,
+      "to": 2027,
+      "color": "#3dfa8a"
+    }
+  ],
+  "events": [
+    {
+      "year": 1609,
+      "era": "dutch",
+      "title": "Henry Hudson",
+      "body": "Sailing for the Dutch, Henry Hudson explores the river that now bears his name.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "origins"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1624,
+      "era": "dutch",
+      "title": "New Amsterdam",
+      "body": "The Dutch found a fur-trading post on the tip of Manhattan.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "origins"
+      ],
+      "place": "wallstreet",
+      "pivotal": true
+    },
+    {
+      "year": 1626,
+      "era": "dutch",
+      "title": "Manhattan “purchased”",
+      "body": "Peter Minuit acquires Manhattan from the Lenape for a bundle of trade goods.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1653,
+      "era": "dutch",
+      "title": "The wall on Wall Street",
+      "body": "The Dutch build a defensive wall along the line of today’s Wall Street.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "history"
+      ],
+      "place": "wallstreet"
+    },
+    {
+      "year": 1664,
+      "era": "colonial",
+      "title": "The English take over",
+      "body": "An English fleet seizes the colony and renames it New York.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1776,
+      "era": "colonial",
+      "title": "Revolution and occupation",
+      "body": "Washington loses the Battle of Brooklyn; the British hold New York through the Revolution.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "conflict"
+      ],
+      "place": "brooklynbridge"
+    },
+    {
+      "year": 1785,
+      "era": "early-republic",
+      "title": "Capital of the nation",
+      "body": "New York briefly serves as the capital of the new United States.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1789,
+      "era": "early-republic",
+      "title": "Washington inaugurated",
+      "body": "George Washington is sworn in as the first president on Wall Street.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ],
+      "place": "wallstreet",
+      "pivotal": true
+    },
+    {
+      "year": 1811,
+      "era": "early-republic",
+      "title": "The grid",
+      "body": "The Commissioners’ Plan lays out Manhattan’s famous rectangular street grid.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1825,
+      "era": "early-republic",
+      "title": "The Erie Canal",
+      "body": "The canal makes New York the gateway to the interior and the nation’s greatest port.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "growth"
+      ],
+      "pivotal": true
+    },
+    {
+      "year": 1858,
+      "era": "early-republic",
+      "title": "Central Park",
+      "body": "Work begins on Central Park, a vast green space amid the exploding city.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "culture"
+      ],
+      "place": "centralpark"
+    },
+    {
+      "year": 1863,
+      "era": "early-republic",
+      "title": "The Draft Riots",
+      "body": "Violent, racist anti-draft riots convulse the city during the Civil War.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1883,
+      "era": "gilded",
+      "title": "The Brooklyn Bridge",
+      "body": "The great suspension bridge finally links Manhattan and Brooklyn.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "growth"
+      ],
+      "place": "brooklynbridge",
+      "pivotal": true
+    },
+    {
+      "year": 1886,
+      "era": "gilded",
+      "title": "The Statue of Liberty",
+      "body": "France’s colossal gift is dedicated in New York harbour.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "culture"
+      ],
+      "place": "statueliberty",
+      "pivotal": true
+    },
+    {
+      "year": 1892,
+      "era": "gilded",
+      "title": "Ellis Island opens",
+      "body": "The immigration station begins processing millions of newcomers to America.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "growth"
+      ],
+      "place": "ellisisland",
+      "pivotal": true
+    },
+    {
+      "year": 1898,
+      "era": "gilded",
+      "title": "The five boroughs",
+      "body": "New York consolidates into a single city of five boroughs.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1904,
+      "era": "gilded",
+      "title": "The subway",
+      "body": "The first line of the New York City Subway opens.",
+      "sourceId": "nyc-gov",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 1929,
+      "era": "modern",
+      "title": "The Wall Street Crash",
+      "body": "The stock market collapses, beginning the Great Depression.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ],
+      "place": "wallstreet",
+      "pivotal": true
+    },
+    {
+      "year": 1931,
+      "era": "modern",
+      "title": "The Empire State Building",
+      "body": "The world’s tallest building opens in the depths of the Depression.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1945,
+      "era": "modern",
+      "title": "Capital of the world",
+      "body": "The new United Nations chooses New York for its headquarters.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "year": 1969,
+      "era": "modern",
+      "title": "Stonewall",
+      "body": "A police raid at the Stonewall Inn sparks the modern gay-rights movement.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "culture"
+      ]
+    },
+    {
+      "year": 1977,
+      "era": "modern",
+      "title": "Blackout and crisis",
+      "body": "A blackout, a fiscal crisis and rising crime mark the city’s hardest years.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "year": 1990,
+      "era": "contemporary",
+      "title": "Renewal",
+      "body": "Crime falls sharply and the city rebounds through the 1990s.",
+      "sourceId": "nyc-gov",
+      "tags": [
+        "growth"
+      ]
+    },
+    {
+      "year": 2001,
+      "era": "contemporary",
+      "title": "September 11",
+      "body": "Hijacked planes destroy the World Trade Center, killing nearly 3,000 people.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "conflict"
+      ],
+      "place": "worldtrade",
+      "pivotal": true
+    },
+    {
+      "year": 2012,
+      "era": "contemporary",
+      "title": "Hurricane Sandy",
+      "body": "A superstorm floods much of the low-lying city.",
+      "sourceId": "britannica-nyc",
+      "tags": [
+        "disaster"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "wallstreet",
+      "name": "Wall Street",
+      "lat": 40.7069,
+      "lon": -74.0113,
+      "note": "Site of the Dutch wall and the world’s financial capital."
+    },
+    {
+      "id": "statueliberty",
+      "name": "Statue of Liberty",
+      "lat": 40.6892,
+      "lon": -74.0445,
+      "note": "France’s 1886 gift, welcoming immigrants to the harbour."
+    },
+    {
+      "id": "ellisisland",
+      "name": "Ellis Island",
+      "lat": 40.6995,
+      "lon": -74.0396,
+      "note": "The immigration station that processed millions of newcomers."
+    },
+    {
+      "id": "centralpark",
+      "name": "Central Park",
+      "lat": 40.7829,
+      "lon": -73.9654,
+      "note": "The vast green rectangle at Manhattan’s heart."
+    },
+    {
+      "id": "brooklynbridge",
+      "name": "Brooklyn Bridge",
+      "lat": 40.7061,
+      "lon": -73.9969,
+      "note": "The great 1883 suspension bridge over the East River."
+    },
+    {
+      "id": "worldtrade",
+      "name": "World Trade Center",
+      "lat": 40.7115,
+      "lon": -74.0134,
+      "note": "The towers destroyed on September 11, 2001, and the site rebuilt since."
+    }
+  ],
+  "sources": {
+    "britannica-nyc": {
+      "title": "New York City — Encyclopædia Britannica",
+      "publisher": "Encyclopædia Britannica",
+      "url": "https://www.britannica.com/place/New-York-City",
+      "official": false
+    },
+    "unesco-307": {
+      "title": "Statue of Liberty — UNESCO World Heritage List",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/307/",
+      "official": true
+    },
+    "nyc-gov": {
+      "title": "The Official Website of the City of New York",
+      "publisher": "City of New York",
+      "url": "https://www.nyc.gov/",
+      "official": true
+    }
+  },
+  "caveats": [
+    "This timeline is compiled from general reference works — listed under Sources — rather than an event-by-event archive of primary documents, as the Mumbai timeline is. Treat it as a reliable outline, not a citation of record.",
+    "Dates for the earliest, legendary events are traditional rather than documented."
+  ],
+  "dynasties": {
+    "note": "Dynasties and houses that shaped New York City.",
+    "list": [
+      {
+        "id": "dutch-founders",
+        "name": "The Dutch founders",
+        "community": "New Amsterdam merchants",
+        "span": "1624–1664",
+        "industries": [
+          "Trade"
+        ],
+        "legacy": "The trading town that became New York",
+        "era": "dutch",
+        "sourceId": "britannica-nyc",
+        "place": "wallstreet",
+        "summary": "The Dutch West India Company men who founded the fur-trading town at the tip of Manhattan."
+      },
+      {
+        "id": "astors",
+        "name": "The Astors",
+        "community": "Fur & real-estate dynasty",
+        "span": "from 1784",
+        "industries": [
+          "Fur",
+          "Real estate"
+        ],
+        "legacy": "America’s first great fortune",
+        "era": "early-republic",
+        "sourceId": "britannica-nyc",
+        "summary": "John Jacob Astor built America’s first great fortune and shaped the growth of Manhattan property."
+      },
+      {
+        "id": "gilded",
+        "name": "The Gilded Age dynasties",
+        "community": "Vanderbilts, Rockefellers, Morgans",
+        "span": "1860s–1920s",
+        "industries": [
+          "Railroads",
+          "Oil",
+          "Finance"
+        ],
+        "legacy": "New York as the capital of American capitalism",
+        "era": "gilded",
+        "sourceId": "britannica-nyc",
+        "place": "wallstreet",
+        "summary": "The families whose railroads, oil and banks made New York the capital of American capitalism."
+      },
+      {
+        "id": "tammany",
+        "name": "Tammany Hall",
+        "community": "Political machine",
+        "span": "19th–20th century",
+        "industries": [
+          "Politics"
+        ],
+        "legacy": "A century of machine politics",
+        "era": "gilded",
+        "sourceId": "britannica-nyc",
+        "summary": "The Democratic machine that ran the city, courting immigrants and mastering patronage."
+      }
+    ]
+  }
+}

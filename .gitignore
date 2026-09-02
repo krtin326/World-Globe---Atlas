@@ -16,3 +16,7 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Pitch deck (business doc — kept out of the public repo)
+World Globe - ATLAS - Pitch Deck.pptx
+*.pptx
